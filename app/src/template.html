@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container text-center">
+      <hr />
+      <h1 class="pt-3 fw-bold display-2">{{ title }}</h1>
+      <h2 class="pb-3 text-uppercase display-6">{{ nationality }}</h2>
+      <hr />
+
+      <div class="row mb-3">
+        <div class="col-3"></div>
+        <div class="col-5">
+          <div class="p-3 text-start" style="background-color: #ddd">
+            <p class="fw-bold">Ingredients</p>
+            <table class="table table-borderless">
+              {{ for ingredients as ingredient }}
+              <tr class="fs-6">
+                <td>{{ ingredient.quantity }} {{ ingredient.units }}</td>
+                <td>{{ ingredient.name }}</td>
+              </tr>
+              {{ endfor }}
+            </table>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="lead italic pt-2 text-start fw-lighter">
+            Achiote chicken, from Mexico's Yucatán Peninsula, is marinated in a
+            vibrant "recado rojo" mix of annatto seeds, spices, and citrus.
+            Grilled or baked, it's a flavorful Central American staple often
+            paired with rice or tortillas.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-9">
+          <div class="list-unstyled text-start pt-3">
+            {{ for instructions as instruction }}
+            <p class="lead pt-2">{{ instruction.content }}</p>
+            <p class="text-muted" style="margin-top: -12px">
+              {{ instruction.ingredients }}
+            </p>
+            {{ endfor }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
