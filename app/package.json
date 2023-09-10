@@ -15,6 +15,11 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@cooklang/cooklang-ts": "^1.2.4"
+    "@cooklang/cooklang-ts": "^1.2.4",
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^20.6.0",
+    "@types/node-fetch": "^2.6.4",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^2.6.1"
   }
 }
