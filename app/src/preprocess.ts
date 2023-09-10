@@ -19,6 +19,9 @@ export function preprocessRecipe(recipe: Recipe): Recipe {
         case "timer":
           instructionText += `${item.quantity} ${item.units}`;
           break;
+        case "cookware":
+          instructionText += `${item.name}`;
+          break;
       }
     }
 

@@ -13,10 +13,14 @@ export function generateHtml(recipe: Recipe) {
 
   // Take the recipe title, downcase and replace spaces with underscore
   const downcasedTitle = recipe.title.toLowerCase().replace(/ /g, "_");
+  const downcasedNationality = recipe.nationality
+    .toLowerCase()
+    .replace(/ /g, "_");
   const outputPath = path.join(
     __dirname,
     "..",
     "dist",
+    `${downcasedNationality}`,
     `${downcasedTitle}.html`
   );
 
