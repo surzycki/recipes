@@ -25,8 +25,9 @@ Blend 3 tomatoes with 1/2 onion, 1 garlic clove, 1/2tsp cumin, 2tsp chicken bull
 becomes:
 Blend @tomatoes{3} with @onion{1/2}, @garlic clove{1}, @cumin seed{1/2%tsp}, @chicken_bullion{2%tsp}, @salt{1%tsp} and water until is 4 cups total
 
-do not put an underscore it things like:
+do not put an underscore in ANY ingredient like:
 
 6 garlic cloves = @garlic cloves{6}
+1/2 cup of pinto beans = @pinto beans{1/2%cups}
 
 Here is the recipe to convert:
