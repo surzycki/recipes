@@ -2,6 +2,8 @@ import fetch from "node-fetch";
 import { OPENAI_API_KEY } from "./config";
 import { ApiResponseItem } from "./types";
 
+// npx ts-node src/index.ts ../thai/cucumber-salad.cook
+
 export async function callOpenAiApi(
   promptText: string
 ): Promise<string | null> {

@@ -30,4 +30,43 @@ do not put an underscore in ANY ingredient like:
 6 garlic cloves = @garlic cloves{6}
 1/2 cup of pinto beans = @pinto beans{1/2%cups}
 
+With a recipe that is just a list of ingredients, such as:
+
+lemongrass chicken
+
+2T fish sauce
+1T oyster sauce
+1/2 t red pepper
+2t sugar
+2 shallots
+3 garlic
+2 stalk lemongrass
+2t lime zest (lime leaves)
+700 grams chicken boneless
+
+mix all ingredient in food processors, marintate overnight
+Using grill pan, grill for several minutes until charred
+Let rest 20 minutes
+
+DO NOT do something like this:
+
+@fish_sauce{2%T}
+@oyster_sauce{1%T}
+@red_pepper{1/2%tsp}
+@sugar{2%tsp}
+@shallots{2}
+@garlic{3}
+@lemongrass{2%stalk}
+@lime_zest{2%tsp} (lime leaves)
+@chicken{700%grams} (boneless)
+
+1. Mix all ingredients in a food processor, marinate overnight.
+2. Using a grill pan, grill for several minutes until charred.
+3. Let rest for ~{20%minutes}.
+
+Rather do this:
+
+Mix @fish sauce{2%T}, @oyster sauce{1%T}, @red pepper{1/2%tsp}, @sugar{2%tsp}, @shallots{2}, @garlic{3}, @lemongrass{2%stalk}, @lime zest{2%tsp} (lime leaves), @chicken{700%grams} (boneless)} in a food processor, marinate ~{24%hours}
+... etc
+
 Here is the recipe to convert:
