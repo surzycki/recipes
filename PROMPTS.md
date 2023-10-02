@@ -69,4 +69,18 @@ Rather do this:
 Mix @fish sauce{2%T}, @oyster sauce{1%T}, @red pepper{1/2%tsp}, @sugar{2%tsp}, @shallots{2}, @garlic{3}, @lemongrass{2%stalk}, @lime zest{2%tsp} (lime leaves), @chicken{700%grams} (boneless)} in a food processor, marinate ~{24%hours}
 ... etc
 
+Be sure not to convert the list of ingredents into a list of just ingredeients
+
+2T fish sauce
+1T oyster sauce
+1/2 t red pepper
+2t sugar
+2 shallots
+3 garlic
+2 stalk lemongrass
+2t lime zest (lime leaves)
+700 grams chicken boneless
+
+should really not exist, it should be just the ingredients, inline with the stpes
+
 Here is the recipe to convert:
