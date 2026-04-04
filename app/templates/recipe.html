@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} — Recipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>{{css}}</style>
+</head>
+<body>
+  <header class="recipe-header">
+    <div class="recipe-header-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">All Recipes</a>
+        <span class="sep">/</span>
+        <a href="../index.html#{{cuisineSlug}}">{{cuisine}}</a>
+        <span class="sep">/</span>
+        {{title}}
+      </nav>
+      <p class="recipe-cuisine">{{cuisine}}</p>
+      <h1>{{title}}</h1>
+      <div class="meta-row">
+        {{metaPills}}
+      </div>
+    </div>
+  </header>
+
+  <main class="recipe-body">
+    <aside class="ingredients-panel">
+      <h2>Ingredients</h2>
+      <table>
+        {{ingredients}}
+      </table>
+      {{source}}
+    </aside>
+
+    <div class="steps-panel">
+      <h2>Method</h2>
+      {{steps}}
+    </div>
+  </main>
+</body>
+</html>

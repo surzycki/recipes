@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mergez — Recipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>/* ── Reset & Base ──────────────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #FAF7F2;
+  --warm-white: #FFFDF9;
+  --ink: #1A1A1A;
+  --ink-light: #4A4A4A;
+  --ink-muted: #8A8680;
+  --terracotta: #C4652E;
+  --terracotta-light: #E8DDD4;
+  --sage: #7A8B6F;
+  --sage-light: #E8EDE5;
+  --border: #E5E0DA;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  --card-hover: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+  --radius: 8px;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── INDEX PAGE ────────────────────────────────────────────────────── */
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.hero-stats {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin-top: 0.5rem;
+}
+
+.hero-stats strong {
+  color: var(--ink-light);
+  font-weight: 600;
+}
+
+/* Cuisine nav */
+.cuisine-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 2rem;
+  overflow-x: auto;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.cuisine-nav::-webkit-scrollbar { display: none; }
+
+.cuisine-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--warm-white);
+  color: var(--ink-light);
+  transition: all 0.2s;
+}
+.cuisine-pill:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: #fff;
+}
+.cuisine-pill .count {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(0,0,0,0.06);
+  padding: 0.1rem 0.45rem;
+  border-radius: 100px;
+}
+.cuisine-pill:hover .count {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Main content area */
+.index-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 6rem;
+}
+
+/* Cuisine sections */
+.cuisine-section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.section-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.section-count {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+/* Recipe grid */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.recipe-card {
+  display: block;
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.2s ease;
+}
+.recipe-card:hover {
+  box-shadow: var(--card-hover);
+  border-color: var(--terracotta);
+  transform: translateY(-2px);
+}
+
+.card-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.card-tag {
+  background: var(--sage-light);
+  color: var(--sage);
+  padding: 0.15rem 0.55rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.card-time, .card-ing {
+  font-weight: 500;
+}
+
+/* ── RECIPE PAGE ───────────────────────────────────────────────────── */
+
+.recipe-header {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 2rem 2.5rem;
+}
+
+.recipe-header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.breadcrumb a {
+  color: var(--terracotta);
+  transition: opacity 0.2s;
+}
+.breadcrumb a:hover { opacity: 0.7; }
+.breadcrumb .sep { margin: 0 0.4rem; }
+
+.recipe-header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.recipe-cuisine {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--ink-light);
+}
+
+/* Two-col layout */
+.recipe-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 6rem;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
+}
+
+/* Ingredients sidebar */
+.ingredients-panel {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+.ingredients-panel h2 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.ingredients-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ingredients-panel tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.ingredients-panel td {
+  padding: 0.45rem 0;
+  font-size: 0.88rem;
+  vertical-align: top;
+}
+
+.ingredients-panel .measure {
+  color: var(--terracotta);
+  font-weight: 600;
+  white-space: nowrap;
+  padding-right: 0.75rem;
+  width: 1%;
+}
+
+.ingredients-panel .ing-name {
+  color: var(--ink-light);
+}
+
+/* Steps */
+.steps-panel h2 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: baseline;
+}
+
+.step-num {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--terracotta);
+  text-align: center;
+}
+
+.step p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-light);
+}
+
+.ing-highlight {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.source-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--terracotta);
+  transition: opacity 0.2s;
+}
+.source-link:hover { opacity: 0.7; }
+
+/* ── Responsive ────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .recipe-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem 1.25rem 4rem;
+  }
+  .ingredients-panel {
+    position: static;
+  }
+  .hero { padding: 3rem 1.25rem 2rem; }
+  .index-main { padding: 1.5rem 1.25rem 4rem; }
+  .recipe-header { padding: 2rem 1.25rem 1.5rem; }
+  .cuisine-nav { padding: 0.75rem 1.25rem; }
+  .recipe-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+  <header class="recipe-header">
+    <div class="recipe-header-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">All Recipes</a>
+        <span class="sep">/</span>
+        <a href="../index.html#american">American</a>
+        <span class="sep">/</span>
+        Mergez
+      </nav>
+      <p class="recipe-cuisine">American</p>
+      <h1>Mergez</h1>
+      <div class="meta-row">
+        <span class="pill">⏱ 4 hours</span>
+<span class="pill">👤 10 servings</span>
+<span class="pill">Main</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="recipe-body">
+    <aside class="ingredients-panel">
+      <h2>Ingredients</h2>
+      <table>
+        <tr><td class="measure">6 g</td><td class="ing-name">cumin seeds</td></tr>
+<tr><td class="measure">6 g</td><td class="ing-name">fennel seed</td></tr>
+<tr><td class="measure">1 cm</td><td class="ing-name">cinnamon</td></tr>
+<tr><td class="measure">6 g</td><td class="ing-name">corriander seeds</td></tr>
+<tr><td class="measure">20 g</td><td class="ing-name">paprika</td></tr>
+<tr><td class="measure">8 g</td><td class="ing-name">smoked paprika</td></tr>
+<tr><td class="measure">150 g</td><td class="ing-name">roasted red pepper</td></tr>
+<tr><td class="measure">25 g</td><td class="ing-name">garlic cloves</td></tr>
+<tr><td class="measure">20 g</td><td class="ing-name">sugar</td></tr>
+<tr><td class="measure">35 g</td><td class="ing-name">curing salt</td></tr>
+<tr><td class="measure">0.3333333333333333 cup</td><td class="ing-name">mint</td></tr>
+<tr><td class="measure">0.6666666666666666 cup</td><td class="ing-name">cilantro</td></tr>
+<tr><td class="measure">50 g</td><td class="ing-name">milk powder</td></tr>
+<tr><td class="measure">20 g</td><td class="ing-name">harissa</td></tr>
+<tr><td class="measure">1.5 kilo</td><td class="ing-name">lamb shoulder</td></tr>
+<tr><td class="measure">400 g</td><td class="ing-name">pork belly</td></tr>
+<tr><td class="measure">60 ml</td><td class="ing-name">red wine</td></tr>
+<tr><td class="measure">60 ml</td><td class="ing-name">water</td></tr>
+<tr><td class="measure">30 ml</td><td class="ing-name">olive oil</td></tr>
+      </table>
+      
+    </aside>
+
+    <div class="steps-panel">
+      <h2>Method</h2>
+      <div class="step"><span class="step-num">1</span><p>Toast <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">fennel seed</span>, <span class="ing-highlight">cinnamon</span>, and <span class="ing-highlight">corriander seeds</span></p></div>
+<div class="step"><span class="step-num">2</span><p>Grind spices</p></div>
+<div class="step"><span class="step-num">3</span><p>Mix with <span class="ing-highlight">paprika</span>, smoked <span class="ing-highlight">paprika</span>, <span class="ing-highlight">roasted red pepper</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">curing salt</span>, chopped <span class="ing-highlight">mint</span>, chopped <span class="ing-highlight">cilantro</span>, <span class="ing-highlight">milk powder</span> and <span class="ing-highlight">harissa</span></p></div>
+<div class="step"><span class="step-num">4</span><p>Mix spice mixture with cubed <span class="ing-highlight">lamb shoulder</span> and <span class="ing-highlight">pork belly</span></p></div>
+<div class="step"><span class="step-num">5</span><p>Chill and grind though fine die.</p></div>
+<div class="step"><span class="step-num">6</span><p>Add <span class="ing-highlight">red wine</span>, <span class="ing-highlight">water</span>, <span class="ing-highlight">olive oil</span></p></div>
+<div class="step"><span class="step-num">7</span><p>Mix with paddle for 1 minute</p></div>
+<div class="step"><span class="step-num">8</span><p>Taste and adjust seasoning</p></div>
+<div class="step"><span class="step-num">9</span><p>Stuff sausages and cook to internal 65°C</p></div>
+    </div>
+  </main>
+</body>
+</html>

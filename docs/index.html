@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>/* ── Reset & Base ──────────────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #FAF7F2;
+  --warm-white: #FFFDF9;
+  --ink: #1A1A1A;
+  --ink-light: #4A4A4A;
+  --ink-muted: #8A8680;
+  --terracotta: #C4652E;
+  --terracotta-light: #E8DDD4;
+  --sage: #7A8B6F;
+  --sage-light: #E8EDE5;
+  --border: #E5E0DA;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  --card-hover: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+  --radius: 8px;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── INDEX PAGE ────────────────────────────────────────────────────── */
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.hero-stats {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin-top: 0.5rem;
+}
+
+.hero-stats strong {
+  color: var(--ink-light);
+  font-weight: 600;
+}
+
+/* Cuisine nav */
+.cuisine-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 2rem;
+  overflow-x: auto;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.cuisine-nav::-webkit-scrollbar { display: none; }
+
+.cuisine-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--warm-white);
+  color: var(--ink-light);
+  transition: all 0.2s;
+}
+.cuisine-pill:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: #fff;
+}
+.cuisine-pill .count {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(0,0,0,0.06);
+  padding: 0.1rem 0.45rem;
+  border-radius: 100px;
+}
+.cuisine-pill:hover .count {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Main content area */
+.index-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 6rem;
+}
+
+/* Cuisine sections */
+.cuisine-section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.section-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.section-count {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+/* Recipe grid */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.recipe-card {
+  display: block;
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.2s ease;
+}
+.recipe-card:hover {
+  box-shadow: var(--card-hover);
+  border-color: var(--terracotta);
+  transform: translateY(-2px);
+}
+
+.card-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.card-tag {
+  background: var(--sage-light);
+  color: var(--sage);
+  padding: 0.15rem 0.55rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.card-time, .card-ing {
+  font-weight: 500;
+}
+
+/* ── RECIPE PAGE ───────────────────────────────────────────────────── */
+
+.recipe-header {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 2rem 2.5rem;
+}
+
+.recipe-header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.breadcrumb a {
+  color: var(--terracotta);
+  transition: opacity 0.2s;
+}
+.breadcrumb a:hover { opacity: 0.7; }
+.breadcrumb .sep { margin: 0 0.4rem; }
+
+.recipe-header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.recipe-cuisine {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--ink-light);
+}
+
+/* Two-col layout */
+.recipe-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 6rem;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
+}
+
+/* Ingredients sidebar */
+.ingredients-panel {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+.ingredients-panel h2 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.ingredients-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ingredients-panel tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.ingredients-panel td {
+  padding: 0.45rem 0;
+  font-size: 0.88rem;
+  vertical-align: top;
+}
+
+.ingredients-panel .measure {
+  color: var(--terracotta);
+  font-weight: 600;
+  white-space: nowrap;
+  padding-right: 0.75rem;
+  width: 1%;
+}
+
+.ingredients-panel .ing-name {
+  color: var(--ink-light);
+}
+
+/* Steps */
+.steps-panel h2 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: baseline;
+}
+
+.step-num {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--terracotta);
+  text-align: center;
+}
+
+.step p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-light);
+}
+
+.ing-highlight {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.source-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--terracotta);
+  transition: opacity 0.2s;
+}
+.source-link:hover { opacity: 0.7; }
+
+/* ── Responsive ────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .recipe-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem 1.25rem 4rem;
+  }
+  .ingredients-panel {
+    position: static;
+  }
+  .hero { padding: 3rem 1.25rem 2rem; }
+  .index-main { padding: 1.5rem 1.25rem 4rem; }
+  .recipe-header { padding: 2rem 1.25rem 1.5rem; }
+  .cuisine-nav { padding: 0.75rem 1.25rem; }
+  .recipe-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+  <header class="hero">
+    <p class="hero-label">A Personal Collection</p>
+    <h1>Recipes</h1>
+    <p class="hero-stats"><strong>225</strong> recipes across <strong>27</strong> cuisines</p>
+  </header>
+
+  <main class="index-main">
+    <section id="american" class="cuisine-section">
+  <div class="section-header">
+    <h2>American</h2>
+    <span class="section-count">27 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="american/apple-cheddar-sausages.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Apple Cheddar Sausages</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="american/asian-pear-salad-with-peanut-lime.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Asian Pear Salad With Peanut Lime</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a>
+<a href="american/bacon.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Bacon</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 72 hours</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="american/blackout-brownies.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Blackout Brownies</h3>
+    <div class="card-meta"><span class="card-tag">Desert</span><span class="card-time">⏱ 6 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="american/butternut-miso-soup.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Butternut Miso Soup</h3>
+    <div class="card-meta"><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="american/carolina-gold-bbq-sauce.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Carolina Gold Bbq Sauce</h3>
+    <div class="card-meta"><span class="card-tag">Sauce</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="american/cheesy-monkey-bread.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Cheesy Monkey Bread</h3>
+    <div class="card-meta"><span class="card-tag">Starter</span><span class="card-time">⏱ 30 minutes</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="american/chicken-basil-tomatoe-sausage.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chicken Basil Tomatoe Sausage</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="american/detroit-pizza.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Detroit Pizza</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 8 hours</span><span class="card-ing">1 ingredients</span></div>
+  </div>
+</a>
+<a href="american/ginger-miso-butternut.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Ginger Miso Butternut</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="american/jalapeno-cheddar-sausages.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Jalapeno Cheddar Sausages</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="american/kfc-oven-copy.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Kfc Oven Copy</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a>
+<a href="american/levain-style-chocolate-chip-cookies.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Levain Style Chocolate Chip Cookies</h3>
+    <div class="card-meta"><span class="card-tag">Desert</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="american/mac-and-cheese.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mac And Cheese</h3>
+    <div class="card-meta"><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="american/mergez.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mergez</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">19 ingredients</span></div>
+  </div>
+</a>
+<a href="american/mushroom-gruyere-stuffing.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mushroom Gruyere Stuffing</h3>
+    <div class="card-meta"><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="american/oven-baked-chicken-wings.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Oven Baked Chicken Wings</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">3 ingredients</span></div>
+  </div>
+</a>
+<a href="american/oven-ribs.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Oven Ribs</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="american/peppermint-paddies.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Peppermint Paddies</h3>
+    <div class="card-meta"><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="american/pork-prune-stuffing.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Pork Prune Stuffing</h3>
+    <div class="card-meta"><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a>
+<a href="american/potato-rolls.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Potato Rolls</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="american/roasted-gochujang-brussel-sprout.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Roasted Gochujang Brussel Sprout</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="american/smoked-chicken-wings.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Smoked Chicken Wings</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="american/sous-vide-cheesecake.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sous Vide Cheesecake</h3>
+    <div class="card-meta"><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="american/sticky-rice-stuffing.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sticky Rice Stuffing</h3>
+    <div class="card-meta"><span class="card-tag">Plat</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="american/subway-cookies.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Subway Cookies</h3>
+    <div class="card-meta"><span class="card-ing">0 ingredients</span></div>
+  </div>
+</a>
+<a href="american/wing-sauce.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Wing Sauce</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hour</span><span class="card-ing">22 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="apero" class="cuisine-section">
+  <div class="section-header">
+    <h2>Apéro</h2>
+    <span class="section-count">3 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="apero/cheese-leek-dip.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Cheese Leek Dip</h3>
+    <div class="card-meta"><span class="card-tag">Apero</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="apero/nduja-honey-aubergines.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Nduja Honey Aubergines</h3>
+    <div class="card-meta"><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="apero/salmon-rillette.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Salmon Rillette</h3>
+    <div class="card-meta"><span class="card-tag">Apero</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="bali" class="cuisine-section">
+  <div class="section-header">
+    <h2>Balinese</h2>
+    <span class="section-count">4 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="bali/babi-guling.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Babi Guling</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">21 ingredients</span></div>
+  </div>
+</a>
+<a href="bali/ikan-panggang-sambal-matah.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Ikan Panggang Sambal Matah</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="bali/mi-goering.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mi Goering</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">18 ingredients</span></div>
+  </div>
+</a>
+<a href="bali/opor-ayam.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Opor Ayam</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="brazillian" class="cuisine-section">
+  <div class="section-header">
+    <h2>Brazilian</h2>
+    <span class="section-count">1 recipe</span>
+  </div>
+  <div class="recipe-grid"><a href="brazillian/feijoada.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Feijoada</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">18 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="brines" class="cuisine-section">
+  <div class="section-header">
+    <h2>Brines</h2>
+    <span class="section-count">2 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="brines/asian-turkey.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Asian Turkey</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">17 ingredients</span></div>
+  </div>
+</a>
+<a href="brines/chicken.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chicken</h3>
+    <div class="card-meta"><span class="card-tag">Brine</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="chinese" class="cuisine-section">
+  <div class="section-header">
+    <h2>Chinese</h2>
+    <span class="section-count">22 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="chinese/ants-on-a-tree.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Ants On A Tree</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/char-siu.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Char Siu</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 3 hours + marinating time</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/chili-oil.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chili Oil</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">19 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/chili-poached-beef.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chili Poached Beef</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">18 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/dried-fried-green-beans.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Dried Fried Green Beans</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/drunked-peanuts.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Drunked Peanuts</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/fish-flavored-eggplant.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Fish Flavored Eggplant</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/five-spice-powder.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Five Spice Powder</h3>
+    <div class="card-meta"><span class="card-tag">Spice</span><span class="card-time">⏱ 10 minutes</span><span class="card-ing">5 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/liang-fen.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Liang Fen</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">2 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/mapo-tofu.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mapo Tofu</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">16 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/mongolian-beef.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mongolian Beef</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/mouthwatering-chicken.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mouthwatering Chicken</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">20 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/nian-gao.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Nian Gao</h3>
+    <div class="card-meta"><span class="card-ing">17 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/scallion-pancakes.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Scallion Pancakes</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/seasoned-soy-sauce.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Seasoned Soy Sauce</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/smacked-cucumbers.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Smacked Cucumbers</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/spicy-and-sour-carrots.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Spicy And Sour Carrots</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/spicy-dumplings.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Spicy Dumplings</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/spicy-garlic-pork.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Spicy Garlic Pork</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/sui-mai.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sui Mai</h3>
+    <div class="card-meta"><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/sweet-and-sour-spare-ribs.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sweet And Sour Spare Ribs</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="chinese/taiwanese-beef-noodle.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Taiwanese Beef Noodle</h3>
+    <div class="card-meta"><span class="card-tag">Ingredient</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">23 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="cuban" class="cuisine-section">
+  <div class="section-header">
+    <h2>Cuban</h2>
+    <span class="section-count">2 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="cuban/mojo-pork.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mojo Pork</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 48 hours</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="cuban/mojo-pork-II.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mojo Pork II</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 48 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="drinks" class="cuisine-section">
+  <div class="section-header">
+    <h2>Drinks</h2>
+    <span class="section-count">1 recipe</span>
+  </div>
+  <div class="recipe-grid"><a href="drinks/ginger-turmeric-shots.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Ginger Turmeric Shots</h3>
+    <div class="card-meta"><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="ethiopian" class="cuisine-section">
+  <div class="section-header">
+    <h2>Ethiopian</h2>
+    <span class="section-count">12 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="ethiopian/berbere.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Berbere</h3>
+    <div class="card-meta"><span class="card-ing">19 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/doro-alecha-wat.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Doro Alecha Wat</h3>
+    <div class="card-meta"><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/doro-wat.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Doro Wat</h3>
+    <div class="card-meta"><span class="card-ing">17 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/gomen-be-sega-wet.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Gomen Be Sega Wet</h3>
+    <div class="card-meta"><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/kitfo.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Kitfo</h3>
+    <div class="card-meta"><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/misir-kik-alecha.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Misir Kik Alecha</h3>
+    <div class="card-meta"><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/mitmita.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mitmita</h3>
+    <div class="card-meta"><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/nitter-kibbeh.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Nitter Kibbeh</h3>
+    <div class="card-meta"><span class="card-ing">17 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/sega-wat.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sega Wat</h3>
+    <div class="card-meta"><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/shiro-wat.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Shiro Wat</h3>
+    <div class="card-meta"><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/tikil-gomen.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Tikil Gomen</h3>
+    <div class="card-meta"><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="ethiopian/ye-abasha-gomen.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Ye Abasha Gomen</h3>
+    <div class="card-meta"><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="fermentation" class="cuisine-section">
+  <div class="section-header">
+    <h2>Fermentation</h2>
+    <span class="section-count">3 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="fermentation/ginger-beer.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Ginger Beer</h3>
+    <div class="card-meta"><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="fermentation/madame-jeanette-hot-sauce.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Madame Jeanette Hot Sauce</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 10 days</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="fermentation/spicy-honey.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Spicy Honey</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 10 days</span><span class="card-ing">4 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="french" class="cuisine-section">
+  <div class="section-header">
+    <h2>French</h2>
+    <span class="section-count">17 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="french/almond-cream.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Almond Cream</h3>
+    <div class="card-meta"><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="french/apricot-tarte.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Apricot Tarte</h3>
+    <div class="card-meta"><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="french/blanquette-de-veau.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Blanquette De Veau</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">27 ingredients</span></div>
+  </div>
+</a>
+<a href="french/carmel-flan.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Carmel Flan</h3>
+    <div class="card-meta"><span class="card-tag">Dessert</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="french/carmelized-fig-brie-compound-butter.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Carmelized Fig Brie Compound Butter</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="french/carrot-curry-soup.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Carrot Curry Soup</h3>
+    <div class="card-meta"><span class="card-tag">Soup</span><span class="card-time">⏱ 12 hours</span><span class="card-ing">16 ingredients</span></div>
+  </div>
+</a>
+<a href="french/chocolate-mousse.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chocolate Mousse</h3>
+    <div class="card-meta"><span class="card-tag">Dessert</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">5 ingredients</span></div>
+  </div>
+</a>
+<a href="french/creme-brulee.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Creme Brulee</h3>
+    <div class="card-meta"><span class="card-tag">Dessert</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">5 ingredients</span></div>
+  </div>
+</a>
+<a href="french/duck-rillette.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Duck Rillette</h3>
+    <div class="card-meta"><span class="card-ing">21 ingredients</span></div>
+  </div>
+</a>
+<a href="french/gratin-dauphinois.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Gratin Dauphinois</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="french/mango-creme-brulee.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mango Creme Brulee</h3>
+    <div class="card-meta"><span class="card-tag">Dessert</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">5 ingredients</span></div>
+  </div>
+</a>
+<a href="french/pastry-cream.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Pastry Cream</h3>
+    <div class="card-meta"><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="french/pate-campagne.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Pate Campagne</h3>
+    <div class="card-meta"><span class="card-tag">Sides</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">16 ingredients</span></div>
+  </div>
+</a>
+<a href="french/roast-fennel-and-boulger.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Roast Fennel And Boulger</h3>
+    <div class="card-meta"><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="french/super-crumble.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Super Crumble</h3>
+    <div class="card-meta"><span class="card-tag">Desert</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="french/tarte-shell.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Tarte Shell</h3>
+    <div class="card-meta"><span class="card-tag">Dessert</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="french/terrine-de-canard-aux-figues.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Terrine De Canard Aux Figues</h3>
+    <div class="card-meta"><span class="card-tag">Sides</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="fusion" class="cuisine-section">
+  <div class="section-header">
+    <h2>Fusion</h2>
+    <span class="section-count">1 recipe</span>
+  </div>
+  <div class="recipe-grid"><a href="fusion/mango-chicken-curry.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mango Chicken Curry</h3>
+    <div class="card-meta"><span class="card-ing">26 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="greek" class="cuisine-section">
+  <div class="section-header">
+    <h2>Greek</h2>
+    <span class="section-count">3 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="greek/chicken-souvlaki.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chicken Souvlaki</h3>
+    <div class="card-meta"><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="greek/gibanica.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Gibanica</h3>
+    <div class="card-meta"><span class="card-tag">Bread</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="greek/spanakopita.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Spanakopita</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="hawaiian" class="cuisine-section">
+  <div class="section-header">
+    <h2>Hawaiian</h2>
+    <span class="section-count">12 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="hawaiian/beef-lu-au.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Beef Lu Au</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/chicken-long-rice.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chicken Long Rice</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/chili-pepper-water.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chili Pepper Water</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/haupia.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Haupia</h3>
+    <div class="card-meta"><span class="card-tag">Desert</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">5 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/lomi-lomi-salmmon.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Lomi Lomi Salmmon</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 72 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/mochiko-chicken.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mochiko Chicken</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">18 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/pipi-kaula.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Pipi Kaula</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/poi.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Poi</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">1 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/poke-I.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Poke I</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/poke-II.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Poke II</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/smoked-pork-with-fig-jam.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Smoked Pork With Fig Jam</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="hawaiian/tako-poke.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Tako Poke</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="hot-sauces" class="cuisine-section">
+  <div class="section-header">
+    <h2>Hot Sauces</h2>
+    <span class="section-count">3 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="hot-sauces/habanero-hot-sauce.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Habanero Hot Sauce</h3>
+    <div class="card-meta"><span class="card-tag">Sauce</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="hot-sauces/habenero-papaya.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Habenero Papaya</h3>
+    <div class="card-meta"><span class="card-tag">Sauce</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="hot-sauces/tropical-habanero-hot-sauce.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Tropical Habanero Hot Sauce</h3>
+    <div class="card-meta"><span class="card-tag">Sauce</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="indian" class="cuisine-section">
+  <div class="section-header">
+    <h2>Indian</h2>
+    <span class="section-count">8 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="indian/chai.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chai</h3>
+    <div class="card-meta"><span class="card-tag">Beverage</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="indian/chicken-bhuna.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chicken Bhuna</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">24 ingredients</span></div>
+  </div>
+</a>
+<a href="indian/hari-teekhi-chutney.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Hari Teekhi Chutney</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 10 minutes</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="indian/khatti-teekhi-chutney.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Khatti Teekhi Chutney</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 10 minutes</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="indian/pork-vindaloo-ribs.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Pork Vindaloo Ribs</h3>
+    <div class="card-meta"><span class="card-ing">0 ingredients</span></div>
+  </div>
+</a>
+<a href="indian/rogan-josh.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Rogan Josh</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">23 ingredients</span></div>
+  </div>
+</a>
+<a href="indian/spicy-banana-yougurt-pachadi.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Spicy Banana Yougurt Pachadi</h3>
+    <div class="card-meta"><span class="card-tag">Entre</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="indian/sri-lankan-village-salad.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sri Lankan Village Salad</h3>
+    <div class="card-meta"><span class="card-tag">Entre</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="italian" class="cuisine-section">
+  <div class="section-header">
+    <h2>Italian</h2>
+    <span class="section-count">13 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="italian/biga-pizza-dough.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Biga Pizza Dough</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 3 hours + overnight</span><span class="card-ing">4 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/gelato-sicillian-base.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Gelato Sicillian Base</h3>
+    <div class="card-meta"><span class="card-tag">Desert</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">5 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/gnocchi.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Gnocchi</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">4 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/golden-lasagna.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Golden Lasagna</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/luganega-di-treviso.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Luganega Di Treviso</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/mac-and-cheese.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mac And Cheese</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 30 minutes</span><span class="card-ing">0 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/osso-buco.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Osso Buco</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">22 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/panna-cotta.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Panna Cotta</h3>
+    <div class="card-meta"><span class="card-tag">Desert</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/pizza-dough-1-day.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Pizza Dough 1 Day</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 3 hours + overnight</span><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/pizza-dough-fast.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Pizza Dough Fast</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 8 hours</span><span class="card-ing">5 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/ricotta-gnocchi.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Ricotta Gnocchi</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">4 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/sausage-ricotta-lasagna.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sausage Ricotta Lasagna</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">5 ingredients</span></div>
+  </div>
+</a>
+<a href="italian/tiramisu.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Tiramisu</h3>
+    <div class="card-meta"><span class="card-tag">Desert</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="japanese" class="cuisine-section">
+  <div class="section-header">
+    <h2>Japanese</h2>
+    <span class="section-count">17 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="japanese/agedashi-tofu.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Agedashi Tofu</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/beef-tataki.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Beef Tataki</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/buta-kakuni.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Buta Kakuni</h3>
+    <div class="card-meta"><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/chicken-fried-rice.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chicken Fried Rice</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 30 minutes</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/cucumber-salad.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Cucumber Salad</h3>
+    <div class="card-meta"><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/eel-sauce.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Eel Sauce</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/green-beans-with-seasame.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Green Beans With Seasame</h3>
+    <div class="card-meta"><span class="card-tag">Salad</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/gyoza.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Gyoza</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/karaage.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Karaage</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/kewpie.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Kewpie</h3>
+    <div class="card-meta"><span class="card-tag">Sauce</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/okonomiyaki.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Okonomiyaki</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">16 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/okonomiyaki-sauce.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Okonomiyaki Sauce</h3>
+    <div class="card-meta"><span class="card-tag">Sauce</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">4 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/oyakodon.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Oyakodon</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 30 minutes</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/soy-marinated-tuna.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Soy Marinated Tuna</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 1 hour</span><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/sushi-rice.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sushi Rice</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/sushi-rice-II.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sushi Rice II</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">3 ingredients</span></div>
+  </div>
+</a>
+<a href="japanese/sushi-rice-vinegar.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sushi Rice Vinegar</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">3 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="korean" class="cuisine-section">
+  <div class="section-header">
+    <h2>Korean</h2>
+    <span class="section-count">10 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="korean/bulgogi.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Bulgogi</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="korean/din-tai-fung-cucumbers.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Din Tai Fung Cucumbers</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="korean/dwaejigogi-bokkeum.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Dwaejigogi Bokkeum</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 30 minutes</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="korean/gamja-salad.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Gamja Salad</h3>
+    <div class="card-meta"><span class="card-tag">Banchan</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="korean/gim-muchim.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Gim Muchim</h3>
+    <div class="card-meta"><span class="card-tag">Banchan</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">6 ingredients</span></div>
+  </div>
+</a>
+<a href="korean/kimchi.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Kimchi</h3>
+    <div class="card-meta"><span class="card-tag">Banchan</span><span class="card-time">⏱ 5 days</span><span class="card-ing">16 ingredients</span></div>
+  </div>
+</a>
+<a href="korean/myeolichi-ttangkong-bokkeum.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Myeolichi Ttangkong Bokkeum</h3>
+    <div class="card-meta"><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="korean/oi-muchim.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Oi Muchim</h3>
+    <div class="card-meta"><span class="card-tag">Banchan</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="korean/yukhoe.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Yukhoe</h3>
+    <div class="card-meta"><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="korean/yukhoe-II.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Yukhoe II</h3>
+    <div class="card-meta"><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="mexican" class="cuisine-section">
+  <div class="section-header">
+    <h2>Mexican</h2>
+    <span class="section-count">21 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="mexican/achiote-chicken.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Achiote Chicken</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/al-pastor.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Al Pastor</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">19 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/barbacoa.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Barbacoa</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/butterey-tortillas.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Butterey Tortillas</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">5 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/carne-asada.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Carne Asada</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/carnitas.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Carnitas</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 6 hours</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/charro-beans.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Charro Beans</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/chilli-rellenos.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chilli Rellenos</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/chorizo.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chorizo</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/chorizo-II.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chorizo II</h3>
+    <div class="card-meta"><span class="card-ing">0 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/costillas-de-puerco-salsa-verde.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Costillas De Puerco Salsa Verde</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/drunken-black-beans.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Drunken Black Beans</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/enchilada-sauce.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Enchilada Sauce</h3>
+    <div class="card-meta"><span class="card-ing">0 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/flour-tortillas.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Flour Tortillas</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">5 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/lamb-barbacoa.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Lamb Barbacoa</h3>
+    <div class="card-meta"><span class="card-tag">Main Dish</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">16 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/queso-fundido.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Queso Fundido</h3>
+    <div class="card-meta"><span class="card-tag">Starter</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/red-rice.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Red Rice</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 1 hours</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/refried-beans.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Refried Beans</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">4 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/salsa-matcha.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Salsa Matcha</h3>
+    <div class="card-meta"><span class="card-tag">Salsa</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/salsa-taqueria-cancun.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Salsa Taqueria Cancun</h3>
+    <div class="card-meta"><span class="card-tag">Salsa</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/taqueria-jalapenos.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Taqueria Jalapenos</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="middle-eastern" class="cuisine-section">
+  <div class="section-header">
+    <h2>Middle Eastern</h2>
+    <span class="section-count">15 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="middle-eastern/celebration-rice-and-sweet-spiced-lamb.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Celebration Rice And Sweet Spiced Lamb</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 4 hours</span><span class="card-ing">25 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/chewey-tender-pita.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chewey Tender Pita</h3>
+    <div class="card-meta"><span class="card-ing">0 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/dolmades.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Dolmades</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/egyptian-shawarma.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Egyptian Shawarma</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">16 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/hummus.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Hummus</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/hummus-sauce.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Hummus Sauce</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">4 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/hushwee.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Hushwee</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 30 minutes</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/lamb-tagine.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Lamb Tagine</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 90 minutes</span><span class="card-ing">25 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/lebanese-rice.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Lebanese Rice</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 20 minites</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/marinated-feta.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Marinated Feta</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 12 hours</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/mouhalabieh.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Mouhalabieh</h3>
+    <div class="card-meta"><span class="card-tag">Desert</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">8 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/pita.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Pita</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">7 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/rose-harrissa.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Rose Harrissa</h3>
+    <div class="card-meta"><span class="card-tag">Condiment</span><span class="card-time">⏱ 15 minutes</span><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/shawarma-spice-mix.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Shawarma Spice Mix</h3>
+    <div class="card-meta"><span class="card-tag">Spice</span><span class="card-time">⏱ 15 minutes</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/sumac-onions.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sumac Onions</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">4 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="ottolenghi" class="cuisine-section">
+  <div class="section-header">
+    <h2>Ottolenghi</h2>
+    <span class="section-count">8 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="ottolenghi/deviled-eggs-with-tangerine-rayu.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Deviled Eggs With Tangerine Rayu</h3>
+    <div class="card-meta"><span class="card-tag">Starter</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a>
+<a href="ottolenghi/easter-lamb.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Easter Lamb</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 8 hours</span><span class="card-ing">18 ingredients</span></div>
+  </div>
+</a>
+<a href="ottolenghi/giant-couscous-with-golden-rasins-almonds.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Giant Couscous With Golden Rasins Almonds</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 1 hour</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="ottolenghi/grilled-courgettes-saffron-butter-yogurt.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Grilled Courgettes Saffron Butter Yogurt</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 30 minutes</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="ottolenghi/labneh-with-olives-pistachios-oregano.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Labneh With Olives Pistachios Oregano</h3>
+    <div class="card-meta"><span class="card-tag">Starter</span><span class="card-time">⏱ 24 hours</span><span class="card-ing">11 ingredients</span></div>
+  </div>
+</a>
+<a href="ottolenghi/lime-poppy-seed-slaw-curry-leaf.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Lime Poppy Seed Slaw Curry Leaf</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 1 hour</span><span class="card-ing">17 ingredients</span></div>
+  </div>
+</a>
+<a href="ottolenghi/pickled-burnt-aubergine.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Pickled Burnt Aubergine</h3>
+    <div class="card-meta"><span class="card-ing">0 ingredients</span></div>
+  </div>
+</a>
+<a href="ottolenghi/turkey-courgette-burgers.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Turkey Courgette Burgers</h3>
+    <div class="card-meta"><span class="card-tag">Side</span><span class="card-time">⏱ 1 hour</span><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="persian" class="cuisine-section">
+  <div class="section-header">
+    <h2>Persian</h2>
+    <span class="section-count">3 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="persian/borani-bademjan.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Borani Bademjan</h3>
+    <div class="card-meta"><span class="card-ing">0 ingredients</span></div>
+  </div>
+</a>
+<a href="persian/khoresh-fesenjan.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Khoresh Fesenjan</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">16 ingredients</span></div>
+  </div>
+</a>
+<a href="persian/tahdig.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Tahdig</h3>
+    <div class="card-meta"><span class="card-ing">0 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="senegalese" class="cuisine-section">
+  <div class="section-header">
+    <h2>Senegalese</h2>
+    <span class="section-count">2 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="senegalese/maffe.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Maffe</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">23 ingredients</span></div>
+  </div>
+</a>
+<a href="senegalese/maffe-II.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Maffe II</h3>
+    <div class="card-meta"><span class="card-ing">19 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="spanish" class="cuisine-section">
+  <div class="section-header">
+    <h2>Spanish</h2>
+    <span class="section-count">1 recipe</span>
+  </div>
+  <div class="recipe-grid"><a href="spanish/cantaloupe-gazpacho.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Cantaloupe Gazpacho</h3>
+    <div class="card-meta"><span class="card-tag">Entree</span><span class="card-time">⏱ 2 hours</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="thai" class="cuisine-section">
+  <div class="section-header">
+    <h2>Thai</h2>
+    <span class="section-count">10 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="thai/cucumber-salad.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Cucumber Salad</h3>
+    <div class="card-meta"><span class="card-tag">Salad</span><span class="card-time">⏱ 30 minutes</span><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a>
+<a href="thai/green-curry-paste.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Green Curry Paste</h3>
+    <div class="card-meta"><span class="card-tag">Ingredient</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="thai/green-curry-paste-II.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Green Curry Paste II</h3>
+    <div class="card-meta"><span class="card-tag">Ingredient</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="thai/peanut-chicken-noodle.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Peanut Chicken Noodle</h3>
+    <div class="card-meta"><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="thai/pork-shrimp-dip.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Pork Shrimp Dip</h3>
+    <div class="card-meta"><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="thai/red-curry-chicken.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Red Curry Chicken</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 60 minutes</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="thai/red-curry-duck.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Red Curry Duck</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 60 minutes</span><span class="card-ing">14 ingredients</span></div>
+  </div>
+</a>
+<a href="thai/red-curry-paste.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Red Curry Paste</h3>
+    <div class="card-meta"><span class="card-tag">Ingredient</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="thai/red-curry-paste-II.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Red Curry Paste II</h3>
+    <div class="card-meta"><span class="card-tag">Ingredient</span><span class="card-time">⏱ 20 minutes</span><span class="card-ing">12 ingredients</span></div>
+  </div>
+</a>
+<a href="thai/tom-kha-gai.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Tom Kha Gai</h3>
+    <div class="card-meta"><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+<section id="vietnamese" class="cuisine-section">
+  <div class="section-header">
+    <h2>Vietnamese</h2>
+    <span class="section-count">4 recipes</span>
+  </div>
+  <div class="recipe-grid"><a href="vietnamese/bahn-mi.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Bahn Mi</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 40minites</span><span class="card-ing">15 ingredients</span></div>
+  </div>
+</a>
+<a href="vietnamese/chicken-cilantro-rice-rolls.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chicken Cilantro Rice Rolls</h3>
+    <div class="card-meta"><span class="card-ing">16 ingredients</span></div>
+  </div>
+</a>
+<a href="vietnamese/lemongrass-chicken.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Lemongrass Chicken</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 20minites + marinating time</span><span class="card-ing">9 ingredients</span></div>
+  </div>
+</a>
+<a href="vietnamese/lumpia.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Lumpia</h3>
+    <div class="card-meta"><span class="card-ing">10 ingredients</span></div>
+  </div>
+</a></div>
+</section>
+  </main>
+</body>
+</html>

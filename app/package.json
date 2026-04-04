@@ -1,25 +1,17 @@
 {
-  "name": "app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "recipes-site",
+  "version": "2.0.0",
+  "description": "Static site generator for CookLang recipes",
   "scripts": {
-    "build": "tsc",
-    "start": "ts-node src/index.ts"
+    "build": "tsc && node dist/build.js",
+    "dev": "ts-node src/build.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "@cooklang/cooklang-ts": "^1.2.4",
-    "@types/dotenv": "^8.2.0",
-    "@types/node": "^20.6.0",
-    "@types/node-fetch": "^2.6.4",
-    "dotenv": "^16.3.1",
-    "node-fetch": "^2.6.1"
+    "@types/node": "^20.6.0"
   }
 }

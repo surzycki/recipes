@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blanquette De Veau — Recipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>/* ── Reset & Base ──────────────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #FAF7F2;
+  --warm-white: #FFFDF9;
+  --ink: #1A1A1A;
+  --ink-light: #4A4A4A;
+  --ink-muted: #8A8680;
+  --terracotta: #C4652E;
+  --terracotta-light: #E8DDD4;
+  --sage: #7A8B6F;
+  --sage-light: #E8EDE5;
+  --border: #E5E0DA;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  --card-hover: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+  --radius: 8px;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── INDEX PAGE ────────────────────────────────────────────────────── */
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.hero-stats {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin-top: 0.5rem;
+}
+
+.hero-stats strong {
+  color: var(--ink-light);
+  font-weight: 600;
+}
+
+/* Cuisine nav */
+.cuisine-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 2rem;
+  overflow-x: auto;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.cuisine-nav::-webkit-scrollbar { display: none; }
+
+.cuisine-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--warm-white);
+  color: var(--ink-light);
+  transition: all 0.2s;
+}
+.cuisine-pill:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: #fff;
+}
+.cuisine-pill .count {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(0,0,0,0.06);
+  padding: 0.1rem 0.45rem;
+  border-radius: 100px;
+}
+.cuisine-pill:hover .count {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Main content area */
+.index-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 6rem;
+}
+
+/* Cuisine sections */
+.cuisine-section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.section-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.section-count {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+/* Recipe grid */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.recipe-card {
+  display: block;
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.2s ease;
+}
+.recipe-card:hover {
+  box-shadow: var(--card-hover);
+  border-color: var(--terracotta);
+  transform: translateY(-2px);
+}
+
+.card-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.card-tag {
+  background: var(--sage-light);
+  color: var(--sage);
+  padding: 0.15rem 0.55rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.card-time, .card-ing {
+  font-weight: 500;
+}
+
+/* ── RECIPE PAGE ───────────────────────────────────────────────────── */
+
+.recipe-header {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 2rem 2.5rem;
+}
+
+.recipe-header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.breadcrumb a {
+  color: var(--terracotta);
+  transition: opacity 0.2s;
+}
+.breadcrumb a:hover { opacity: 0.7; }
+.breadcrumb .sep { margin: 0 0.4rem; }
+
+.recipe-header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.recipe-cuisine {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--ink-light);
+}
+
+/* Two-col layout */
+.recipe-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 6rem;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
+}
+
+/* Ingredients sidebar */
+.ingredients-panel {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+.ingredients-panel h2 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.ingredients-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ingredients-panel tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.ingredients-panel td {
+  padding: 0.45rem 0;
+  font-size: 0.88rem;
+  vertical-align: top;
+}
+
+.ingredients-panel .measure {
+  color: var(--terracotta);
+  font-weight: 600;
+  white-space: nowrap;
+  padding-right: 0.75rem;
+  width: 1%;
+}
+
+.ingredients-panel .ing-name {
+  color: var(--ink-light);
+}
+
+/* Steps */
+.steps-panel h2 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: baseline;
+}
+
+.step-num {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--terracotta);
+  text-align: center;
+}
+
+.step p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-light);
+}
+
+.ing-highlight {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.source-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--terracotta);
+  transition: opacity 0.2s;
+}
+.source-link:hover { opacity: 0.7; }
+
+/* ── Responsive ────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .recipe-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem 1.25rem 4rem;
+  }
+  .ingredients-panel {
+    position: static;
+  }
+  .hero { padding: 3rem 1.25rem 2rem; }
+  .index-main { padding: 1.5rem 1.25rem 4rem; }
+  .recipe-header { padding: 2rem 1.25rem 1.5rem; }
+  .cuisine-nav { padding: 0.75rem 1.25rem; }
+  .recipe-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+  <header class="recipe-header">
+    <div class="recipe-header-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">All Recipes</a>
+        <span class="sep">/</span>
+        <a href="../index.html#french">French</a>
+        <span class="sep">/</span>
+        Blanquette De Veau
+      </nav>
+      <p class="recipe-cuisine">French</p>
+      <h1>Blanquette De Veau</h1>
+      <div class="meta-row">
+        <span class="pill">⏱ 3 hours</span>
+<span class="pill">Main</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="recipe-body">
+    <aside class="ingredients-panel">
+      <h2>Ingredients</h2>
+      <table>
+        <tr><td class="measure">1.2 kg</td><td class="ing-name">veal shoulder</td></tr>
+<tr><td class="measure">2</td><td class="ing-name">leek</td></tr>
+<tr><td class="measure">10 branches</td><td class="ing-name">thyme</td></tr>
+<tr><td class="measure">3</td><td class="ing-name">bay leaves</td></tr>
+<tr><td class="measure">3 branches</td><td class="ing-name">parsely</td></tr>
+<tr><td class="measure">2</td><td class="ing-name">onion</td></tr>
+<tr><td class="measure">8</td><td class="ing-name">cloves</td></tr>
+<tr><td class="measure">200 g</td><td class="ing-name">carrots</td></tr>
+<tr><td class="measure">100 g</td><td class="ing-name">celery</td></tr>
+<tr><td class="measure">25 g</td><td class="ing-name">garlic cloves</td></tr>
+<tr><td class="measure">2 litres</td><td class="ing-name">chicken stock</td></tr>
+<tr><td class="measure">some</td><td class="ing-name">salt.</td></tr>
+<tr><td class="measure">250 ml</td><td class="ing-name">white wine</td></tr>
+<tr><td class="measure">2 g</td><td class="ing-name">black peppercorns</td></tr>
+<tr><td class="measure">12</td><td class="ing-name">juniper berries</td></tr>
+<tr><td class="measure">3 g</td><td class="ing-name">corriander seeds</td></tr>
+<tr><td class="measure">250 g</td><td class="ing-name">mushrooms</td></tr>
+<tr><td class="measure">some</td><td class="ing-name">salt,</td></tr>
+<tr><td class="measure">some</td><td class="ing-name">pepper,</td></tr>
+<tr><td class="measure">1 tbsp</td><td class="ing-name">butter</td></tr>
+<tr><td class="measure">1</td><td class="ing-name">lemon</td></tr>
+<tr><td class="measure">300 g</td><td class="ing-name">pearl onions</td></tr>
+<tr><td class="measure">20 g</td><td class="ing-name">sugar</td></tr>
+<tr><td class="measure">30 g</td><td class="ing-name">water</td></tr>
+<tr><td class="measure">60 g</td><td class="ing-name">flour</td></tr>
+<tr><td class="measure">2</td><td class="ing-name">eggs</td></tr>
+<tr><td class="measure">20 cl</td><td class="ing-name">heavy cream</td></tr>
+      </table>
+      <a href="https://brunoalbouze.com/recipe/blanquette-de-veau/" class="source-link" target="_blank" rel="noopener">View source →</a>
+    </aside>
+
+    <div class="steps-panel">
+      <h2>Method</h2>
+      <div class="step"><span class="step-num">1</span><p>Blanch large cut pieces  <span class="ing-highlight">veal shoulder</span> in water</p></div>
+<div class="step"><span class="step-num">2</span><p>Skim off impurities as they rise</p></div>
+<div class="step"><span class="step-num">3</span><p>Make bouquet garni, cut <span class="ing-highlight">leek</span> 3/4 way through to open it up</p></div>
+<div class="step"><span class="step-num">4</span><p>Inside put <span class="ing-highlight">thyme</span>, <span class="ing-highlight">bay leaves</span>, and <span class="ing-highlight">parsely</span>; tie with twine.</p></div>
+<div class="step"><span class="step-num">5</span><p>Peel <span class="ing-highlight">onion</span> with <span class="ing-highlight">cloves</span> 4 pushed inside each.</p></div>
+<div class="step"><span class="step-num">6</span><p>Strain meat.</p></div>
+<div class="step"><span class="step-num">7</span><p>Chop <span class="ing-highlight">carrots</span> into bite sized pieces</p></div>
+<div class="step"><span class="step-num">8</span><p>Chop <span class="ing-highlight">celery</span> into large pieces</p></div>
+<div class="step"><span class="step-num">9</span><p>Add blanched veal, bouquet garni, onion, carrots, celery, and <span class="ing-highlight">garlic cloves</span> to a dutch oven</p></div>
+<div class="step"><span class="step-num">10</span><p>Add <span class="ing-highlight">chicken stock</span> and season with salt.</p></div>
+<div class="step"><span class="step-num">11</span><p>Add <span class="ing-highlight">white wine</span></p></div>
+<div class="step"><span class="step-num">12</span><p>Add <span class="ing-highlight">black peppercorns</span>, <span class="ing-highlight">juniper berries</span>, <span class="ing-highlight">corriander seeds</span></p></div>
+<div class="step"><span class="step-num">13</span><p>Simmer covered on low heat for 90 minutes</p></div>
+<div class="step"><span class="step-num">14</span><p>Remove carrots and leek, save carrots, and continue cooking for 45 minutes until meat is tender</p></div>
+<div class="step"><span class="step-num">15</span><p>Strain and save meat, carrots, and stock.</p></div>
+<div class="step"><span class="step-num">16</span><p>Wash and cut <span class="ing-highlight">mushrooms</span></p></div>
+<div class="step"><span class="step-num">17</span><p>Cover mushrooms with water, season with salt, pepper, <span class="ing-highlight">butter</span>, and juice of 1/2 of <span class="ing-highlight">lemon</span></p></div>
+<div class="step"><span class="step-num">18</span><p>Add a splash of <span class="ing-highlight">white wine</span> and boil for 15 minutes.</p></div>
+<div class="step"><span class="step-num">19</span><p>For the <span class="ing-highlight">pearl onions</span>, blanche for 2 minutes and place in cold water, you can then peel easily by squeezing them.</p></div>
+<div class="step"><span class="step-num">20</span><p>Saute the pearl onions in <span class="ing-highlight">butter</span> with <span class="ing-highlight">sugar</span> and <span class="ing-highlight">water</span></p></div>
+<div class="step"><span class="step-num">21</span><p>Carmelize the onions (when the water is evaporated)</p></div>
+<div class="step"><span class="step-num">22</span><p>Melt <span class="ing-highlight">butter</span> with <span class="ing-highlight">flour</span> in the dutch oven to make a light roux.</p></div>
+<div class="step"><span class="step-num">23</span><p>Add saved stock to make a veloute</p></div>
+<div class="step"><span class="step-num">24</span><p>Add veal and carrots, mushrooms, and simmer gently for 20 minutes</p></div>
+<div class="step"><span class="step-num">25</span><p>Mix yolks of <span class="ing-highlight">eggs</span> with <span class="ing-highlight">heavy cream</span></p></div>
+<div class="step"><span class="step-num">26</span><p>And mix in mixture, do not let boil anymore.</p></div>
+<div class="step"><span class="step-num">27</span><p>Add 1/2 of juice from lemon.  Season with salt and pepper</p></div>
+    </div>
+  </main>
+</body>
+</html>
