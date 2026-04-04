@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:cooklang.org)"
+      "WebFetch(domain:cooklang.org)",
+      "WebFetch(domain:www.rickbayless.com)"
     ]
   }
 }
