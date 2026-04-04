@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -440,21 +463,21 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Mix the marinade, sift <span class="ing-highlight">cornstarch</span>, <span class="ing-highlight">rice flour</span>, and <span class="ing-highlight">sugar</span>.</p></div>
-<div class="step"><span class="step-num">2</span><p>Whisk together, <span class="ing-highlight">gochujang</span>, <span class="ing-highlight">soy sauce</span>, minced <span class="ing-highlight">ginger</span>, <span class="ing-highlight">sake</span>, <span class="ing-highlight">eggs</span>, toasted <span class="ing-highlight">sesame seeds</span>, and <span class="ing-highlight">water</span>.</p></div>
-<div class="step"><span class="step-num">3</span><p>Add dry ingredients, add boneless, skin on <span class="ing-highlight">chicken thighs</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Consitancy should be of loose peanut butter</p></div>
-<div class="step"><span class="step-num">5</span><p>Marinate 24 hours</p></div>
-<div class="step"><span class="step-num">6</span><p>Make aioli, whisk <span class="ing-highlight">mayonnaise</span>, <span class="ing-highlight">gochujang</span>, and <span class="ing-highlight">sugar</span></p></div>
-<div class="step"><span class="step-num">7</span><p>Make su-miso, mix <span class="ing-highlight">sugar</span>, <span class="ing-highlight">mirin</span>, <span class="ing-highlight">sake</span>, cook until <span class="ing-highlight">sugar</span> dissolved, reduce a bit.</p></div>
-<div class="step"><span class="step-num">8</span><p>Remove from heat add <span class="ing-highlight">white miso</span>, whisk until smooth. Let cool</p></div>
-<div class="step"><span class="step-num">9</span><p>Sift <span class="ing-highlight">cornstarch</span>, <span class="ing-highlight">flour</span>, <span class="ing-highlight">garlic powder</span></p></div>
-<div class="step"><span class="step-num">10</span><p>Heat <span class="ing-highlight">oil</span> to 165°C, {cast iron} works well</p></div>
-<div class="step"><span class="step-num">11</span><p>Dredge chicken in flour, fry until golden brown, 2 minutes</p></div>
-<div class="step"><span class="step-num">12</span><p>Remove from oil,</p></div>
-<div class="step"><span class="step-num">13</span><p>Head oil to 190°C, fry again until crispy, 2 minutes</p></div>
-<div class="step"><span class="step-num">14</span><p>Let cool, serve with aioli and su-miso</p></div>
-<div class="step"><span class="step-num">15</span><p>Dust with a bit of <span class="ing-highlight">furikake</span> if you have it</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Mix the marinade, sift <span class="ing-highlight">cornstarch</span>, <span class="ing-highlight">rice flour</span>, and <span class="ing-highlight">sugar</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.25 cups</span> cornstarch</li><li><span class="step-ing-measure">100 g</span> rice flour</li><li><span class="step-ing-measure">2 tbps</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Whisk together, <span class="ing-highlight">gochujang</span>, <span class="ing-highlight">soy sauce</span>, minced <span class="ing-highlight">ginger</span>, <span class="ing-highlight">sake</span>, <span class="ing-highlight">eggs</span>, toasted <span class="ing-highlight">sesame seeds</span>, and <span class="ing-highlight">water</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> gochujang</li><li><span class="step-ing-measure">2 tbsp</span> soy sauce</li><li><span class="step-ing-measure">2 tbsp</span> ginger</li><li><span class="step-ing-measure">2 tbsp</span> sake</li><li><span class="step-ing-measure">2</span> eggs</li><li><span class="step-ing-measure">1 tbsp</span> sesame seeds</li><li><span class="step-ing-measure">2 tbsp</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add dry ingredients, add boneless, skin on <span class="ing-highlight">chicken thighs</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">8</span> chicken thighs</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Consitancy should be of loose peanut butter</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Marinate 24 hours</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Make aioli, whisk <span class="ing-highlight">mayonnaise</span>, <span class="ing-highlight">gochujang</span>, and <span class="ing-highlight">sugar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">150 g</span> mayonnaise</li><li><span class="step-ing-measure">1 tsp</span> gochujang</li><li><span class="step-ing-measure">1 tsp</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Make su-miso, mix <span class="ing-highlight">sugar</span>, <span class="ing-highlight">mirin</span>, <span class="ing-highlight">sake</span>, cook until <span class="ing-highlight">sugar</span> dissolved, reduce a bit.</p><ul class="step-ingredients"><li><span class="step-ing-measure">120 g</span> sugar</li><li><span class="step-ing-measure">120 ml</span> mirin</li><li><span class="step-ing-measure">1 tbsp</span> sake</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Remove from heat add <span class="ing-highlight">white miso</span>, whisk until smooth. Let cool</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tsp</span> white miso</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Sift <span class="ing-highlight">cornstarch</span>, <span class="ing-highlight">flour</span>, <span class="ing-highlight">garlic powder</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">200 g</span> cornstarch</li><li><span class="step-ing-measure">280 g</span> flour</li><li><span class="step-ing-measure">2 tbsp</span> garlic powder</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Heat <span class="ing-highlight">oil</span> to 165°C, {cast iron} works well</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 l</span> oil</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Dredge chicken in flour, fry until golden brown, 2 minutes</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Remove from oil,</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Head oil to 190°C, fry again until crispy, 2 minutes</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Let cool, serve with aioli and su-miso</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Dust with a bit of <span class="ing-highlight">furikake</span> if you have it</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> furikake</li></ul></div></div>
     </div>
   </main>
 </body>

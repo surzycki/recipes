@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -433,21 +456,21 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Grease bottom of 9x13in pan.  Place parchment paper</p></div>
-<div class="step"><span class="step-num">2</span><p>Melt <span class="ing-highlight">butter</span> and <span class="ing-highlight">dark chocolate</span> in bain marie, be careful not to scortch, water shoul never boil</p></div>
-<div class="step"><span class="step-num">3</span><p>Sift <span class="ing-highlight">bread flour</span> and <span class="ing-highlight">cocoa powder</span> together (twice) then mix</p></div>
-<div class="step"><span class="step-num">4</span><p>Heat <span class="ing-highlight">sugar</span> and <span class="ing-highlight">water</span> to 120C.</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">eggs</span> in mixer and whip until fluffy</p></div>
-<div class="step"><span class="step-num">6</span><p>Mix syrup into eggs slowly</p></div>
-<div class="step"><span class="step-num">7</span><p>Whip for 15 minutes</p></div>
-<div class="step"><span class="step-num">8</span><p>Slowly mix in butter/chocolate mixture</p></div>
-<div class="step"><span class="step-num">9</span><p>Add <span class="ing-highlight">white miso</span>, <span class="ing-highlight">vanilla extract</span>, and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">10</span><p>Mix in flour/cocoa mixture</p></div>
-<div class="step"><span class="step-num">11</span><p>Pour 1/3 mixture into pan, add milk chocolate chips and 1/3 can of dolce de leche.</p></div>
-<div class="step"><span class="step-num">12</span><p>Add remaining mixture and dolce de leche on top, swirl with toothpick</p></div>
-<div class="step"><span class="step-num">13</span><p>Add <span class="ing-highlight">maldon salt</span> on top</p></div>
-<div class="step"><span class="step-num">14</span><p>Cook 170C for 30 minutes or until internal temp is 82C-88C</p></div>
-<div class="step"><span class="step-num">15</span><p>Rest 2 hours</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Grease bottom of 9x13in pan.  Place parchment paper</p></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Melt <span class="ing-highlight">butter</span> and <span class="ing-highlight">dark chocolate</span> in bain marie, be careful not to scortch, water shoul never boil</p><ul class="step-ingredients"><li><span class="step-ing-measure">270 g</span> butter</li><li><span class="step-ing-measure">205 g</span> dark chocolate</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Sift <span class="ing-highlight">bread flour</span> and <span class="ing-highlight">cocoa powder</span> together (twice) then mix</p><ul class="step-ingredients"><li><span class="step-ing-measure">170 g</span> bread flour</li><li><span class="step-ing-measure">70 g</span> cocoa powder</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Heat <span class="ing-highlight">sugar</span> and <span class="ing-highlight">water</span> to 120C.</p><ul class="step-ingredients"><li><span class="step-ing-measure">540 g</span> sugar</li><li><span class="step-ing-measure">200 g</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">eggs</span> in mixer and whip until fluffy</p><ul class="step-ingredients"><li><span class="step-ing-measure">212 g</span> eggs</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Mix syrup into eggs slowly</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Whip for 15 minutes</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Slowly mix in butter/chocolate mixture</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Add <span class="ing-highlight">white miso</span>, <span class="ing-highlight">vanilla extract</span>, and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">3 tbsp</span> white miso</li><li><span class="step-ing-measure">1 tbsp</span> vanilla extract</li><li><span class="step-ing-measure">1 tbsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Mix in flour/cocoa mixture</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Pour 1/3 mixture into pan, add milk chocolate chips and 1/3 can of dolce de leche.</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Add remaining mixture and dolce de leche on top, swirl with toothpick</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Add <span class="ing-highlight">maldon salt</span> on top</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> maldon salt</li></ul></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Cook 170C for 30 minutes or until internal temp is 82C-88C</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Rest 2 hours</p></div></div>
     </div>
   </main>
 </body>

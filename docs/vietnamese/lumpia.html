@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -431,13 +454,13 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Into a blender, add <span class="ing-highlight">carrot</span> and <span class="ing-highlight">garlic cloves</span>. Blend until finely chopped.</p></div>
-<div class="step"><span class="step-num">2</span><p>Add <span class="ing-highlight">onion</span> and blend until finely chopped.</p></div>
-<div class="step"><span class="step-num">3</span><p>In a mixing bowl, add the chopped vegetables, <span class="ing-highlight">ground pork</span>, <span class="ing-highlight">eggs</span>,</p></div>
-<div class="step"><span class="step-num">4</span><p><span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">powdered chicken stock</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">black pepper</span>.</p></div>
-<div class="step"><span class="step-num">5</span><p>Mix everything together until combined, then mix in a circular motion until the filling is well binded and pasty.</p></div>
-<div class="step"><span class="step-num">6</span><p>Set the filling aside until needed.</p></div>
-<div class="step"><span class="step-num">7</span><p>Use <span class="ing-highlight">spring roll wrapper</span> for wrapping.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Into a blender, add <span class="ing-highlight">carrot</span> and <span class="ing-highlight">garlic cloves</span>. Blend until finely chopped.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 large</span> carrot</li><li><span class="step-ing-measure">4</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add <span class="ing-highlight">onion</span> and blend until finely chopped.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 large yellow</span> onion</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>In a mixing bowl, add the chopped vegetables, <span class="ing-highlight">ground pork</span>, <span class="ing-highlight">eggs</span>,</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> ground pork</li><li><span class="step-ing-measure">2 large</span> eggs</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p><span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">powdered chicken stock</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">black pepper</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">4 tbsp</span> soy sauce</li><li><span class="step-ing-measure">2 tsp</span> powdered chicken stock</li><li><span class="step-ing-measure">1.5 tsp</span> salt</li><li><span class="step-ing-measure">0.5 tsp</span> black pepper</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Mix everything together until combined, then mix in a circular motion until the filling is well binded and pasty.</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Set the filling aside until needed.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Use <span class="ing-highlight">spring roll wrapper</span> for wrapping.</p><ul class="step-ingredients"><li><span class="step-ing-measure">50 sheets</span> spring roll wrapper</li></ul></div></div>
     </div>
   </main>
 </body>

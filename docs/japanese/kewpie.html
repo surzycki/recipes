@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -431,12 +454,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Place yolk of <span class="ing-highlight">egg</span> and <span class="ing-highlight">dijon mustard</span> in emersion blender and blend for 30seconds</p></div>
-<div class="step"><span class="step-num">2</span><p>With the blender running slowly, drizzle in one third of the <span class="ing-highlight">oil</span> until emulsifies</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">salt</span>, <span class="ing-highlight">glucose syrup</span>, <span class="ing-highlight">dashi powder</span>, and <span class="ing-highlight">msg</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Blend again for a moment then add another third of the oil slowly</p></div>
-<div class="step"><span class="step-num">5</span><p>Finally add the <span class="ing-highlight">rice vinegar</span> and juice of <span class="ing-highlight">lemon</span>, blend quickly and add remain third of the oil</p></div>
-<div class="step"><span class="step-num">6</span><p>Caution the blender might not whip the egg yolk enough due to lack of volume, this first step can be done by hand</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Place yolk of <span class="ing-highlight">egg</span> and <span class="ing-highlight">dijon mustard</span> in emersion blender and blend for 30seconds</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> egg</li><li><span class="step-ing-measure">1 tsp</span> dijon mustard</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>With the blender running slowly, drizzle in one third of the <span class="ing-highlight">oil</span> until emulsifies</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.75cups</span> oil</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">salt</span>, <span class="ing-highlight">glucose syrup</span>, <span class="ing-highlight">dashi powder</span>, and <span class="ing-highlight">msg</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 tsp</span> salt</li><li><span class="step-ing-measure">1 tbsp</span> glucose syrup</li><li><span class="step-ing-measure">0.25 tsp</span> dashi powder</li><li><span class="step-ing-measure">0.25 tsp</span> msg</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Blend again for a moment then add another third of the oil slowly</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Finally add the <span class="ing-highlight">rice vinegar</span> and juice of <span class="ing-highlight">lemon</span>, blend quickly and add remain third of the oil</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> rice vinegar</li><li><span class="step-ing-measure">0.5</span> lemon</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Caution the blender might not whip the egg yolk enough due to lack of volume, this first step can be done by hand</p></div></div>
     </div>
   </main>
 </body>

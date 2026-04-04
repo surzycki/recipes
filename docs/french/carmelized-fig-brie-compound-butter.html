@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,8 +452,8 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>In a glass bowl, add <span class="ing-highlight">butter</span> (not melted, just room temperature), <span class="ing-highlight">brie</span> (softened), <span class="ing-highlight">dried figs</span> (chopped into small dice), <span class="ing-highlight">caramelized onions</span> (2 onions), <span class="ing-highlight">salt</span> and <span class="ing-highlight">pepper</span> (to taste), and <span class="ing-highlight">parsely</span> (fresh, chopped) and mix well.</p></div>
-<div class="step"><span class="step-num">2</span><p>Wet the table a bit, put plastic wrap and spread the butter, roll to make a tube and refrigerate.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>In a glass bowl, add <span class="ing-highlight">butter</span> (not melted, just room temperature), <span class="ing-highlight">brie</span> (softened), <span class="ing-highlight">dried figs</span> (chopped into small dice), <span class="ing-highlight">caramelized onions</span> (2 onions), <span class="ing-highlight">salt</span> and <span class="ing-highlight">pepper</span> (to taste), and <span class="ing-highlight">parsely</span> (fresh, chopped) and mix well.</p><ul class="step-ingredients"><li><span class="step-ing-measure">225 g</span> butter</li><li><span class="step-ing-measure">57 g</span> brie</li><li><span class="step-ing-measure">0.25 cup</span> dried figs</li><li><span class="step-ing-measure">0.5 cup</span> caramelized onions</li><li><span class="step-ing-measure">some</span> salt</li><li><span class="step-ing-measure">some</span> pepper</li><li><span class="step-ing-measure">2 tbsp</span> parsely</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Wet the table a bit, put plastic wrap and spread the butter, roll to make a tube and refrigerate.</p></div></div>
     </div>
   </main>
 </body>

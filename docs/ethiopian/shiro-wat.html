@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -428,12 +451,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Finely chop / puree <span class="ing-highlight">onions</span> and partially carmelize.</p></div>
-<div class="step"><span class="step-num">2</span><p>Add <span class="ing-highlight">nitter kibbeh</span>, <span class="ing-highlight">berbere</span>, and fry until fragrant.</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">tomato paste</span> and crushed <span class="ing-highlight">garlic cloves</span>, sautee</p></div>
-<div class="step"><span class="step-num">4</span><p>Whisk <span class="ing-highlight">chickpea flour</span>, then gradually add <span class="ing-highlight">water</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Simmer and cook 10 minutes</p></div>
-<div class="step"><span class="step-num">6</span><p>Season and finish with <span class="ing-highlight">nitter kibbeh</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Finely chop / puree <span class="ing-highlight">onions</span> and partially carmelize.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> onions</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add <span class="ing-highlight">nitter kibbeh</span>, <span class="ing-highlight">berbere</span>, and fry until fragrant.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cups</span> nitter kibbeh</li><li><span class="step-ing-measure">3 tbsp</span> berbere</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">tomato paste</span> and crushed <span class="ing-highlight">garlic cloves</span>, sautee</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> tomato paste</li><li><span class="step-ing-measure">4</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Whisk <span class="ing-highlight">chickpea flour</span>, then gradually add <span class="ing-highlight">water</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cups</span> chickpea flour</li><li><span class="step-ing-measure">2 cups</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Simmer and cook 10 minutes</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Season and finish with <span class="ing-highlight">nitter kibbeh</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> nitter kibbeh</li></ul></div></div>
     </div>
   </main>
 </body>

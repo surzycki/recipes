@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -435,12 +458,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Stem and deseed the <span class="ing-highlight">red chilis</span>; soak in warm water for 20min.</p></div>
-<div class="step"><span class="step-num">2</span><p>Toast the dry spices, <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">black pepper</span>.</p></div>
-<div class="step"><span class="step-num">3</span><p>Grind to fine powder.</p></div>
-<div class="step"><span class="step-num">4</span><p>Trim and slice the <span class="ing-highlight">lemongrass</span>, cut away grassy stalks and hard bottom, remove outer leaves.</p></div>
-<div class="step"><span class="step-num">5</span><p>Blend <span class="ing-highlight">corriander roots</span>, <span class="ing-highlight">galanga</span>, <span class="ing-highlight">kaffir leaves</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">shallots</span>, and red chilis into a paste.</p></div>
-<div class="step"><span class="step-num">6</span><p>Add ground spices, <span class="ing-highlight">salt</span>, <span class="ing-highlight">msg</span>, and <span class="ing-highlight">bonito flakes</span>.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Stem and deseed the <span class="ing-highlight">red chilis</span>; soak in warm water for 20min.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.25 cups</span> red chilis</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Toast the dry spices, <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">black pepper</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> corriander seeds</li><li><span class="step-ing-measure">1 tsp</span> cumin seeds</li><li><span class="step-ing-measure">10</span> black pepper</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Grind to fine powder.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Trim and slice the <span class="ing-highlight">lemongrass</span>, cut away grassy stalks and hard bottom, remove outer leaves.</p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> lemongrass</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Blend <span class="ing-highlight">corriander roots</span>, <span class="ing-highlight">galanga</span>, <span class="ing-highlight">kaffir leaves</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">shallots</span>, and red chilis into a paste.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> corriander roots</li><li><span class="step-ing-measure">2 tbsp</span> galanga</li><li><span class="step-ing-measure">3</span> kaffir leaves</li><li><span class="step-ing-measure">2 tbsp</span> garlic cloves</li><li><span class="step-ing-measure">0.25 cups</span> shallots</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add ground spices, <span class="ing-highlight">salt</span>, <span class="ing-highlight">msg</span>, and <span class="ing-highlight">bonito flakes</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> salt</li><li><span class="step-ing-measure">1 pinch</span> msg</li><li><span class="step-ing-measure">3 tbsp</span> bonito flakes</li></ul></div></div>
     </div>
   </main>
 </body>

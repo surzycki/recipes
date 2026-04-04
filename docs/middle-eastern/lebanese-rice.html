@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,12 +452,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Rinse <span class="ing-highlight">basmati rice</span> until runs clear, drain set aside</p></div>
-<div class="step"><span class="step-num">2</span><p>In a pan add <span class="ing-highlight">butter</span> and start to brown,</p></div>
-<div class="step"><span class="step-num">3</span><p>Add dried <span class="ing-highlight">egg noodles</span>, and rice</p></div>
-<div class="step"><span class="step-num">4</span><p>Then add minced <span class="ing-highlight">garlic cloves</span></p></div>
-<div class="step"><span class="step-num">5</span><p>When rice is white, add boiling <span class="ing-highlight">water</span>, <span class="ing-highlight">allspice</span>, and powdered <span class="ing-highlight">chicken stock</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Bring to boil, cover and simmer for 15minutes</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Rinse <span class="ing-highlight">basmati rice</span> until runs clear, drain set aside</p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 cups</span> basmati rice</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>In a pan add <span class="ing-highlight">butter</span> and start to brown,</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.25 cup</span> butter</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add dried <span class="ing-highlight">egg noodles</span>, and rice</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cups</span> egg noodles</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Then add minced <span class="ing-highlight">garlic cloves</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>When rice is white, add boiling <span class="ing-highlight">water</span>, <span class="ing-highlight">allspice</span>, and powdered <span class="ing-highlight">chicken stock</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">3 cups</span> water</li><li><span class="step-ing-measure">1 tsp</span> allspice</li><li><span class="step-ing-measure">2 tsp</span> chicken stock</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Bring to boil, cover and simmer for 15minutes</p></div></div>
     </div>
   </main>
 </body>

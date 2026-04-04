@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -431,12 +454,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Soak dried <span class="ing-highlight">chickpeas</span> overnight with a <span class="ing-highlight">baking powder</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Rinse chickpeas and boil in water with <span class="ing-highlight">salt</span> for 3 hours or until very tender</p></div>
-<div class="step"><span class="step-num">3</span><p>Let cool the chickpeas and add to a blender and blend with very cold water.</p></div>
-<div class="step"><span class="step-num">4</span><p>Blend with a 3 : 1 : 1 ratio of chickpeas, tahini, and juice of <span class="ing-highlight">lemons</span> until very smooth.</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">salt</span> to taste.</p></div>
-<div class="step"><span class="step-num">6</span><p>Plate with <span class="ing-highlight">olive oil</span>, chopped parsely, and paprika.  Add spoonful of <span class="ing-highlight">hummus sauce</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Soak dried <span class="ing-highlight">chickpeas</span> overnight with a <span class="ing-highlight">baking powder</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">200 g</span> chickpeas</li><li><span class="step-ing-measure">pinch</span> baking powder</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Rinse chickpeas and boil in water with <span class="ing-highlight">salt</span> for 3 hours or until very tender</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Let cool the chickpeas and add to a blender and blend with very cold water.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Blend with a 3 : 1 : 1 ratio of chickpeas, tahini, and juice of <span class="ing-highlight">lemons</span> until very smooth.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> tahini,</li><li><span class="step-ing-measure">some</span> lemons</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">salt</span> to taste.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Plate with <span class="ing-highlight">olive oil</span>, chopped parsely, and paprika.  Add spoonful of <span class="ing-highlight">hummus sauce</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> olive oil</li><li><span class="step-ing-measure">some</span> parsely,</li><li><span class="step-ing-measure">some</span> paprika.</li><li><span class="step-ing-measure">some</span> hummus sauce</li></ul></div></div>
     </div>
   </main>
 </body>

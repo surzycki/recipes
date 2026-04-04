@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -432,14 +455,14 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Heat large frying pan until almost smoking and add <span class="ing-highlight">green beans</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Lower to medium low heat and sear the green beans for about 20 minutes</p></div>
-<div class="step"><span class="step-num">3</span><p>Remove and set aside</p></div>
-<div class="step"><span class="step-num">4</span><p>Heat <span class="ing-highlight">oil</span> in pan and brown the <span class="ing-highlight">ground pork</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Add chopped <span class="ing-highlight">garlic cloves</span> and diced <span class="ing-highlight">dried red chilies</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Add <span class="ing-highlight">sui mi ya cai</span> and cook for 5 minutes</p></div>
-<div class="step"><span class="step-num">7</span><p>Add green beans, <span class="ing-highlight">shaoxing wine</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">sesame oil</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Stir fry for a few minutes and serve.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Heat large frying pan until almost smoking and add <span class="ing-highlight">green beans</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">450 g</span> green beans</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Lower to medium low heat and sear the green beans for about 20 minutes</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Remove and set aside</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Heat <span class="ing-highlight">oil</span> in pan and brown the <span class="ing-highlight">ground pork</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> oil</li><li><span class="step-ing-measure">200 g</span> ground pork</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add chopped <span class="ing-highlight">garlic cloves</span> and diced <span class="ing-highlight">dried red chilies</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> garlic cloves</li><li><span class="step-ing-measure">2</span> dried red chilies</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add <span class="ing-highlight">sui mi ya cai</span> and cook for 5 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> sui mi ya cai</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add green beans, <span class="ing-highlight">shaoxing wine</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">sesame oil</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> shaoxing wine</li><li><span class="step-ing-measure">1 tbsp</span> soy sauce</li><li><span class="step-ing-measure">0.5 tsp</span> sugar</li><li><span class="step-ing-measure">1 tsp</span> sesame oil</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Stir fry for a few minutes and serve.</p></div></div>
     </div>
   </main>
 </body>

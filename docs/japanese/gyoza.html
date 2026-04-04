@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -433,15 +456,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Combine finly slided <span class="ing-highlight">napa cabbage</span>, thinly sliced <span class="ing-highlight">green onions</span>, and minced <span class="ing-highlight">garlic clove</span>.</p></div>
-<div class="step"><span class="step-num">2</span><p>Sprinkle <span class="ing-highlight">salt</span> on the cabbage mixture and let sit 15 minutes.</p></div>
-<div class="step"><span class="step-num">3</span><p>Rinse cabbage mixture under water and squeeze out extra.</p></div>
-<div class="step"><span class="step-num">4</span><p>Combine cabbage with <span class="ing-highlight">ground pork</span>, <span class="ing-highlight">sake</span>, <span class="ing-highlight">sesame oil</span>, grated <span class="ing-highlight">ginger</span> and ground <span class="ing-highlight">white pepper</span> with <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Form dumplings and set aside</p></div>
-<div class="step"><span class="step-num">6</span><p>To cook heat <span class="ing-highlight">oil</span> in pan with lid until hot</p></div>
-<div class="step"><span class="step-num">7</span><p>Add dumplings, then add <span class="ing-highlight">water</span> to reach about 1/3 up the dumplings and cover with lid, turn heat to high</p></div>
-<div class="step"><span class="step-num">8</span><p>Cook 5 minutes remove lid, drizzle oil and cook until bottom crispy,</p></div>
-<div class="step"><span class="step-num">9</span><p>Drizzle with seasame oil</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Combine finly slided <span class="ing-highlight">napa cabbage</span>, thinly sliced <span class="ing-highlight">green onions</span>, and minced <span class="ing-highlight">garlic clove</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">4 cups</span> napa cabbage</li><li><span class="step-ing-measure">1.5 cups</span> green onions</li><li><span class="step-ing-measure">2</span> garlic clove</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Sprinkle <span class="ing-highlight">salt</span> on the cabbage mixture and let sit 15 minutes.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Rinse cabbage mixture under water and squeeze out extra.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Combine cabbage with <span class="ing-highlight">ground pork</span>, <span class="ing-highlight">sake</span>, <span class="ing-highlight">sesame oil</span>, grated <span class="ing-highlight">ginger</span> and ground <span class="ing-highlight">white pepper</span> with <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">240 g</span> ground pork</li><li><span class="step-ing-measure">1 tbsp</span> sake</li><li><span class="step-ing-measure">2 tsp</span> sesame oil</li><li><span class="step-ing-measure">1 tsp</span> ginger</li><li><span class="step-ing-measure">pinch</span> white pepper</li><li><span class="step-ing-measure">0.5 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Form dumplings and set aside</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>To cook heat <span class="ing-highlight">oil</span> in pan with lid until hot</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> oil</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add dumplings, then add <span class="ing-highlight">water</span> to reach about 1/3 up the dumplings and cover with lid, turn heat to high</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Cook 5 minutes remove lid, drizzle oil and cook until bottom crispy,</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Drizzle with seasame oil</p></div></div>
     </div>
   </main>
 </body>

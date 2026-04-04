@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -437,15 +460,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Cut <span class="ing-highlight">chinese eggplant</span> into sticks, sprinkle with <span class="ing-highlight">salt</span> and let sit 10 minutes</p></div>
-<div class="step"><span class="step-num">2</span><p>Squeeze water out of eggplant</p></div>
-<div class="step"><span class="step-num">3</span><p>Sprinkle with <span class="ing-highlight">corn starch</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Fry in <span class="ing-highlight">frying oil</span> and set aside</p></div>
-<div class="step"><span class="step-num">5</span><p>Fry <span class="ing-highlight">ground pork</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">garlic cloves</span>, and rehydrated <span class="ing-highlight">chilies</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Mix in bowl <span class="ing-highlight">black vinegar</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">shaoxing wine</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">chicken stock</span>.</p></div>
-<div class="step"><span class="step-num">7</span><p>Add sauce to pork mixture</p></div>
-<div class="step"><span class="step-num">8</span><p>Add eggplant</p></div>
-<div class="step"><span class="step-num">9</span><p>Garnish with <span class="ing-highlight">cilantro</span> and <span class="ing-highlight">green onions</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Cut <span class="ing-highlight">chinese eggplant</span> into sticks, sprinkle with <span class="ing-highlight">salt</span> and let sit 10 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">5</span> chinese eggplant</li><li><span class="step-ing-measure">some</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Squeeze water out of eggplant</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Sprinkle with <span class="ing-highlight">corn starch</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">5 tbs</span> corn starch</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Fry in <span class="ing-highlight">frying oil</span> and set aside</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> frying oil</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Fry <span class="ing-highlight">ground pork</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">garlic cloves</span>, and rehydrated <span class="ing-highlight">chilies</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">300g</span> ground pork</li><li><span class="step-ing-measure">2 in</span> ginger</li><li><span class="step-ing-measure">4</span> garlic cloves</li><li><span class="step-ing-measure">3</span> chilies</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Mix in bowl <span class="ing-highlight">black vinegar</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">shaoxing wine</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">chicken stock</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 tbsp</span> black vinegar</li><li><span class="step-ing-measure">2 tbsp</span> soy sauce</li><li><span class="step-ing-measure">1 tbsp</span> shaoxing wine</li><li><span class="step-ing-measure">2 tbsp</span> sugar</li><li><span class="step-ing-measure">0.5 cup</span> chicken stock</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add sauce to pork mixture</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add eggplant</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Garnish with <span class="ing-highlight">cilantro</span> and <span class="ing-highlight">green onions</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> cilantro</li><li><span class="step-ing-measure">1</span> green onions</li></ul></div></div>
     </div>
   </main>
 </body>

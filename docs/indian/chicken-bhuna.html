@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -446,21 +469,21 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Cut <span class="ing-highlight">chicken breast</span> into small cubes (1cm)</p></div>
-<div class="step"><span class="step-num">2</span><p>Add <span class="ing-highlight">salt</span>, pepper, <span class="ing-highlight">chili powder</span>, paste of <span class="ing-highlight">garlic cloves</span>, paste of <span class="ing-highlight">ginger</span>, paste of <span class="ing-highlight">green chili</span>, <span class="ing-highlight">vinegar</span> to chicken</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">ghee</span>, <span class="ing-highlight">cumin seeds</span>, chopped medium <span class="ing-highlight">red onions</span> to a pan</p></div>
-<div class="step"><span class="step-num">4</span><p>Cook until golden and add <span class="ing-highlight">turmeric</span>, paste of <span class="ing-highlight">garlic clove</span>, paste of <span class="ing-highlight">ginger</span> and cook</p></div>
-<div class="step"><span class="step-num">5</span><p>Lower heat and add paste of <span class="ing-highlight">red chili</span>, <span class="ing-highlight">chili powder</span>, ground <span class="ing-highlight">corriander seed</span>, ground <span class="ing-highlight">cumin seed</span>, a bit of hot water</p></div>
-<div class="step"><span class="step-num">6</span><p>Cook until oil released</p></div>
-<div class="step"><span class="step-num">7</span><p>Add puree of <span class="ing-highlight">tomatoes</span>, salt, pepper, stems of <span class="ing-highlight"><span class="ing-highlight">cilantro</span></span>, <span class="ing-highlight"><span class="ing-highlight">cilantro</span></span></p></div>
-<div class="step"><span class="step-num">8</span><p>Cook until oil released</p></div>
-<div class="step"><span class="step-num">9</span><p>Lower flame and add paste of <span class="ing-highlight">cashew nuts</span>, <span class="ing-highlight">yogurt</span></p></div>
-<div class="step"><span class="step-num">10</span><p>Cook 15 minutes until oil released, avoid sticking</p></div>
-<div class="step"><span class="step-num">11</span><p>Add chicken</p></div>
-<div class="step"><span class="step-num">12</span><p>Cook and add water to adjust consistency</p></div>
-<div class="step"><span class="step-num">13</span><p>Add <span class="ing-highlight">garam masala</span>, <span class="ing-highlight">kasuri methi</span></p></div>
-<div class="step"><span class="step-num">14</span><p>Finish with juice of <span class="ing-highlight">lemon</span> and <span class="ing-highlight">cilantro</span></p></div>
-<div class="step"><span class="step-num">15</span><p>Eat with hari-teeki chutney and hkatti teekhi chutney 50/50 on plate with some onions, green chilis, and lemon in the middle</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Cut <span class="ing-highlight">chicken breast</span> into small cubes (1cm)</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> chicken breast</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add <span class="ing-highlight">salt</span>, pepper, <span class="ing-highlight">chili powder</span>, paste of <span class="ing-highlight">garlic cloves</span>, paste of <span class="ing-highlight">ginger</span>, paste of <span class="ing-highlight">green chili</span>, <span class="ing-highlight">vinegar</span> to chicken</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> salt</li><li><span class="step-ing-measure">some</span> pepper,</li><li><span class="step-ing-measure">1 tbsp</span> chili powder</li><li><span class="step-ing-measure">1 tbsp</span> garlic cloves</li><li><span class="step-ing-measure">1 tbsp</span> ginger</li><li><span class="step-ing-measure">1 tbsp</span> green chili</li><li><span class="step-ing-measure">1 tbsp</span> vinegar</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">ghee</span>, <span class="ing-highlight">cumin seeds</span>, chopped medium <span class="ing-highlight">red onions</span> to a pan</p><ul class="step-ingredients"><li><span class="step-ing-measure">6 tbsp</span> ghee</li><li><span class="step-ing-measure">1 tbsp</span> cumin seeds</li><li><span class="step-ing-measure">7</span> red onions</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Cook until golden and add <span class="ing-highlight">turmeric</span>, paste of <span class="ing-highlight">garlic clove</span>, paste of <span class="ing-highlight">ginger</span> and cook</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> turmeric</li><li><span class="step-ing-measure">1 tbsp</span> garlic clove</li><li><span class="step-ing-measure">1 tbsp</span> ginger</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Lower heat and add paste of <span class="ing-highlight">red chili</span>, <span class="ing-highlight">chili powder</span>, ground <span class="ing-highlight">corriander seed</span>, ground <span class="ing-highlight">cumin seed</span>, a bit of hot water</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 tbsp</span> red chili</li><li><span class="step-ing-measure">1 tbsp</span> chili powder</li><li><span class="step-ing-measure">1 tbsp</span> corriander seed</li><li><span class="step-ing-measure">1 tbsp</span> cumin seed</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Cook until oil released</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add puree of <span class="ing-highlight">tomatoes</span>, salt, pepper, stems of <span class="ing-highlight"><span class="ing-highlight">cilantro</span></span>, <span class="ing-highlight"><span class="ing-highlight">cilantro</span></span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> tomatoes</li><li><span class="step-ing-measure">some</span> salt,</li><li><span class="step-ing-measure">some</span> pepper,</li><li><span class="step-ing-measure">1 tbsp</span> cilantro</li><li><span class="step-ing-measure">2 tbsp</span> cilantro</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Cook until oil released</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Lower flame and add paste of <span class="ing-highlight">cashew nuts</span>, <span class="ing-highlight">yogurt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4 tbsp</span> cashew nuts</li><li><span class="step-ing-measure">1 cup</span> yogurt</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Cook 15 minutes until oil released, avoid sticking</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Add chicken</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Cook and add water to adjust consistency</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Add <span class="ing-highlight">garam masala</span>, <span class="ing-highlight">kasuri methi</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> garam masala</li><li><span class="step-ing-measure">1 tsp</span> kasuri methi</li></ul></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Finish with juice of <span class="ing-highlight">lemon</span> and <span class="ing-highlight">cilantro</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5</span> lemon</li><li><span class="step-ing-measure">some</span> cilantro</li></ul></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Eat with hari-teeki chutney and hkatti teekhi chutney 50/50 on plate with some onions, green chilis, and lemon in the middle</p></div></div>
     </div>
   </main>
 </body>

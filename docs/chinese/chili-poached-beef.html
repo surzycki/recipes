@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -440,25 +463,25 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Slice <span class="ing-highlight">beef loin</span> into thin slices (slightly freeze to make it easier)</p></div>
-<div class="step"><span class="step-num">2</span><p>Add <span class="ing-highlight">water</span> of <span class="ing-highlight">water</span> to beef and 'slap' it in, until no longer see the <span class="ing-highlight">water</span></p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">egg</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">corn starch</span>, mix together and set aside</p></div>
-<div class="step"><span class="step-num">4</span><p>Soak chopped <span class="ing-highlight">dried red chilies</span> in water</p></div>
-<div class="step"><span class="step-num">5</span><p>Blanche <span class="ing-highlight">soy bean sprouts</span> and cliced <span class="ing-highlight">celery</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Stir fry for a minute adding <span class="ing-highlight">salt</span> and <span class="ing-highlight">chicken boullion powder</span></p></div>
-<div class="step"><span class="step-num">7</span><p>Put directly into serving pot</p></div>
-<div class="step"><span class="step-num">8</span><p>Add <span class="ing-highlight">oil</span> to pot and then add chopped <span class="ing-highlight">doubanjiang</span></p></div>
-<div class="step"><span class="step-num">9</span><p>Stir fry until oil is red</p></div>
-<div class="step"><span class="step-num">10</span><p>Add chopped <span class="ing-highlight">garlic cloves</span> and chopped <span class="ing-highlight">ginger</span> and fry for a few minutes</p></div>
-<div class="step"><span class="step-num">11</span><p>Add <span class="ing-highlight">water</span> mixed with <span class="ing-highlight">chicken boullion powder</span> and <span class="ing-highlight">msg</span></p></div>
-<div class="step"><span class="step-num">12</span><p>Bring to boil.</p></div>
-<div class="step"><span class="step-num">13</span><p>Add beef and cook briefly, remove and put in serving pot</p></div>
-<div class="step"><span class="step-num">14</span><p>Thicken the broth with <span class="ing-highlight">corn starch</span> slurry</p></div>
-<div class="step"><span class="step-num">15</span><p>Spoon over meat until it is covered</p></div>
-<div class="step"><span class="step-num">16</span><p>Add chopped <span class="ing-highlight">garlic bulb</span> on top of meat</p></div>
-<div class="step"><span class="step-num">17</span><p>Heat <span class="ing-highlight">oil</span> until hot, add <span class="ing-highlight">sichuan peppercorns</span> and drained chili peppers</p></div>
-<div class="step"><span class="step-num">18</span><p>Fry until fragrant and add on top of meat</p></div>
-<div class="step"><span class="step-num">19</span><p>Garnish with <span class="ing-highlight">cilantro</span> and <span class="ing-highlight">green onions</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Slice <span class="ing-highlight">beef loin</span> into thin slices (slightly freeze to make it easier)</p><ul class="step-ingredients"><li><span class="step-ing-measure">500 g</span> beef loin</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add <span class="ing-highlight">water</span> of <span class="ing-highlight">water</span> to beef and 'slap' it in, until no longer see the <span class="ing-highlight">water</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">120 g</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">egg</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">corn starch</span>, mix together and set aside</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> egg</li><li><span class="step-ing-measure">1 tsp</span> salt</li><li><span class="step-ing-measure">1 tbsp</span> corn starch</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Soak chopped <span class="ing-highlight">dried red chilies</span> in water</p><ul class="step-ingredients"><li><span class="step-ing-measure">100 g</span> dried red chilies</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Blanche <span class="ing-highlight">soy bean sprouts</span> and cliced <span class="ing-highlight">celery</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">300 g</span> soy bean sprouts</li><li><span class="step-ing-measure">300 g</span> celery</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Stir fry for a minute adding <span class="ing-highlight">salt</span> and <span class="ing-highlight">chicken boullion powder</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> salt</li><li><span class="step-ing-measure">1 tsp</span> chicken boullion powder</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Put directly into serving pot</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add <span class="ing-highlight">oil</span> to pot and then add chopped <span class="ing-highlight">doubanjiang</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> oil</li><li><span class="step-ing-measure">0.6666666666666666 cup</span> doubanjiang</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Stir fry until oil is red</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Add chopped <span class="ing-highlight">garlic cloves</span> and chopped <span class="ing-highlight">ginger</span> and fry for a few minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">8</span> garlic cloves</li><li><span class="step-ing-measure">1 in</span> ginger</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Add <span class="ing-highlight">water</span> mixed with <span class="ing-highlight">chicken boullion powder</span> and <span class="ing-highlight">msg</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">750 ml</span> water</li><li><span class="step-ing-measure">2 tsp</span> chicken boullion powder</li><li><span class="step-ing-measure">0.25 tsp</span> msg</li></ul></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Bring to boil.</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Add beef and cook briefly, remove and put in serving pot</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Thicken the broth with <span class="ing-highlight">corn starch</span> slurry</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 tbs</span> corn starch</li></ul></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Spoon over meat until it is covered</p></div></div>
+<div class="step"><span class="step-num">16</span><div class="step-content"><p>Add chopped <span class="ing-highlight">garlic bulb</span> on top of meat</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> garlic bulb</li></ul></div></div>
+<div class="step"><span class="step-num">17</span><div class="step-content"><p>Heat <span class="ing-highlight">oil</span> until hot, add <span class="ing-highlight">sichuan peppercorns</span> and drained chili peppers</p><ul class="step-ingredients"><li><span class="step-ing-measure">500 ml</span> oil</li><li><span class="step-ing-measure">2 tbsp</span> sichuan peppercorns</li></ul></div></div>
+<div class="step"><span class="step-num">18</span><div class="step-content"><p>Fry until fragrant and add on top of meat</p></div></div>
+<div class="step"><span class="step-num">19</span><div class="step-content"><p>Garnish with <span class="ing-highlight">cilantro</span> and <span class="ing-highlight">green onions</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> cilantro</li><li><span class="step-ing-measure">1</span> green onions</li></ul></div></div>
     </div>
   </main>
 </body>

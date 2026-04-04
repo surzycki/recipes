@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,16 +452,16 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Grind <span class="ing-highlight">speculoos</span>, add <span class="ing-highlight">butter</span> and <span class="ing-highlight">sugar</span>.</p></div>
-<div class="step"><span class="step-num">2</span><p>Press into the bottom of jars (about 1-2 cm thick).</p></div>
-<div class="step"><span class="step-num">3</span><p>Bake at 140°C for 10 min. Let cool for 15 min.</p></div>
-<div class="step"><span class="step-num">4</span><p>Put <span class="ing-highlight">cream cheese</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">cornstarch</span> in a mixer with a paddle attachment and beat on low speed until creamy, about 5 min.</p></div>
-<div class="step"><span class="step-num">5</span><p>Blend in remaining <span class="ing-highlight">cream cheese</span>.</p></div>
-<div class="step"><span class="step-num">6</span><p>Increase mixer speed to medium, add remaining <span class="ing-highlight">sugar</span> and a pinch of vanilla.</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">egg</span>, beating well. Add <span class="ing-highlight">heavy cream</span> and mix briefly until just combined (do not overmix!).</p></div>
-<div class="step"><span class="step-num">8</span><p>Pour about 170ml of batter into each jar (enough for about 7 jars).</p></div>
-<div class="step"><span class="step-num">9</span><p>Place jars in a water bath set to 80°C , and once it reaches temperature, set a timer for 90 min.</p></div>
-<div class="step"><span class="step-num">10</span><p>After, remove jars and let cool to room temperature before placing in the fridge.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Grind <span class="ing-highlight">speculoos</span>, add <span class="ing-highlight">butter</span> and <span class="ing-highlight">sugar</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">150 g</span> speculoos</li><li><span class="step-ing-measure">80 g</span> butter</li><li><span class="step-ing-measure">60 g</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Press into the bottom of jars (about 1-2 cm thick).</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Bake at 140°C for 10 min. Let cool for 15 min.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Put <span class="ing-highlight">cream cheese</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">cornstarch</span> in a mixer with a paddle attachment and beat on low speed until creamy, about 5 min.</p><ul class="step-ingredients"><li><span class="step-ing-measure">120 g</span> cream cheese</li><li><span class="step-ing-measure">60 g</span> sugar</li><li><span class="step-ing-measure">2 tbsp</span> cornstarch</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Blend in remaining <span class="ing-highlight">cream cheese</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">330 g</span> cream cheese</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Increase mixer speed to medium, add remaining <span class="ing-highlight">sugar</span> and a pinch of vanilla.</p><ul class="step-ingredients"><li><span class="step-ing-measure">110 g</span> sugar</li><li><span class="step-ing-measure">some</span> vanilla.</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">egg</span>, beating well. Add <span class="ing-highlight">heavy cream</span> and mix briefly until just combined (do not overmix!).</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 large</span> egg</li><li><span class="step-ing-measure">170 g</span> heavy cream</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Pour about 170ml of batter into each jar (enough for about 7 jars).</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Place jars in a water bath set to 80°C , and once it reaches temperature, set a timer for 90 min.</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>After, remove jars and let cool to room temperature before placing in the fridge.</p></div></div>
     </div>
   </main>
 </body>

@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -438,19 +461,19 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>In a bowl combine <span class="ing-highlight">flour</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">baking powder</span> mix well</p></div>
-<div class="step"><span class="step-num">2</span><p>Peel and grate the <span class="ing-highlight">nagaimo</span> into a bowl</p></div>
-<div class="step"><span class="step-num">3</span><p>Add the naigiamo and <span class="ing-highlight">dashi</span> to the flour mixture</p></div>
-<div class="step"><span class="step-num">4</span><p>Let sit in fridge for minimum of 1 hour up to overnight</p></div>
-<div class="step"><span class="step-num">5</span><p>Thinly slice the <span class="ing-highlight">napa cabbage</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Add <span class="ing-highlight">eggs</span>, <span class="ing-highlight">tempura scraps</span>, and <span class="ing-highlight">pickled ginger</span> to the batter and mix</p></div>
-<div class="step"><span class="step-num">7</span><p>Add the cabbage to the batter 1/3 at a time to keep batter light</p></div>
-<div class="step"><span class="step-num">8</span><p>Heat a pan to 200°C add <span class="ing-highlight">oil</span> and make a portion of okonomiyaki</p></div>
-<div class="step"><span class="step-num">9</span><p>Place sliced <span class="ing-highlight">bacon</span> on top and cook covered for minutes</p></div>
-<div class="step"><span class="step-num">10</span><p>When bottom is browned, flip over and gently press, cover and cook another 5 minutes</p></div>
-<div class="step"><span class="step-num">11</span><p>Flip one more time and cook for 2 minutes</p></div>
-<div class="step"><span class="step-num">12</span><p>To server, paint with <span class="ing-highlight">okonomiyaki sauce</span></p></div>
-<div class="step"><span class="step-num">13</span><p>Zigzag with <span class="ing-highlight">kewpie</span> mayonaise, sprinkle with thinly sliced <span class="ing-highlight">green onions</span> and <span class="ing-highlight">bonito flakes</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>In a bowl combine <span class="ing-highlight">flour</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">baking powder</span> mix well</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> flour</li><li><span class="step-ing-measure">0.25 tsp</span> salt</li><li><span class="step-ing-measure">1 tsp</span> sugar</li><li><span class="step-ing-measure">0.25 tsp</span> baking powder</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Peel and grate the <span class="ing-highlight">nagaimo</span> into a bowl</p><ul class="step-ingredients"><li><span class="step-ing-measure">160 g</span> nagaimo</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add the naigiamo and <span class="ing-highlight">dashi</span> to the flour mixture</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.75 cups</span> dashi</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Let sit in fridge for minimum of 1 hour up to overnight</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Thinly slice the <span class="ing-highlight">napa cabbage</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">700 g</span> napa cabbage</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add <span class="ing-highlight">eggs</span>, <span class="ing-highlight">tempura scraps</span>, and <span class="ing-highlight">pickled ginger</span> to the batter and mix</p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> eggs</li><li><span class="step-ing-measure">0.5 cups</span> tempura scraps</li><li><span class="step-ing-measure">0.25 cups</span> pickled ginger</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add the cabbage to the batter 1/3 at a time to keep batter light</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Heat a pan to 200°C add <span class="ing-highlight">oil</span> and make a portion of okonomiyaki</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> oil</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Place sliced <span class="ing-highlight">bacon</span> on top and cook covered for minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> bacon</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>When bottom is browned, flip over and gently press, cover and cook another 5 minutes</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Flip one more time and cook for 2 minutes</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>To server, paint with <span class="ing-highlight">okonomiyaki sauce</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> okonomiyaki sauce</li></ul></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Zigzag with <span class="ing-highlight">kewpie</span> mayonaise, sprinkle with thinly sliced <span class="ing-highlight">green onions</span> and <span class="ing-highlight">bonito flakes</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> kewpie</li><li><span class="step-ing-measure">some</span> green onions</li><li><span class="step-ing-measure">some</span> bonito flakes</li></ul></div></div>
     </div>
   </main>
 </body>

@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -439,17 +462,17 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Skin and cut <span class="ing-highlight">chicken legs</span>, mix with <span class="ing-highlight">vinegar</span> and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Let sit for 30 minutes</p></div>
-<div class="step"><span class="step-num">3</span><p>Slice <span class="ing-highlight">onions</span> and fry in <span class="ing-highlight">olive oil</span> until translucent</p></div>
-<div class="step"><span class="step-num">4</span><p>Make a paste from <span class="ing-highlight">walnuts</span> and <span class="ing-highlight">water</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Add chopped <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">cardamom pods</span>, <span class="ing-highlight">nutmeg</span>, <span class="ing-highlight">saffron</span> and <span class="ing-highlight">salt</span> to the onions</p></div>
-<div class="step"><span class="step-num">6</span><p>Cook for 5 minutes</p></div>
-<div class="step"><span class="step-num">7</span><p>Add walnut paste, <span class="ing-highlight">pomegranate syrup</span>, and <span class="ing-highlight">water</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Cook covered on low heat for 1 hour</p></div>
-<div class="step"><span class="step-num">9</span><p>Add <span class="ing-highlight">brown sugar</span>, chicken, and <span class="ing-highlight">dried lime</span></p></div>
-<div class="step"><span class="step-num">10</span><p>Cover and cook on low for 30 minutes</p></div>
-<div class="step"><span class="step-num">11</span><p>Serve with chopped <span class="ing-highlight">cilantro</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Skin and cut <span class="ing-highlight">chicken legs</span>, mix with <span class="ing-highlight">vinegar</span> and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 kg</span> chicken legs</li><li><span class="step-ing-measure">2 tbsp</span> vinegar</li><li><span class="step-ing-measure">1 tbsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Let sit for 30 minutes</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Slice <span class="ing-highlight">onions</span> and fry in <span class="ing-highlight">olive oil</span> until translucent</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> onions</li><li><span class="step-ing-measure">3 tbsp</span> olive oil</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Make a paste from <span class="ing-highlight">walnuts</span> and <span class="ing-highlight">water</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">200 g</span> walnuts</li><li><span class="step-ing-measure">some</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add chopped <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">cardamom pods</span>, <span class="ing-highlight">nutmeg</span>, <span class="ing-highlight">saffron</span> and <span class="ing-highlight">salt</span> to the onions</p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> garlic cloves</li><li><span class="step-ing-measure">2 cm</span> cinnamon stick</li><li><span class="step-ing-measure">4</span> cardamom pods</li><li><span class="step-ing-measure">pinch</span> nutmeg</li><li><span class="step-ing-measure">pinch</span> saffron</li><li><span class="step-ing-measure">some</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Cook for 5 minutes</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add walnut paste, <span class="ing-highlight">pomegranate syrup</span>, and <span class="ing-highlight">water</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">150 ml</span> pomegranate syrup</li><li><span class="step-ing-measure">100 ml</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Cook covered on low heat for 1 hour</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Add <span class="ing-highlight">brown sugar</span>, chicken, and <span class="ing-highlight">dried lime</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> brown sugar</li><li><span class="step-ing-measure">1</span> dried lime</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Cover and cook on low for 30 minutes</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Serve with chopped <span class="ing-highlight">cilantro</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">handful</span> cilantro</li></ul></div></div>
     </div>
   </main>
 </body>

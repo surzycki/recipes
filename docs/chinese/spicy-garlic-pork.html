@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -435,18 +458,18 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Soak tied <span class="ing-highlight">pork roast</span> in cold water for 30 minutes.</p></div>
-<div class="step"><span class="step-num">2</span><p>Fill pan with water and <span class="ing-highlight">salt</span> to make seawater.</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">green onions</span>, smashed <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">shaoxing wine</span>.</p></div>
-<div class="step"><span class="step-num">4</span><p>Bring to a boil and add pork.</p></div>
-<div class="step"><span class="step-num">5</span><p>Boil for 15 minutes</p></div>
-<div class="step"><span class="step-num">6</span><p>Turn off heat and rest in water for 2 hours (internal temperature should reaches 63°C).</p></div>
-<div class="step"><span class="step-num">7</span><p>Remove from water, wrap and store in refrigerator.</p></div>
-<div class="step"><span class="step-num">8</span><p>To make the sauce mix, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">seasoned soy sauce</span>, <span class="ing-highlight">chili oil</span>, <span class="ing-highlight">sesame oil</span>, <span class="ing-highlight">MSG</span>, and <span class="ing-highlight">salt</span>.</p></div>
-<div class="step"><span class="step-num">9</span><p>Thinly slice pork and <span class="ing-highlight">cucumber</span>.</p></div>
-<div class="step"><span class="step-num">10</span><p>Arrange cucumner in the center of the plate in curls and cover with the pork.</p></div>
-<div class="step"><span class="step-num">11</span><p>Pour sauce over pork.</p></div>
-<div class="step"><span class="step-num">12</span><p>Garnish with <span class="ing-highlight">green onions</span>, <span class="ing-highlight">sesame seeds</span>, and roasted crushed <span class="ing-highlight">sichuan peppercorns</span>.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Soak tied <span class="ing-highlight">pork roast</span> in cold water for 30 minutes.</p><ul class="step-ingredients"><li><span class="step-ing-measure">600 g</span> pork roast</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Fill pan with water and <span class="ing-highlight">salt</span> to make seawater.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">green onions</span>, smashed <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">shaoxing wine</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">25 g</span> green onions</li><li><span class="step-ing-measure">4 cm</span> ginger</li><li><span class="step-ing-measure">2 tbsp</span> shaoxing wine</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Bring to a boil and add pork.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Boil for 15 minutes</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Turn off heat and rest in water for 2 hours (internal temperature should reaches 63°C).</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Remove from water, wrap and store in refrigerator.</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>To make the sauce mix, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">seasoned soy sauce</span>, <span class="ing-highlight">chili oil</span>, <span class="ing-highlight">sesame oil</span>, <span class="ing-highlight">MSG</span>, and <span class="ing-highlight">salt</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">50 g</span> garlic cloves</li><li><span class="step-ing-measure">0.5 cup</span> seasoned soy sauce</li><li><span class="step-ing-measure">0.25 cup</span> chili oil</li><li><span class="step-ing-measure">1 tbsp</span> sesame oil</li><li><span class="step-ing-measure">0.25 tsp</span> MSG</li><li><span class="step-ing-measure">0.25 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Thinly slice pork and <span class="ing-highlight">cucumber</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> cucumber</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Arrange cucumner in the center of the plate in curls and cover with the pork.</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Pour sauce over pork.</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Garnish with <span class="ing-highlight">green onions</span>, <span class="ing-highlight">sesame seeds</span>, and roasted crushed <span class="ing-highlight">sichuan peppercorns</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> green onions</li><li><span class="step-ing-measure">1 tbsp</span> sesame seeds</li><li><span class="step-ing-measure">1 tbsp</span> sichuan peppercorns</li></ul></div></div>
     </div>
   </main>
 </body>

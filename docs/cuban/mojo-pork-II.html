@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -433,18 +456,18 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Blend together <span class="ing-highlight">garlic cloves</span>, toasted ground <span class="ing-highlight">cumin seeds</span>, toasted ground <span class="ing-highlight">black peppercorns</span>, juice from <span class="ing-highlight">oranges</span>, juice from <span class="ing-highlight">limes</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Add <span class="ing-highlight">mexican oregano</span> and <span class="ing-highlight">msg</span> to the marinade.</p></div>
-<div class="step"><span class="step-num">3</span><p>Stab a <span class="ing-highlight">pork shoulder</span> repeatedly with a knife and rub the 1/2 marinade all over it.</p></div>
-<div class="step"><span class="step-num">4</span><p>Bag it up and let it sit in the fridge for 24 hrs</p></div>
-<div class="step"><span class="step-num">5</span><p>Remove the pork from the bag and place it in a covered baking pan.</p></div>
-<div class="step"><span class="step-num">6</span><p>Add marinate to the pan and <span class="ing-highlight">white wine</span> to the pan.</p></div>
-<div class="step"><span class="step-num">7</span><p>Salt generously.</p></div>
-<div class="step"><span class="step-num">8</span><p>Cook it in a 120°C oven for 3 hrs covered.</p></div>
-<div class="step"><span class="step-num">9</span><p>Remove the cover and cook for another 3 hr until the pork is tender and internal temp is 91°C.</p></div>
-<div class="step"><span class="step-num">10</span><p>At the end turn on broiler and brown pork for 5 min.</p></div>
-<div class="step"><span class="step-num">11</span><p>Remove the pork from oven let it rest covered for 30 min.</p></div>
-<div class="step"><span class="step-num">12</span><p>Mix remaining marinate with pan juices.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Blend together <span class="ing-highlight">garlic cloves</span>, toasted ground <span class="ing-highlight">cumin seeds</span>, toasted ground <span class="ing-highlight">black peppercorns</span>, juice from <span class="ing-highlight">oranges</span>, juice from <span class="ing-highlight">limes</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">8</span> garlic cloves</li><li><span class="step-ing-measure">2 tsp</span> cumin seeds</li><li><span class="step-ing-measure">2 tsp</span> black peppercorns</li><li><span class="step-ing-measure">120 ml</span> oranges</li><li><span class="step-ing-measure">60 ml</span> limes</li><li><span class="step-ing-measure">60 ml</span> olive oil</li><li><span class="step-ing-measure">1 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add <span class="ing-highlight">mexican oregano</span> and <span class="ing-highlight">msg</span> to the marinade.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> mexican oregano</li><li><span class="step-ing-measure">1 tsp</span> msg</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Stab a <span class="ing-highlight">pork shoulder</span> repeatedly with a knife and rub the 1/2 marinade all over it.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 kg</span> pork shoulder</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Bag it up and let it sit in the fridge for 24 hrs</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Remove the pork from the bag and place it in a covered baking pan.</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add marinate to the pan and <span class="ing-highlight">white wine</span> to the pan.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> white wine</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Salt generously.</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Cook it in a 120°C oven for 3 hrs covered.</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Remove the cover and cook for another 3 hr until the pork is tender and internal temp is 91°C.</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>At the end turn on broiler and brown pork for 5 min.</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Remove the pork from oven let it rest covered for 30 min.</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Mix remaining marinate with pan juices.</p></div></div>
     </div>
   </main>
 </body>

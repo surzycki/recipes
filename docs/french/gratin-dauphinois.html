@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -430,14 +453,14 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Boil <span class="ing-highlight">whole milk</span>, <span class="ing-highlight">heavy cream</span>, <span class="ing-highlight">onion</span> cut in half, <span class="ing-highlight">garlic cloves</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Turn heat and let steep for 10 minutes</p></div>
-<div class="step"><span class="step-num">3</span><p>Remove the onion and garlic and add sliced <span class="ing-highlight">russet potatoes</span>, <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Boil and then simmer gently for 15 minutes</p></div>
-<div class="step"><span class="step-num">5</span><p>Add grated <span class="ing-highlight">gruyere</span> and ground <span class="ing-highlight">black peppercorns</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Put in 28cm x 20cm baking dish</p></div>
-<div class="step"><span class="step-num">7</span><p>Cook for 50 minutes at 200°C</p></div>
-<div class="step"><span class="step-num">8</span><p>Let site at least 15 minutes once out of the oven</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Boil <span class="ing-highlight">whole milk</span>, <span class="ing-highlight">heavy cream</span>, <span class="ing-highlight">onion</span> cut in half, <span class="ing-highlight">garlic cloves</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">750 ml</span> whole milk</li><li><span class="step-ing-measure">250 ml</span> heavy cream</li><li><span class="step-ing-measure">1</span> onion</li><li><span class="step-ing-measure">3</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Turn heat and let steep for 10 minutes</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Remove the onion and garlic and add sliced <span class="ing-highlight">russet potatoes</span>, <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 kg</span> russet potatoes</li><li><span class="step-ing-measure">1 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Boil and then simmer gently for 15 minutes</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add grated <span class="ing-highlight">gruyere</span> and ground <span class="ing-highlight">black peppercorns</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">100 g</span> gruyere</li><li><span class="step-ing-measure">0.5 tsp</span> black peppercorns</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Put in 28cm x 20cm baking dish</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Cook for 50 minutes at 200°C</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Let site at least 15 minutes once out of the oven</p></div></div>
     </div>
   </main>
 </body>

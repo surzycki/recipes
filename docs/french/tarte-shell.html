@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,22 +452,22 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Beat room temp <span class="ing-highlight">butter</span> with <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Sift in <span class="ing-highlight">powdered sugar</span>, <span class="ing-highlight">almond flour</span>, <span class="ing-highlight">corn starch</span> together</p></div>
-<div class="step"><span class="step-num">3</span><p>Beat lightly until combined</p></div>
-<div class="step"><span class="step-num">4</span><p>Add room temp <span class="ing-highlight">eggs</span> gradually and mix</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">flour</span> and mix well</p></div>
-<div class="step"><span class="step-num">6</span><p>Use bench scraper to and silicon mat to 'Fraiser' the dough</p></div>
-<div class="step"><span class="step-num">7</span><p>Between parchment paper, roll out dough to 3mm thickness, if it extends beyond the parchment paper, trim it, and glue it back elsewhere</p></div>
-<div class="step"><span class="step-num">8</span><p>Rest in the cold for 1 hour</p></div>
-<div class="step"><span class="step-num">9</span><p>Grease the tart shell with butter</p></div>
-<div class="step"><span class="step-num">10</span><p>Using the tart ring cut a circle of the dough</p></div>
-<div class="step"><span class="step-num">11</span><p>Place on a lightly buttered perforated baking sheet</p></div>
-<div class="step"><span class="step-num">12</span><p>Cut out strips of dough and line the tart ring</p></div>
-<div class="step"><span class="step-num">13</span><p>Trim excess dough</p></div>
-<div class="step"><span class="step-num">14</span><p>Put in freezer for 30 minutes</p></div>
-<div class="step"><span class="step-num">15</span><p>Bake in oven for 15 minutes at 170°C</p></div>
-<div class="step"><span class="step-num">16</span><p>Let cook completely before removing from the ring</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Beat room temp <span class="ing-highlight">butter</span> with <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">100 g</span> butter</li><li><span class="step-ing-measure">1 pinch</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Sift in <span class="ing-highlight">powdered sugar</span>, <span class="ing-highlight">almond flour</span>, <span class="ing-highlight">corn starch</span> together</p><ul class="step-ingredients"><li><span class="step-ing-measure">72 g</span> powdered sugar</li><li><span class="step-ing-measure">20 g</span> almond flour</li><li><span class="step-ing-measure">30 g</span> corn starch</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Beat lightly until combined</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add room temp <span class="ing-highlight">eggs</span> gradually and mix</p><ul class="step-ingredients"><li><span class="step-ing-measure">36 g</span> eggs</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">flour</span> and mix well</p><ul class="step-ingredients"><li><span class="step-ing-measure">170 g</span> flour</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Use bench scraper to and silicon mat to 'Fraiser' the dough</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Between parchment paper, roll out dough to 3mm thickness, if it extends beyond the parchment paper, trim it, and glue it back elsewhere</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Rest in the cold for 1 hour</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Grease the tart shell with butter</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Using the tart ring cut a circle of the dough</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Place on a lightly buttered perforated baking sheet</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Cut out strips of dough and line the tart ring</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Trim excess dough</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Put in freezer for 30 minutes</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Bake in oven for 15 minutes at 170°C</p></div></div>
+<div class="step"><span class="step-num">16</span><div class="step-content"><p>Let cook completely before removing from the ring</p></div></div>
     </div>
   </main>
 </body>

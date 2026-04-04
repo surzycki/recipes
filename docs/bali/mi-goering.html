@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -440,18 +463,18 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Undercook dried <span class="ing-highlight">egg noodles</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Place <span class="ing-highlight">shallots</span>, <span class="ing-highlight">garlic cloves</span>, and <span class="ing-highlight">candlenuts</span> in food processor to make paste.</p></div>
-<div class="step"><span class="step-num">3</span><p>Heat <span class="ing-highlight">coconut oil</span> and add cubed <span class="ing-highlight">chicken breast</span>.</p></div>
-<div class="step"><span class="step-num">4</span><p>Cook until heated through, set aside.</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">coconut oil</span> and scramble <span class="ing-highlight">eggs</span> in large chuncks</p></div>
-<div class="step"><span class="step-num">6</span><p>Set aside.</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">coconut oil</span> cook the paste from above until brown then and add sliced <span class="ing-highlight">leek</span> sticks.</p></div>
-<div class="step"><span class="step-num">8</span><p>Add shredded <span class="ing-highlight">napa cabbage</span> and cook for 1 minute then add <span class="ing-highlight">water</span></p></div>
-<div class="step"><span class="step-num">9</span><p>Add quartered <span class="ing-highlight">tomatoes</span> and sliced <span class="ing-highlight">chinese sausage</span></p></div>
-<div class="step"><span class="step-num">10</span><p>Add everything back in with the vegetables (eggs, meat)</p></div>
-<div class="step"><span class="step-num">11</span><p>Add <span class="ing-highlight">oyster sauce</span>, <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">kecap manis</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">chili paste</span>, and <span class="ing-highlight">white pepper</span></p></div>
-<div class="step"><span class="step-num">12</span><p>Garnish with fried shallots</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Undercook dried <span class="ing-highlight">egg noodles</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">250 g</span> egg noodles</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Place <span class="ing-highlight">shallots</span>, <span class="ing-highlight">garlic cloves</span>, and <span class="ing-highlight">candlenuts</span> in food processor to make paste.</p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> shallots</li><li><span class="step-ing-measure">4</span> garlic cloves</li><li><span class="step-ing-measure">5</span> candlenuts</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Heat <span class="ing-highlight">coconut oil</span> and add cubed <span class="ing-highlight">chicken breast</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> coconut oil</li><li><span class="step-ing-measure">300 g</span> chicken breast</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Cook until heated through, set aside.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">coconut oil</span> and scramble <span class="ing-highlight">eggs</span> in large chuncks</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> coconut oil</li><li><span class="step-ing-measure">3</span> eggs</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Set aside.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">coconut oil</span> cook the paste from above until brown then and add sliced <span class="ing-highlight">leek</span> sticks.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> coconut oil</li><li><span class="step-ing-measure">1</span> leek</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add shredded <span class="ing-highlight">napa cabbage</span> and cook for 1 minute then add <span class="ing-highlight">water</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 cups</span> napa cabbage</li><li><span class="step-ing-measure">0.25 cup</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Add quartered <span class="ing-highlight">tomatoes</span> and sliced <span class="ing-highlight">chinese sausage</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> tomatoes</li><li><span class="step-ing-measure">4</span> chinese sausage</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Add everything back in with the vegetables (eggs, meat)</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Add <span class="ing-highlight">oyster sauce</span>, <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">kecap manis</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">chili paste</span>, and <span class="ing-highlight">white pepper</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbps</span> oyster sauce</li><li><span class="step-ing-measure">1 tbsp</span> brown sugar</li><li><span class="step-ing-measure">3 tbsp</span> kecap manis</li><li><span class="step-ing-measure">3 tbsp</span> soy sauce</li><li><span class="step-ing-measure">2 tbsp</span> chili paste</li><li><span class="step-ing-measure">0.5 tsp</span> white pepper</li></ul></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Garnish with fried shallots</p></div></div>
     </div>
   </main>
 </body>

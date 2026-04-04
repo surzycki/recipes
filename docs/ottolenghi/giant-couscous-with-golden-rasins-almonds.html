@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -435,16 +458,16 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Dry toast <span class="ing-highlight">giant couscous</span> until some color 5 minutes</p></div>
-<div class="step"><span class="step-num">2</span><p>Add <span class="ing-highlight">vegetable stock</span>, <span class="ing-highlight">salt</span>, bring to boil, cover and simmer 10 minutes</p></div>
-<div class="step"><span class="step-num">3</span><p>Remove from heat, let sit covered for 10 minutes</p></div>
-<div class="step"><span class="step-num">4</span><p>Mix in <span class="ing-highlight">olive oil</span> and let cool</p></div>
-<div class="step"><span class="step-num">5</span><p>Soak <span class="ing-highlight">golden raisins</span> in boiling water for 10 minutes</p></div>
-<div class="step"><span class="step-num">6</span><p>Toast and crush <span class="ing-highlight">cumin seed</span></p></div>
-<div class="step"><span class="step-num">7</span><p>Toast <span class="ing-highlight">almond slivers</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Mix cumin, rasins, almond, chopped <span class="ing-highlight">dill</span>, and chopped <span class="ing-highlight">basil</span> into couscous</p></div>
-<div class="step"><span class="step-num">9</span><p>Blend <span class="ing-highlight">parsely</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">garlic clove</span>, salt, and <span class="ing-highlight">pepper</span> until smooth</p></div>
-<div class="step"><span class="step-num">10</span><p>Spoon oil on top before serving</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Dry toast <span class="ing-highlight">giant couscous</span> until some color 5 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">250 g</span> giant couscous</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add <span class="ing-highlight">vegetable stock</span>, <span class="ing-highlight">salt</span>, bring to boil, cover and simmer 10 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">500 ml</span> vegetable stock</li><li><span class="step-ing-measure">1 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Remove from heat, let sit covered for 10 minutes</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Mix in <span class="ing-highlight">olive oil</span> and let cool</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> olive oil</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Soak <span class="ing-highlight">golden raisins</span> in boiling water for 10 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">60 g</span> golden raisins</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Toast and crush <span class="ing-highlight">cumin seed</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 tsp</span> cumin seed</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Toast <span class="ing-highlight">almond slivers</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">60 g</span> almond slivers</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Mix cumin, rasins, almond, chopped <span class="ing-highlight">dill</span>, and chopped <span class="ing-highlight">basil</span> into couscous</p><ul class="step-ingredients"><li><span class="step-ing-measure">15 g</span> dill</li><li><span class="step-ing-measure">15 g</span> basil</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Blend <span class="ing-highlight">parsely</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">garlic clove</span>, salt, and <span class="ing-highlight">pepper</span> until smooth</p><ul class="step-ingredients"><li><span class="step-ing-measure">15 g</span> parsely</li><li><span class="step-ing-measure">60 ml</span> olive oil</li><li><span class="step-ing-measure">1</span> garlic clove</li><li><span class="step-ing-measure">some</span> salt,</li><li><span class="step-ing-measure">some</span> pepper</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Spoon oil on top before serving</p></div></div>
     </div>
   </main>
 </body>

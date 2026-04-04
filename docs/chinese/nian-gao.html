@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -438,21 +461,21 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Marinate julienned <span class="ing-highlight">pork shoulder</span> with <span class="ing-highlight">water</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">sesame <span class="ing-highlight">oil</span></span>, <span class="ing-highlight">white pepper</span>, <span class="ing-highlight">oil</span>, and <span class="ing-highlight">cornstarch</span>.</p></div>
-<div class="step"><span class="step-num">2</span><p>Let sit for 30 minutes.</p></div>
-<div class="step"><span class="step-num">3</span><p>Rinse and drain <span class="ing-highlight">chinese rice cakes</span>.</p></div>
-<div class="step"><span class="step-num">4</span><p>Wash and prep <span class="ing-highlight">bok choy</span>, <span class="ing-highlight">garlic cloves</span>, and sliced <span class="ing-highlight">green onions</span>.</p></div>
-<div class="step"><span class="step-num">5</span><p>Soak and slice <span class="ing-highlight">dried shitake mushrooms</span>. Save soaking liquid.</p></div>
-<div class="step"><span class="step-num">6</span><p>Heat wok over high heat. Add <span class="ing-highlight">oil</span>, then stir-fry pork and garlic until opaque.</p></div>
-<div class="step"><span class="step-num">7</span><p>Add mushrooms, then stir-fry 1 minute.</p></div>
-<div class="step"><span class="step-num">8</span><p>Add green onions, bok choy, and <span class="ing-highlight">shaoxing wine</span>.</p></div>
-<div class="step"><span class="step-num">9</span><p>Stir-fry 30 seconds.</p></div>
-<div class="step"><span class="step-num">10</span><p>Push mixture to center, add rice cakes on top.</p></div>
-<div class="step"><span class="step-num">11</span><p>Pour in <span class="ing-highlight">water</span> or soaking liquid.</p></div>
-<div class="step"><span class="step-num">12</span><p>Cover and steam 2 minutes.</p></div>
-<div class="step"><span class="step-num">13</span><p>Uncover, add <span class="ing-highlight">sesame oil</span>, <span class="ing-highlight">dark <span class="ing-highlight">soy sauce</span></span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">oyster sauce</span>, <span class="ing-highlight">white pepper</span>, and <span class="ing-highlight">sugar</span>.</p></div>
-<div class="step"><span class="step-num">14</span><p>Stir-fry 1 minute.</p></div>
-<div class="step"><span class="step-num">15</span><p>Season with <span class="ing-highlight">salt</span> to taste. Stir-fry until rice cakes are chewy and coated. Serve.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Marinate julienned <span class="ing-highlight">pork shoulder</span> with <span class="ing-highlight">water</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">sesame <span class="ing-highlight">oil</span></span>, <span class="ing-highlight">white pepper</span>, <span class="ing-highlight">oil</span>, and <span class="ing-highlight">cornstarch</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">225 g</span> pork shoulder</li><li><span class="step-ing-measure">1 tbsp</span> water</li><li><span class="step-ing-measure">2 tsp</span> soy sauce</li><li><span class="step-ing-measure">0.5 tsp</span> sesame oil</li><li><span class="step-ing-measure">0.25 tsp</span> white pepper</li><li><span class="step-ing-measure">1 tsp</span> oil</li><li><span class="step-ing-measure">1 tsp</span> cornstarch</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Let sit for 30 minutes.</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Rinse and drain <span class="ing-highlight">chinese rice cakes</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">450 g</span> chinese rice cakes</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Wash and prep <span class="ing-highlight">bok choy</span>, <span class="ing-highlight">garlic cloves</span>, and sliced <span class="ing-highlight">green onions</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">225 g</span> bok choy</li><li><span class="step-ing-measure">2</span> garlic cloves</li><li><span class="step-ing-measure">3</span> green onions</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Soak and slice <span class="ing-highlight">dried shitake mushrooms</span>. Save soaking liquid.</p><ul class="step-ingredients"><li><span class="step-ing-measure">6</span> dried shitake mushrooms</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Heat wok over high heat. Add <span class="ing-highlight">oil</span>, then stir-fry pork and garlic until opaque.</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 tbsp</span> oil</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add mushrooms, then stir-fry 1 minute.</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add green onions, bok choy, and <span class="ing-highlight">shaoxing wine</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> shaoxing wine</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Stir-fry 30 seconds.</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Push mixture to center, add rice cakes on top.</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Pour in <span class="ing-highlight">water</span> or soaking liquid.</p><ul class="step-ingredients"><li><span class="step-ing-measure">120-180 ml</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Cover and steam 2 minutes.</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Uncover, add <span class="ing-highlight">sesame oil</span>, <span class="ing-highlight">dark <span class="ing-highlight">soy sauce</span></span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">oyster sauce</span>, <span class="ing-highlight">white pepper</span>, and <span class="ing-highlight">sugar</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 tsp</span> sesame oil</li><li><span class="step-ing-measure">1.5 tsp</span> dark soy sauce</li><li><span class="step-ing-measure">1 tbsp</span> soy sauce</li><li><span class="step-ing-measure">2 tsp</span> oyster sauce</li><li><span class="step-ing-measure">0.25 tsp</span> white pepper</li><li><span class="step-ing-measure">0.5 tsp</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Stir-fry 1 minute.</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Season with <span class="ing-highlight">salt</span> to taste. Stir-fry until rice cakes are chewy and coated. Serve.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> salt</li></ul></div></div>
     </div>
   </main>
 </body>

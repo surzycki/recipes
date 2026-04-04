@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -431,22 +454,22 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Combine <span class="ing-highlight">flour</span> and <span class="ing-highlight">salt</span> in mixer</p></div>
-<div class="step"><span class="step-num">2</span><p>Start on slow speed and add <span class="ing-highlight">water</span>, boiling 0.5cups then cold <span class="ing-highlight">water</span> 0.25cups</p></div>
-<div class="step"><span class="step-num">3</span><p>Turn up speed and knead for about 3 minutes cover and rest 20 minutes</p></div>
-<div class="step"><span class="step-num">4</span><p>Combine <span class="ing-highlight">flour</span>, <span class="ing-highlight">oil</span>, sesame <span class="ing-highlight">oil</span> and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Cut <span class="ing-highlight">green onions</span> down the middle then slice</p></div>
-<div class="step"><span class="step-num">6</span><p>After dough has rested mix again for a minute and cut into 80g pieces</p></div>
-<div class="step"><span class="step-num">7</span><p>Roll dough into rectangle, aprrox (15x25cm)</p></div>
-<div class="step"><span class="step-num">8</span><p>Spoon 1Tbsp of filling on the dough and spread (leave 1cm around edges)</p></div>
-<div class="step"><span class="step-num">9</span><p>Spoon 2Tbsp of green onions on the dough in loose L shape</p></div>
-<div class="step"><span class="step-num">10</span><p>Roll a tube width-wise starting on the corner of the L</p></div>
-<div class="step"><span class="step-num">11</span><p>The roll into disc starting from the size with the most onions, seal</p></div>
-<div class="step"><span class="step-num">12</span><p>Press down gently to fully seal</p></div>
-<div class="step"><span class="step-num">13</span><p>Roll each pancake in to a circle 17-20cm</p></div>
-<div class="step"><span class="step-num">14</span><p>Can freeze them now, and before cooking thaw for 10 minutes</p></div>
-<div class="step"><span class="step-num">15</span><p>Cook on medium heat covered flipping every minute until evenly cooked</p></div>
-<div class="step"><span class="step-num">16</span><p>For dipping sauce mix <span class="ing-highlight">soy sauce</span>, minced <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">sugar</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Combine <span class="ing-highlight">flour</span> and <span class="ing-highlight">salt</span> in mixer</p><ul class="step-ingredients"><li><span class="step-ing-measure">300 g</span> flour</li><li><span class="step-ing-measure">0.5 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Start on slow speed and add <span class="ing-highlight">water</span>, boiling 0.5cups then cold <span class="ing-highlight">water</span> 0.25cups</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.75 cup</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Turn up speed and knead for about 3 minutes cover and rest 20 minutes</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Combine <span class="ing-highlight">flour</span>, <span class="ing-highlight">oil</span>, sesame <span class="ing-highlight">oil</span> and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">50 g</span> flour</li><li><span class="step-ing-measure">0.25 cup</span> oil</li><li><span class="step-ing-measure">1 tbsp</span> sesame oil</li><li><span class="step-ing-measure">0.75 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Cut <span class="ing-highlight">green onions</span> down the middle then slice</p><ul class="step-ingredients"><li><span class="step-ing-measure">10</span> green onions</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>After dough has rested mix again for a minute and cut into 80g pieces</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Roll dough into rectangle, aprrox (15x25cm)</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Spoon 1Tbsp of filling on the dough and spread (leave 1cm around edges)</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Spoon 2Tbsp of green onions on the dough in loose L shape</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Roll a tube width-wise starting on the corner of the L</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>The roll into disc starting from the size with the most onions, seal</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Press down gently to fully seal</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Roll each pancake in to a circle 17-20cm</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Can freeze them now, and before cooking thaw for 10 minutes</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Cook on medium heat covered flipping every minute until evenly cooked</p></div></div>
+<div class="step"><span class="step-num">16</span><div class="step-content"><p>For dipping sauce mix <span class="ing-highlight">soy sauce</span>, minced <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">sugar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 tbsp), @black vinegar{1%tbsp</span> soy sauce</li><li><span class="step-ing-measure">1 tsp</span> ginger</li><li><span class="step-ing-measure">0.25 tsp</span> sugar</li></ul></div></div>
     </div>
   </main>
 </body>

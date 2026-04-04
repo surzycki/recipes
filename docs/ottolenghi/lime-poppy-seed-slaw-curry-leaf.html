@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -439,15 +462,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Put <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">turmeric</span>, and <span class="ing-highlight">water</span> in pan</p></div>
-<div class="step"><span class="step-num">2</span><p>Bring to boil, add roasted <span class="ing-highlight">cashew nuts</span> and <span class="ing-highlight">cumin seeds</span>, and cook until sticky glaze</p></div>
-<div class="step"><span class="step-num">3</span><p>Transfer to baking tray and bake at 160C for 15 minutes, stirring occasionally</p></div>
-<div class="step"><span class="step-num">4</span><p>Remove let cool</p></div>
-<div class="step"><span class="step-num">5</span><p>Cook thinly sliced <span class="ing-highlight">red chili</span> and <span class="ing-highlight">olive oil</span> for 10 minutes on medium</p></div>
-<div class="step"><span class="step-num">6</span><p>Add  <span class="ing-highlight">curry leaves</span> cook for 5 minutes and transfer to a bowl</p></div>
-<div class="step"><span class="step-num">7</span><p>Put juice from <span class="ing-highlight">limes</span> 70ml, <span class="ing-highlight">mustard</span>, <span class="ing-highlight">garlic clove</span>, <span class="ing-highlight">olive oil</span>, and <span class="ing-highlight">salt</span> in bowl set aside</p></div>
-<div class="step"><span class="step-num">8</span><p>Combine sliced <span class="ing-highlight">cabbage</span>, <span class="ing-highlight">carrot</span>, <span class="ing-highlight">red onion</span>, leaves of <span class="ing-highlight">cilantro</span>, and <span class="ing-highlight">mint</span> in bowl with dressing</p></div>
-<div class="step"><span class="step-num">9</span><p>Drizzle curry oil and sprinkly with turmeric casheews</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Put <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">turmeric</span>, and <span class="ing-highlight">water</span> in pan</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> brown sugar</li><li><span class="step-ing-measure">2 tsp</span> olive oil</li><li><span class="step-ing-measure">1 tsp</span> turmeric</li><li><span class="step-ing-measure">2 tbsp</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Bring to boil, add roasted <span class="ing-highlight">cashew nuts</span> and <span class="ing-highlight">cumin seeds</span>, and cook until sticky glaze</p><ul class="step-ingredients"><li><span class="step-ing-measure">200 g</span> cashew nuts</li><li><span class="step-ing-measure">2 tsp</span> cumin seeds</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Transfer to baking tray and bake at 160C for 15 minutes, stirring occasionally</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Remove let cool</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Cook thinly sliced <span class="ing-highlight">red chili</span> and <span class="ing-highlight">olive oil</span> for 10 minutes on medium</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> red chili</li><li><span class="step-ing-measure">3 tbsp</span> olive oil</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add  <span class="ing-highlight">curry leaves</span> cook for 5 minutes and transfer to a bowl</p><ul class="step-ingredients"><li><span class="step-ing-measure">20</span> curry leaves</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Put juice from <span class="ing-highlight">limes</span> 70ml, <span class="ing-highlight">mustard</span>, <span class="ing-highlight">garlic clove</span>, <span class="ing-highlight">olive oil</span>, and <span class="ing-highlight">salt</span> in bowl set aside</p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> limes</li><li><span class="step-ing-measure">2 tsp</span> mustard</li><li><span class="step-ing-measure">2</span> garlic clove</li><li><span class="step-ing-measure">75 ml</span> olive oil</li><li><span class="step-ing-measure">some</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Combine sliced <span class="ing-highlight">cabbage</span>, <span class="ing-highlight">carrot</span>, <span class="ing-highlight">red onion</span>, leaves of <span class="ing-highlight">cilantro</span>, and <span class="ing-highlight">mint</span> in bowl with dressing</p><ul class="step-ingredients"><li><span class="step-ing-measure">700 g</span> cabbage</li><li><span class="step-ing-measure">180 g</span> carrot</li><li><span class="step-ing-measure">1</span> red onion</li><li><span class="step-ing-measure">15 g</span> cilantro</li><li><span class="step-ing-measure">5 g</span> mint</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Drizzle curry oil and sprinkly with turmeric casheews</p></div></div>
     </div>
   </main>
 </body>

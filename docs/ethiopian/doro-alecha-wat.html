@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -434,15 +457,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Cut <span class="ing-highlight">chicken legs</span> remove skin, put in cold water with lemon and salt</p></div>
-<div class="step"><span class="step-num">2</span><p>Cook chopped <span class="ing-highlight">onions</span>, carmelize in pot, little water at a time</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">nitter kibbeh</span> and <span class="ing-highlight">ginger</span>, cook</p></div>
-<div class="step"><span class="step-num">4</span><p>Add garlic cloves , <span class="ing-highlight">tomatoes</span>, <span class="ing-highlight">turmeric</span>, <span class="ing-highlight">white wine</span>, <span class="ing-highlight">korerima</span>, <span class="ing-highlight">cinnamon</span>, and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Let simmer for 3 hours</p></div>
-<div class="step"><span class="step-num">6</span><p>Add chicken, add water if necessary to cover chicken</p></div>
-<div class="step"><span class="step-num">7</span><p>Let simmer for 1 hour</p></div>
-<div class="step"><span class="step-num">8</span><p>Add <span class="ing-highlight">honey</span> and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">9</span><p>Slit hard boilded <span class="ing-highlight">eggs</span> and drop in last minute</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Cut <span class="ing-highlight">chicken legs</span> remove skin, put in cold water with lemon and salt</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> chicken legs</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Cook chopped <span class="ing-highlight">onions</span>, carmelize in pot, little water at a time</p><ul class="step-ingredients"><li><span class="step-ing-measure">6-8</span> onions</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">nitter kibbeh</span> and <span class="ing-highlight">ginger</span>, cook</p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 c</span> nitter kibbeh</li><li><span class="step-ing-measure">2T</span> ginger</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add garlic cloves , <span class="ing-highlight">tomatoes</span>, <span class="ing-highlight">turmeric</span>, <span class="ing-highlight">white wine</span>, <span class="ing-highlight">korerima</span>, <span class="ing-highlight">cinnamon</span>, and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">10</span> garlic cloves </li><li><span class="step-ing-measure">2</span> tomatoes</li><li><span class="step-ing-measure">1.5 tbsp</span> turmeric</li><li><span class="step-ing-measure">1 c</span> white wine</li><li><span class="step-ing-measure">1.5 tsp</span> korerima</li><li><span class="step-ing-measure">1 tsp</span> cinnamon</li><li><span class="step-ing-measure">1 tbsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Let simmer for 3 hours</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add chicken, add water if necessary to cover chicken</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Let simmer for 1 hour</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add <span class="ing-highlight">honey</span> and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> honey</li><li><span class="step-ing-measure">1 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Slit hard boilded <span class="ing-highlight">eggs</span> and drop in last minute</p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> eggs</li></ul></div></div>
     </div>
   </main>
 </body>

@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -445,19 +468,19 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Heat <span class="ing-highlight">ghee</span> and add <span class="ing-highlight">onions</span> that have been blended with a bit of water</p></div>
-<div class="step"><span class="step-num">2</span><p>Add spices, <span class="ing-highlight">black cardamom pod</span>, <span class="ing-highlight">green cardamom pods</span>, <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">black peppercorns</span>,</p></div>
-<div class="step"><span class="step-num">3</span><p><span class="ing-highlight">cloves</span>, <span class="ing-highlight">bay leaf</span>, <span class="ing-highlight">cumin seeds</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Cook until starts to brown</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">ginger</span> paste, <span class="ing-highlight">garlic cloves</span> paste, <span class="ing-highlight">green chili</span> paste</p></div>
-<div class="step"><span class="step-num">6</span><p>Cook for a couple minutes then add chunks of <span class="ing-highlight">lamb shoulder</span> and cook until brown and oil starts to come out</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">salt</span>, <span class="ing-highlight">turmeric</span> ground <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">chili powder</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Cook for a while then add <span class="ing-highlight">water</span></p></div>
-<div class="step"><span class="step-num">9</span><p>Cook low heat until oil starts to come out</p></div>
-<div class="step"><span class="step-num">10</span><p>Add <span class="ing-highlight">yogurt</span> simmer until oil comes out</p></div>
-<div class="step"><span class="step-num">11</span><p>Add <span class="ing-highlight">saffran</span>, <span class="ing-highlight">mace</span>, and <span class="ing-highlight">nutmeg</span></p></div>
-<div class="step"><span class="step-num">12</span><p>Cover and simmer on low until oil comes out and meat is tender</p></div>
-<div class="step"><span class="step-num">13</span><p>Garnish with <span class="ing-highlight">cilantro</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Heat <span class="ing-highlight">ghee</span> and add <span class="ing-highlight">onions</span> that have been blended with a bit of water</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cup</span> ghee</li><li><span class="step-ing-measure">2</span> onions</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add spices, <span class="ing-highlight">black cardamom pod</span>, <span class="ing-highlight">green cardamom pods</span>, <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">black peppercorns</span>,</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> black cardamom pod</li><li><span class="step-ing-measure">4</span> green cardamom pods</li><li><span class="step-ing-measure">3 cm</span> cinnamon stick</li><li><span class="step-ing-measure">0.5 tsp</span> black peppercorns</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p><span class="ing-highlight">cloves</span>, <span class="ing-highlight">bay leaf</span>, <span class="ing-highlight">cumin seeds</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> cloves</li><li><span class="step-ing-measure">1</span> bay leaf</li><li><span class="step-ing-measure">1 tsp</span> cumin seeds</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Cook until starts to brown</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">ginger</span> paste, <span class="ing-highlight">garlic cloves</span> paste, <span class="ing-highlight">green chili</span> paste</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> ginger</li><li><span class="step-ing-measure">1 tbsp</span> garlic cloves</li><li><span class="step-ing-measure">1 tbsp</span> green chili</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Cook for a couple minutes then add chunks of <span class="ing-highlight">lamb shoulder</span> and cook until brown and oil starts to come out</p><ul class="step-ingredients"><li><span class="step-ing-measure">750 g</span> lamb shoulder</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">salt</span>, <span class="ing-highlight">turmeric</span> ground <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">chili powder</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> salt</li><li><span class="step-ing-measure">1 tsp</span> turmeric</li><li><span class="step-ing-measure">1 tsp</span> corriander seeds</li><li><span class="step-ing-measure">1.5 tsp</span> chili powder</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Cook for a while then add <span class="ing-highlight">water</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 cups</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Cook low heat until oil starts to come out</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Add <span class="ing-highlight">yogurt</span> simmer until oil comes out</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> yogurt</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Add <span class="ing-highlight">saffran</span>, <span class="ing-highlight">mace</span>, and <span class="ing-highlight">nutmeg</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 pinch</span> saffran</li><li><span class="step-ing-measure">0.5 tsp</span> mace</li><li><span class="step-ing-measure">0.5 tsp</span> nutmeg</li></ul></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Cover and simmer on low until oil comes out and meat is tender</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Garnish with <span class="ing-highlight">cilantro</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> cilantro</li></ul></div></div>
     </div>
   </main>
 </body>

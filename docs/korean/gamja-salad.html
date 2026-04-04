@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -428,15 +451,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Dice <span class="ing-highlight">cucumber</span> put in bowl with salt, let sit, strain and remove excess water</p></div>
-<div class="step"><span class="step-num">2</span><p>Hardboil <span class="ing-highlight">eggs</span> and separate white from yellow, dice white</p></div>
-<div class="step"><span class="step-num">3</span><p>Peel, chop and rinse <span class="ing-highlight">russet potatoes</span> into 2cm slices</p></div>
-<div class="step"><span class="step-num">4</span><p>Put potatoes in pan cover with water and salt, cook 20 minutes</p></div>
-<div class="step"><span class="step-num">5</span><p>Remove water and simmer potatoes to remove excess water</p></div>
-<div class="step"><span class="step-num">6</span><p>Mash potatoes with egg yolks</p></div>
-<div class="step"><span class="step-num">7</span><p>Add egg whites, cucumber, <span class="ing-highlight">white pepper</span>, and <span class="ing-highlight">sugar</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Add <span class="ing-highlight">mayonnaise</span> and mix well</p></div>
-<div class="step"><span class="step-num">9</span><p>Serve room temp or chilled</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Dice <span class="ing-highlight">cucumber</span> put in bowl with salt, let sit, strain and remove excess water</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> cucumber</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Hardboil <span class="ing-highlight">eggs</span> and separate white from yellow, dice white</p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> eggs</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Peel, chop and rinse <span class="ing-highlight">russet potatoes</span> into 2cm slices</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> russet potatoes</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Put potatoes in pan cover with water and salt, cook 20 minutes</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Remove water and simmer potatoes to remove excess water</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Mash potatoes with egg yolks</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add egg whites, cucumber, <span class="ing-highlight">white pepper</span>, and <span class="ing-highlight">sugar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 tsp</span> white pepper</li><li><span class="step-ing-measure">4 tbsp</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add <span class="ing-highlight">mayonnaise</span> and mix well</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> mayonnaise</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Serve room temp or chilled</p></div></div>
     </div>
   </main>
 </body>

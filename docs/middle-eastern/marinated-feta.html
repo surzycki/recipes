@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -430,12 +453,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Put pan on high heat and add <span class="ing-highlight">garlic cloves</span> until charred</p></div>
-<div class="step"><span class="step-num">2</span><p>Add peel of <span class="ing-highlight">lemon</span> and <span class="ing-highlight">bay leaves</span> until lightly charred</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">chili flakes</span> until well toasted</p></div>
-<div class="step"><span class="step-num">4</span><p>Remove from heat add <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">smoked paprika</span>, and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">feta</span> to oil and leave out to marinate.</p></div>
-<div class="step"><span class="step-num">6</span><p>Can be stored in fridge.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Put pan on high heat and add <span class="ing-highlight">garlic cloves</span> until charred</p><ul class="step-ingredients"><li><span class="step-ing-measure">5</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add peel of <span class="ing-highlight">lemon</span> and <span class="ing-highlight">bay leaves</span> until lightly charred</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5</span> lemon</li><li><span class="step-ing-measure">2</span> bay leaves</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">chili flakes</span> until well toasted</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> chili flakes</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Remove from heat add <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">smoked paprika</span>, and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">125 ml</span> olive oil</li><li><span class="step-ing-measure">1 tsp</span> smoked paprika</li><li><span class="step-ing-measure">0.5 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">feta</span> to oil and leave out to marinate.</p><ul class="step-ingredients"><li><span class="step-ing-measure">180 g</span> feta</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Can be stored in fridge.</p></div></div>
     </div>
   </main>
 </body>

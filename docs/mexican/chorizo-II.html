@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -422,34 +445,34 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>60g Anaheim / california chili</p></div>
-<div class="step"><span class="step-num">2</span><p>30g ancho chili</p></div>
-<div class="step"><span class="step-num">3</span><p>1 chipotle</p></div>
-<div class="step"><span class="step-num">4</span><p>1/2 head garlic</p></div>
-<div class="step"><span class="step-num">5</span><p>1/2T mexican oregano</p></div>
-<div class="step"><span class="step-num">6</span><p>1/2T thyme</p></div>
-<div class="step"><span class="step-num">7</span><p>1/2tT black peppercorn</p></div>
-<div class="step"><span class="step-num">8</span><p>1/2t coriander seeds</p></div>
-<div class="step"><span class="step-num">9</span><p>1t cumin seeds</p></div>
-<div class="step"><span class="step-num">10</span><p>1/2T allspice</p></div>
-<div class="step"><span class="step-num">11</span><p>1in cinnamon</p></div>
-<div class="step"><span class="step-num">12</span><p>4 cloves</p></div>
-<div class="step"><span class="step-num">13</span><p>1 large dried orange peel</p></div>
-<div class="step"><span class="step-num">14</span><p>1T salt</p></div>
-<div class="step"><span class="step-num">15</span><p>1T achiote</p></div>
-<div class="step"><span class="step-num">16</span><p>2T apple cider vinegar</p></div>
-<div class="step"><span class="step-num">17</span><p>1T sugar</p></div>
-<div class="step"><span class="step-num">18</span><p>1/2T chicken bullion</p></div>
-<div class="step"><span class="step-num">19</span><p>1.3 kilo pork</p></div>
-<div class="step"><span class="step-num">20</span><p>Remove seeds from chilis</p></div>
-<div class="step"><span class="step-num">21</span><p>Toast chilis, add to pot with just enough water to cover</p></div>
-<div class="step"><span class="step-num">22</span><p>Toast spicss, grind</p></div>
-<div class="step"><span class="step-num">23</span><p>Blend chilis utntil smooth adding little cooking liquid at a time with with thyme and oregano salt vinegar, chicken bouillon ,sugar</p></div>
-<div class="step"><span class="step-num">24</span><p>Add chilis to bowl with ground spices,</p></div>
-<div class="step"><span class="step-num">25</span><p>Let cool</p></div>
-<div class="step"><span class="step-num">26</span><p>Grind 2x pork,</p></div>
-<div class="step"><span class="step-num">27</span><p>Add paste and pork to paddle attachment make paste</p></div>
-<div class="step"><span class="step-num">28</span><p>Cover wrap for 48hr, then freeze or whatever</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>60g Anaheim / california chili</p></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>30g ancho chili</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>1 chipotle</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>1/2 head garlic</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>1/2T mexican oregano</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>1/2T thyme</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>1/2tT black peppercorn</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>1/2t coriander seeds</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>1t cumin seeds</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>1/2T allspice</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>1in cinnamon</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>4 cloves</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>1 large dried orange peel</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>1T salt</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>1T achiote</p></div></div>
+<div class="step"><span class="step-num">16</span><div class="step-content"><p>2T apple cider vinegar</p></div></div>
+<div class="step"><span class="step-num">17</span><div class="step-content"><p>1T sugar</p></div></div>
+<div class="step"><span class="step-num">18</span><div class="step-content"><p>1/2T chicken bullion</p></div></div>
+<div class="step"><span class="step-num">19</span><div class="step-content"><p>1.3 kilo pork</p></div></div>
+<div class="step"><span class="step-num">20</span><div class="step-content"><p>Remove seeds from chilis</p></div></div>
+<div class="step"><span class="step-num">21</span><div class="step-content"><p>Toast chilis, add to pot with just enough water to cover</p></div></div>
+<div class="step"><span class="step-num">22</span><div class="step-content"><p>Toast spicss, grind</p></div></div>
+<div class="step"><span class="step-num">23</span><div class="step-content"><p>Blend chilis utntil smooth adding little cooking liquid at a time with with thyme and oregano salt vinegar, chicken bouillon ,sugar</p></div></div>
+<div class="step"><span class="step-num">24</span><div class="step-content"><p>Add chilis to bowl with ground spices,</p></div></div>
+<div class="step"><span class="step-num">25</span><div class="step-content"><p>Let cool</p></div></div>
+<div class="step"><span class="step-num">26</span><div class="step-content"><p>Grind 2x pork,</p></div></div>
+<div class="step"><span class="step-num">27</span><div class="step-content"><p>Add paste and pork to paddle attachment make paste</p></div></div>
+<div class="step"><span class="step-num">28</span><div class="step-content"><p>Cover wrap for 48hr, then freeze or whatever</p></div></div>
     </div>
   </main>
 </body>

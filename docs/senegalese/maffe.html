@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -445,16 +468,16 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Soak <span class="ing-highlight">chicken legs</span> in water with juice from <span class="ing-highlight">lime</span> and <span class="ing-highlight">salt</span> for 20 minutes.</p></div>
-<div class="step"><span class="step-num">2</span><p>Puree <span class="ing-highlight">onion</span>, <span class="ing-highlight">garlic <span class="ing-highlight">cloves</span></span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">tomato paste</span>, <span class="ing-highlight">anise seed</span>, <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">thyme</span>, <span class="ing-highlight">chicken stock</span>, and <span class="ing-highlight">olive oil</span> in a blender</p></div>
-<div class="step"><span class="step-num">3</span><p>Brown the chicken, then add the puree with some salt.</p></div>
-<div class="step"><span class="step-num">4</span><p>Add chopped <span class="ing-highlight">carrots</span> and <span class="ing-highlight">sweet potato</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">powdered chicken stock</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Add remaining <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">habenero peppers</span>, quartered <span class="ing-highlight">onion</span>, and <span class="ing-highlight">bay leaves</span></p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">chicken stock</span>, boil and cover for 20 minites</p></div>
-<div class="step"><span class="step-num">8</span><p>Remove onion, ginger, garlic, and habeneros and blend with <span class="ing-highlight">chicken stock</span>, canned <span class="ing-highlight">tomatoes</span>, <span class="ing-highlight">dashi powder</span>, <span class="ing-highlight">palm oil</span>, and <span class="ing-highlight">peanut butter</span></p></div>
-<div class="step"><span class="step-num">9</span><p>Add to pot and simmer on medium for 40 minutes or when oil starts to separate</p></div>
-<div class="step"><span class="step-num">10</span><p>Add spinach to finish.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Soak <span class="ing-highlight">chicken legs</span> in water with juice from <span class="ing-highlight">lime</span> and <span class="ing-highlight">salt</span> for 20 minutes.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 kg</span> chicken legs</li><li><span class="step-ing-measure">1</span> lime</li><li><span class="step-ing-measure">1 tbsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Puree <span class="ing-highlight">onion</span>, <span class="ing-highlight">garlic <span class="ing-highlight">cloves</span></span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">tomato paste</span>, <span class="ing-highlight">anise seed</span>, <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">thyme</span>, <span class="ing-highlight">chicken stock</span>, and <span class="ing-highlight">olive oil</span> in a blender</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> onion</li><li><span class="step-ing-measure">3</span> garlic cloves</li><li><span class="step-ing-measure">15 g</span> ginger</li><li><span class="step-ing-measure">2 tbsp</span> tomato paste</li><li><span class="step-ing-measure">1 tsp</span> anise seed</li><li><span class="step-ing-measure">1 tsp</span> cumin seed</li><li><span class="step-ing-measure">3</span> cloves</li><li><span class="step-ing-measure">1 tsp</span> thyme</li><li><span class="step-ing-measure">120 ml</span> chicken stock</li><li><span class="step-ing-measure">2 tbsp</span> olive oil</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Brown the chicken, then add the puree with some salt.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> salt.</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add chopped <span class="ing-highlight">carrots</span> and <span class="ing-highlight">sweet potato</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> carrots</li><li><span class="step-ing-measure">1</span> sweet potato</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">powdered chicken stock</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> powdered chicken stock</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add remaining <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">habenero peppers</span>, quartered <span class="ing-highlight">onion</span>, and <span class="ing-highlight">bay leaves</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> garlic cloves</li><li><span class="step-ing-measure">15 g</span> ginger</li><li><span class="step-ing-measure">2</span> habenero peppers</li><li><span class="step-ing-measure">1</span> onion</li><li><span class="step-ing-measure">2</span> bay leaves</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">chicken stock</span>, boil and cover for 20 minites</p><ul class="step-ingredients"><li><span class="step-ing-measure">200 ml</span> chicken stock</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Remove onion, ginger, garlic, and habeneros and blend with <span class="ing-highlight">chicken stock</span>, canned <span class="ing-highlight">tomatoes</span>, <span class="ing-highlight">dashi powder</span>, <span class="ing-highlight">palm oil</span>, and <span class="ing-highlight">peanut butter</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">250 ml</span> chicken stock</li><li><span class="step-ing-measure">800 g</span> tomatoes</li><li><span class="step-ing-measure">2 tsp</span> dashi powder</li><li><span class="step-ing-measure">3 tbsp</span> palm oil</li><li><span class="step-ing-measure">230 g</span> peanut butter</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Add to pot and simmer on medium for 40 minutes or when oil starts to separate</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Add spinach to finish.</p></div></div>
     </div>
   </main>
 </body>

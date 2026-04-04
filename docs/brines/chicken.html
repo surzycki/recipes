@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -432,8 +455,8 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Mix <span class="ing-highlight">water</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">honey</span>, <span class="ing-highlight">bay leaves</span>, crushed <span class="ing-highlight">garlic cloves</span>, whole <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">rosemary</span>, <span class="ing-highlight">thyme</span>, <span class="ing-highlight">lemons</span> cut in half.</p></div>
-<div class="step"><span class="step-num">2</span><p>Brine <span class="ing-highlight">whole chicken</span> 24 hours</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Mix <span class="ing-highlight">water</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">honey</span>, <span class="ing-highlight">bay leaves</span>, crushed <span class="ing-highlight">garlic cloves</span>, whole <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">rosemary</span>, <span class="ing-highlight">thyme</span>, <span class="ing-highlight">lemons</span> cut in half.</p><ul class="step-ingredients"><li><span class="step-ing-measure">8 cups</span> water</li><li><span class="step-ing-measure">0.5 c</span> salt</li><li><span class="step-ing-measure">0.3333333333333333 cup</span> honey</li><li><span class="step-ing-measure">3</span> bay leaves</li><li><span class="step-ing-measure">25</span> garlic cloves</li><li><span class="step-ing-measure">1 tbsp</span> black pepper</li><li><span class="step-ing-measure">2 sprigs</span> rosemary</li><li><span class="step-ing-measure">1 bunch</span> thyme</li><li><span class="step-ing-measure">2</span> lemons</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Brine <span class="ing-highlight">whole chicken</span> 24 hours</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> whole chicken</li></ul></div></div>
     </div>
   </main>
 </body>

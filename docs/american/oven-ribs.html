@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -434,17 +457,17 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Remove silver skin from back of <span class="ing-highlight">pork ribs</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Brine in <span class="ing-highlight">water</span> bring to boil</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">sugar</span>, <span class="ing-highlight">salt</span>, and pink <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Add cold <span class="ing-highlight">water</span> to pot</p></div>
-<div class="step"><span class="step-num">5</span><p>Brine ribs for 24 hours</p></div>
-<div class="step"><span class="step-num">6</span><p>Dry on rack on pan covered with foil</p></div>
-<div class="step"><span class="step-num">7</span><p>Add ground <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">cayenne <span class="ing-highlight">pepper</span></span>, <span class="ing-highlight">paprika</span>, <span class="ing-highlight">brown sugar</span>, ground <span class="ing-highlight">mustard seed</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">pepper</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Cover ribs with <span class="ing-highlight">yellow mustard</span> then cover with rub</p></div>
-<div class="step"><span class="step-num">9</span><p>Put in cold oven at 150°C for 3 hours</p></div>
-<div class="step"><span class="step-num">10</span><p>Take ribs out, wrap tight in paper / plastic wrap for 30 minutes</p></div>
-<div class="step"><span class="step-num">11</span><p>Turn broiler on baste with bbq sauce, for a couple rounds</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Remove silver skin from back of <span class="ing-highlight">pork ribs</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> pork ribs</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Brine in <span class="ing-highlight">water</span> bring to boil</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 liters</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">sugar</span>, <span class="ing-highlight">salt</span>, and pink <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.25 cups</span> sugar</li><li><span class="step-ing-measure">0.5 cup</span> salt</li><li><span class="step-ing-measure">0.25 tbsp</span> pink salt</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add cold <span class="ing-highlight">water</span> to pot</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 liters</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Brine ribs for 24 hours</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Dry on rack on pan covered with foil</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add ground <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">cayenne <span class="ing-highlight">pepper</span></span>, <span class="ing-highlight">paprika</span>, <span class="ing-highlight">brown sugar</span>, ground <span class="ing-highlight">mustard seed</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">pepper</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> cumin seed</li><li><span class="step-ing-measure">2 tbsp</span> cayenne pepper</li><li><span class="step-ing-measure">2 tbsp</span> paprika</li><li><span class="step-ing-measure">2 tbsp</span> brown sugar</li><li><span class="step-ing-measure">2 tbsp</span> mustard seed</li><li><span class="step-ing-measure">3 tbsp</span> salt</li><li><span class="step-ing-measure">some</span> pepper</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Cover ribs with <span class="ing-highlight">yellow mustard</span> then cover with rub</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> yellow mustard</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Put in cold oven at 150°C for 3 hours</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Take ribs out, wrap tight in paper / plastic wrap for 30 minutes</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Turn broiler on baste with bbq sauce, for a couple rounds</p></div></div>
     </div>
   </main>
 </body>

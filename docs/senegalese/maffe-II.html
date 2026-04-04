@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -440,22 +463,22 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Cut <span class="ing-highlight">plats de cotes</span> into 3 cm chunks and salt generously. Let sit for 30 minutes.</p></div>
-<div class="step"><span class="step-num">2</span><p>Heat pan with <span class="ing-highlight">tallow</span> and brown the mea. Remove and set aside.</p></div>
-<div class="step"><span class="step-num">3</span><p>Add the Nocos to pan:</p></div>
-<div class="step"><span class="step-num">4</span><p>- Blend together <span class="ing-highlight">green bell pepper</span>, <span class="ing-highlight">onion</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">cilantro</span>, and <span class="ing-highlight">flat leaf parsely</span>.</p></div>
-<div class="step"><span class="step-num">5</span><p>Fry the Nocos mixture in the pan until it starts to brown.</p></div>
-<div class="step"><span class="step-num">6</span><p>Add <span class="ing-highlight">tomato paste</span> and fry until it begins to caramelize.</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">soumbala</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">black pepper</span> to taste.</p></div>
-<div class="step"><span class="step-num">8</span><p>Add <span class="ing-highlight">tomatoes</span> and stir.</p></div>
-<div class="step"><span class="step-num">9</span><p>Create a mixture of <span class="ing-highlight">peanut butter</span> and <span class="ing-highlight">water</span>. Mix well and add to the pan.</p></div>
-<div class="step"><span class="step-num">10</span><p>Stir everything together and add <span class="ing-highlight">chicken stock</span> or water.</p></div>
-<div class="step"><span class="step-num">11</span><p>Place a cartouche on top, cover, and cook in the oven at 140°C for 3-4 hours.</p></div>
-<div class="step"><span class="step-num">12</span><p>Remove from oven and discard the cartouche, and season with <span class="ing-highlight">salt</span> and <span class="ing-highlight">black pepper</span>.</p></div>
-<div class="step"><span class="step-num">13</span><p>Add vegetables: <span class="ing-highlight">carrots</span>, <span class="ing-highlight">yam</span>, <span class="ing-highlight">sweet potato</span>, and <span class="ing-highlight">spinach</span>.</p></div>
-<div class="step"><span class="step-num">14</span><p>Cover and return to the oven for 1 hour.</p></div>
-<div class="step"><span class="step-num">15</span><p>Remove from oven and let stand for 45 minutes.</p></div>
-<div class="step"><span class="step-num">16</span><p>Serve.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Cut <span class="ing-highlight">plats de cotes</span> into 3 cm chunks and salt generously. Let sit for 30 minutes.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 kg</span> plats de cotes</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Heat pan with <span class="ing-highlight">tallow</span> and brown the mea. Remove and set aside.</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 T</span> tallow</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add the Nocos to pan:</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>- Blend together <span class="ing-highlight">green bell pepper</span>, <span class="ing-highlight">onion</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">cilantro</span>, and <span class="ing-highlight">flat leaf parsely</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> green bell pepper</li><li><span class="step-ing-measure">1</span> onion</li><li><span class="step-ing-measure">8</span> garlic cloves</li><li><span class="step-ing-measure">0.5 cups</span> cilantro</li><li><span class="step-ing-measure">0.5 cups</span> flat leaf parsely</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Fry the Nocos mixture in the pan until it starts to brown.</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add <span class="ing-highlight">tomato paste</span> and fry until it begins to caramelize.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> tomato paste</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">soumbala</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">black pepper</span> to taste.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 tbsp</span> soumbala</li><li><span class="step-ing-measure">some</span> salt</li><li><span class="step-ing-measure">some</span> black pepper</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add <span class="ing-highlight">tomatoes</span> and stir.</p><ul class="step-ingredients"><li><span class="step-ing-measure">800 g</span> tomatoes</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Create a mixture of <span class="ing-highlight">peanut butter</span> and <span class="ing-highlight">water</span>. Mix well and add to the pan.</p><ul class="step-ingredients"><li><span class="step-ing-measure">300 g</span> peanut butter</li><li><span class="step-ing-measure">2 cups</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Stir everything together and add <span class="ing-highlight">chicken stock</span> or water.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 l</span> chicken stock</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Place a cartouche on top, cover, and cook in the oven at 140°C for 3-4 hours.</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Remove from oven and discard the cartouche, and season with <span class="ing-highlight">salt</span> and <span class="ing-highlight">black pepper</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> salt</li><li><span class="step-ing-measure">some</span> black pepper</li></ul></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Add vegetables: <span class="ing-highlight">carrots</span>, <span class="ing-highlight">yam</span>, <span class="ing-highlight">sweet potato</span>, and <span class="ing-highlight">spinach</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> carrots</li><li><span class="step-ing-measure">some</span> yam</li><li><span class="step-ing-measure">some</span> sweet potato</li><li><span class="step-ing-measure">some</span> spinach</li></ul></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Cover and return to the oven for 1 hour.</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Remove from oven and let stand for 45 minutes.</p></div></div>
+<div class="step"><span class="step-num">16</span><div class="step-content"><p>Serve.</p></div></div>
     </div>
   </main>
 </body>

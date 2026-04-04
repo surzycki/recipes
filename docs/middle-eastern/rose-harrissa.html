@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -437,14 +460,14 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Char <span class="ing-highlight">garlic cloves</span> and toast <span class="ing-highlight">ancho chilis</span>, <span class="ing-highlight">guajillo chilis</span>.</p></div>
-<div class="step"><span class="step-num">2</span><p>Pour enough boiling water over the chilis to cover and let rehydrate for 30 minutes</p></div>
-<div class="step"><span class="step-num">3</span><p>Roughly chop chilis and add to food processor</p></div>
-<div class="step"><span class="step-num">4</span><p>Toast <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">corriander seed</span> and <span class="ing-highlight">caraway seed</span> until fragrant</p></div>
-<div class="step"><span class="step-num">5</span><p>Roughly crush seeds and add to food processor along with chillis, garlic, <span class="ing-highlight">tomato paste</span>, <span class="ing-highlight">rose petals</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">paprika</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Pulse to rough paste</p></div>
-<div class="step"><span class="step-num">7</span><p>Add juice of <span class="ing-highlight">lemon</span>, half of <span class="ing-highlight">rose water</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">cider vinegar</span> <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Remove and add to bowl add remaining rose water and <span class="ing-highlight">olive oil</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Char <span class="ing-highlight">garlic cloves</span> and toast <span class="ing-highlight">ancho chilis</span>, <span class="ing-highlight">guajillo chilis</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> garlic cloves</li><li><span class="step-ing-measure">25 g</span> ancho chilis</li><li><span class="step-ing-measure">40 g</span> guajillo chilis</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Pour enough boiling water over the chilis to cover and let rehydrate for 30 minutes</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Roughly chop chilis and add to food processor</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Toast <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">corriander seed</span> and <span class="ing-highlight">caraway seed</span> until fragrant</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tsp</span> cumin seed</li><li><span class="step-ing-measure">1 tbsp</span> corriander seed</li><li><span class="step-ing-measure">1 tsp</span> caraway seed</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Roughly crush seeds and add to food processor along with chillis, garlic, <span class="ing-highlight">tomato paste</span>, <span class="ing-highlight">rose petals</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">paprika</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> tomato paste</li><li><span class="step-ing-measure">1 tbsp</span> rose petals</li><li><span class="step-ing-measure">2 tsp</span> sugar</li><li><span class="step-ing-measure">1 tsp</span> paprika</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Pulse to rough paste</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add juice of <span class="ing-highlight">lemon</span>, half of <span class="ing-highlight">rose water</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">cider vinegar</span> <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> lemon</li><li><span class="step-ing-measure">1 tbsp</span> rose water</li><li><span class="step-ing-measure">some</span> olive oil</li><li><span class="step-ing-measure">4 tbsp</span> cider vinegar</li><li><span class="step-ing-measure">pinch</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Remove and add to bowl add remaining rose water and <span class="ing-highlight">olive oil</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cup</span> olive oil</li></ul></div></div>
     </div>
   </main>
 </body>

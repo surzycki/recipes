@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -427,12 +450,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Place <span class="ing-highlight">sweetened condensed milk</span>, <span class="ing-highlight">peppermint extract</span>, and <span class="ing-highlight">vanilla extract</span> in the bowl of a mixer.</p></div>
-<div class="step"><span class="step-num">2</span><p>Add half of the <span class="ing-highlight">powdered sugar</span> and beat on low speed. Gradually add the remaining <span class="ing-highlight">powdered sugar</span>. Beat until a smooth dough forms.</p></div>
-<div class="step"><span class="step-num">3</span><p>You should be able to pinch off a piece of dough and roll it into a ball that holds its shape. If the dough is too soft or sticky, add more <span class="ing-highlight">powdered sugar</span> at a time until the desired consistency is reached. If the dough is too dry or crumbly, add <span class="ing-highlight">water</span> at a time to adjust the texture.</p></div>
-<div class="step"><span class="step-num">4</span><p>Sprinkle <span class="ing-highlight">powdered sugar</span> over a piece of parchment paper. Place the peppermint dough on the parchment and sprinkle more <span class="ing-highlight">powdered sugar</span> over the top. Roll into a 1.25 cm thick circle.</p></div>
-<div class="step"><span class="step-num">5</span><p>Coat a cookie cutter (2.5-3.8 cm) with <span class="ing-highlight">cooking spray</span> and use it to cut out circles from the dough. If the dough does not cut easily, place it in the freezer for few minutes  to firm up, then try again.</p></div>
-<div class="step"><span class="step-num">6</span><p>Transfer the peppermint rounds to a parchment lined baking sheet. Cover and freeze for 20 minutes.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Place <span class="ing-highlight">sweetened condensed milk</span>, <span class="ing-highlight">peppermint extract</span>, and <span class="ing-highlight">vanilla extract</span> in the bowl of a mixer.</p><ul class="step-ingredients"><li><span class="step-ing-measure">200 g</span> sweetened condensed milk</li><li><span class="step-ing-measure">1 tsp</span> peppermint extract</li><li><span class="step-ing-measure">1 tsp</span> vanilla extract</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add half of the <span class="ing-highlight">powdered sugar</span> and beat on low speed. Gradually add the remaining <span class="ing-highlight">powdered sugar</span>. Beat until a smooth dough forms.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2.5 cups</span> powdered sugar</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>You should be able to pinch off a piece of dough and roll it into a ball that holds its shape. If the dough is too soft or sticky, add more <span class="ing-highlight">powdered sugar</span> at a time until the desired consistency is reached. If the dough is too dry or crumbly, add <span class="ing-highlight">water</span> at a time to adjust the texture.</p><ul class="step-ingredients"><li><span class="step-ing-measure">8 g</span> powdered sugar</li><li><span class="step-ing-measure">5 ml</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Sprinkle <span class="ing-highlight">powdered sugar</span> over a piece of parchment paper. Place the peppermint dough on the parchment and sprinkle more <span class="ing-highlight">powdered sugar</span> over the top. Roll into a 1.25 cm thick circle.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> powdered sugar</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Coat a cookie cutter (2.5-3.8 cm) with <span class="ing-highlight">cooking spray</span> and use it to cut out circles from the dough. If the dough does not cut easily, place it in the freezer for few minutes  to firm up, then try again.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> cooking spray</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Transfer the peppermint rounds to a parchment lined baking sheet. Cover and freeze for 20 minutes.</p></div></div>
     </div>
   </main>
 </body>

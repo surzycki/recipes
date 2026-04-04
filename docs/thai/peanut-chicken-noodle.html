@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -434,15 +457,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Saute minced <span class="ing-highlight">garlic clove</span> for 1 minute</p></div>
-<div class="step"><span class="step-num">2</span><p>Add mined <span class="ing-highlight">chicken breast</span>, and cook until white</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">red curry paste</span>, <span class="ing-highlight">curry powder</span>, and <span class="ing-highlight">dark soy sauce</span>.</p></div>
-<div class="step"><span class="step-num">4</span><p>Make space in middle of pan and fry <span class="ing-highlight">red curry paste</span> for 30 seconds</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">chicken stock</span>, bring to boil, the simmer.</p></div>
-<div class="step"><span class="step-num">6</span><p>Add <span class="ing-highlight">ramen noodles</span> and cook until tender and break apart</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">coconut milk</span> and <span class="ing-highlight">peanut butter</span>, <span class="ing-highlight">vinegar</span> and mix</p></div>
-<div class="step"><span class="step-num">8</span><p>Toss with <span class="ing-highlight">baby spinach</span> until wilts</p></div>
-<div class="step"><span class="step-num">9</span><p>Transfer to bowl and garnish with <span class="ing-highlight">cilantro</span> and <span class="ing-highlight">peanuts</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Saute minced <span class="ing-highlight">garlic clove</span> for 1 minute</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> garlic clove</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add mined <span class="ing-highlight">chicken breast</span>, and cook until white</p><ul class="step-ingredients"><li><span class="step-ing-measure">300 g</span> chicken breast</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">red curry paste</span>, <span class="ing-highlight">curry powder</span>, and <span class="ing-highlight">dark soy sauce</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> red curry paste</li><li><span class="step-ing-measure">1 tsp</span> curry powder</li><li><span class="step-ing-measure">1 tsp</span> dark soy sauce</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Make space in middle of pan and fry <span class="ing-highlight">red curry paste</span> for 30 seconds</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 tbsp</span> red curry paste</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">chicken stock</span>, bring to boil, the simmer.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 cups</span> chicken stock</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add <span class="ing-highlight">ramen noodles</span> and cook until tender and break apart</p><ul class="step-ingredients"><li><span class="step-ing-measure">200 g</span> ramen noodles</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">coconut milk</span> and <span class="ing-highlight">peanut butter</span>, <span class="ing-highlight">vinegar</span> and mix</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.75 cups</span> coconut milk</li><li><span class="step-ing-measure">3 tbsp</span> peanut butter</li><li><span class="step-ing-measure">2 tbsp</span> vinegar</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Toss with <span class="ing-highlight">baby spinach</span> until wilts</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 cups</span> baby spinach</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Transfer to bowl and garnish with <span class="ing-highlight">cilantro</span> and <span class="ing-highlight">peanuts</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> cilantro</li><li><span class="step-ing-measure">1 tbsp</span> peanuts</li></ul></div></div>
     </div>
   </main>
 </body>

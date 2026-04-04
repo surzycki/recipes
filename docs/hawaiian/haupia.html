@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -427,12 +450,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Mix <span class="ing-highlight">water</span> with <span class="ing-highlight">cornstarch</span>, set aside</p></div>
-<div class="step"><span class="step-num">2</span><p>Bring <span class="ing-highlight">coconut milk</span>, <span class="ing-highlight">sugar</span>, saltand <span class="ing-highlight">water</span> to a boil</p></div>
-<div class="step"><span class="step-num">3</span><p>Pour cornstarch mixture into boiling liquid, stirring constantly until thick.</p></div>
-<div class="step"><span class="step-num">4</span><p>Refine through tamis</p></div>
-<div class="step"><span class="step-num">5</span><p>Pour into a 22cm x 32cm pan and let cool to room temp</p></div>
-<div class="step"><span class="step-num">6</span><p>Refriegerate for 2 hours</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Mix <span class="ing-highlight">water</span> with <span class="ing-highlight">cornstarch</span>, set aside</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 cups</span> water</li><li><span class="step-ing-measure">1.5 cups</span> cornstarch</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Bring <span class="ing-highlight">coconut milk</span>, <span class="ing-highlight">sugar</span>, saltand <span class="ing-highlight">water</span> to a boil</p><ul class="step-ingredients"><li><span class="step-ing-measure">470 ml</span> coconut milk</li><li><span class="step-ing-measure">1 cups</span> sugar</li><li><span class="step-ing-measure">1 pinch</span> salt</li><li><span class="step-ing-measure">1 cup</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Pour cornstarch mixture into boiling liquid, stirring constantly until thick.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Refine through tamis</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Pour into a 22cm x 32cm pan and let cool to room temp</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Refriegerate for 2 hours</p></div></div>
     </div>
   </main>
 </body>

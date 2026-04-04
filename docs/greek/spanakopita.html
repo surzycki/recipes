@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -433,18 +456,18 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Add chopped <span class="ing-highlight">onions</span>, chopped green <span class="ing-highlight">onions</span>, and minced <span class="ing-highlight">garlic cloves</span> to <span class="ing-highlight">olive oil</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Saute until soft.</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">spinach</span> to mixture and saute until limp.</p></div>
-<div class="step"><span class="step-num">4</span><p>Add juice from <span class="ing-highlight">lemon</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Let cook and drain excess liquid.</p></div>
-<div class="step"><span class="step-num">6</span><p>Mix <span class="ing-highlight">eggs</span>, <span class="ing-highlight">feta</span>, add <span class="ing-highlight">nutmeg</span></p></div>
-<div class="step"><span class="step-num">7</span><p>Add cheese mixture to spinach.</p></div>
-<div class="step"><span class="step-num">8</span><p>Take 1 sheet of <span class="ing-highlight">phyllo</span> and brush the sheet with melted <span class="ing-highlight">butter</span>.</p></div>
-<div class="step"><span class="step-num">9</span><p>Place another sheet on the buttered sheet, and butter again.</p></div>
-<div class="step"><span class="step-num">10</span><p>Cut into quarters.</p></div>
-<div class="step"><span class="step-num">11</span><p>Add heaping spoonful of mixture at one end and fold into triangles.</p></div>
-<div class="step"><span class="step-num">12</span><p>Bake at 180°C for 20 minutes / 25 minutes until golden brown.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Add chopped <span class="ing-highlight">onions</span>, chopped green <span class="ing-highlight">onions</span>, and minced <span class="ing-highlight">garlic cloves</span> to <span class="ing-highlight">olive oil</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> onions</li><li><span class="step-ing-measure">0.5 cup</span> green onions</li><li><span class="step-ing-measure">4</span> garlic cloves</li><li><span class="step-ing-measure">3 tbsp</span> olive oil</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Saute until soft.</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">spinach</span> to mixture and saute until limp.</p><ul class="step-ingredients"><li><span class="step-ing-measure">4 cups</span> spinach</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add juice from <span class="ing-highlight">lemon</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 tbsp</span> lemon</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Let cook and drain excess liquid.</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Mix <span class="ing-highlight">eggs</span>, <span class="ing-highlight">feta</span>, add <span class="ing-highlight">nutmeg</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> eggs</li><li><span class="step-ing-measure">220 g</span> feta</li><li><span class="step-ing-measure">1 tsp</span> nutmeg</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add cheese mixture to spinach.</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Take 1 sheet of <span class="ing-highlight">phyllo</span> and brush the sheet with melted <span class="ing-highlight">butter</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">14 sheets</span> phyllo</li><li><span class="step-ing-measure">120 g</span> butter</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Place another sheet on the buttered sheet, and butter again.</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Cut into quarters.</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Add heaping spoonful of mixture at one end and fold into triangles.</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Bake at 180°C for 20 minutes / 25 minutes until golden brown.</p></div></div>
     </div>
   </main>
 </body>

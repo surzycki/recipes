@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -436,22 +459,22 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Char in over or comal  <span class="ing-highlight">pablano peppers</span> and then steam in a covered bowl for 40 minutes</p></div>
-<div class="step"><span class="step-num">2</span><p>Peel off blackened skin and set aside</p></div>
-<div class="step"><span class="step-num">3</span><p>Shred <span class="ing-highlight">mozzarella</span> and dice <span class="ing-highlight">tomato</span>, and <span class="ing-highlight">onion</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Sauté onion and tomato in <span class="ing-highlight">lard</span>, then melt cheese with it</p></div>
-<div class="step"><span class="step-num">5</span><p>Slice open chili without breaking the top (take out seeds), make a small incision</p></div>
-<div class="step"><span class="step-num">6</span><p>Stuff with cheese mixture</p></div>
-<div class="step"><span class="step-num">7</span><p>Make salsa: <span class="ing-highlight">tomatoes</span>, <span class="ing-highlight">onion</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">chicken boullion powder</span> (jalapenos optional), <span class="ing-highlight">water</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Heat pan and cook salsa for 10 minutes, add <span class="ing-highlight">mexican oregano</span></p></div>
-<div class="step"><span class="step-num">9</span><p>Reduce slightly</p></div>
-<div class="step"><span class="step-num">10</span><p>Cover chili in some <span class="ing-highlight">flour</span></p></div>
-<div class="step"><span class="step-num">11</span><p>Separate egg whites and yolks of <span class="ing-highlight">eggs</span></p></div>
-<div class="step"><span class="step-num">12</span><p>Whip egg whites until stiff</p></div>
-<div class="step"><span class="step-num">13</span><p>Add egg yolks to whites and mix gently</p></div>
-<div class="step"><span class="step-num">14</span><p>Add <span class="ing-highlight">flour</span> with <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">15</span><p>Dip chili in egg mixture and fry in <span class="ing-highlight">lard</span> until golden brown</p></div>
-<div class="step"><span class="step-num">16</span><p>Place sauce on plate with cooked chili on top, and cover with more salsa</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Char in over or comal  <span class="ing-highlight">pablano peppers</span> and then steam in a covered bowl for 40 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">6</span> pablano peppers</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Peel off blackened skin and set aside</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Shred <span class="ing-highlight">mozzarella</span> and dice <span class="ing-highlight">tomato</span>, and <span class="ing-highlight">onion</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">500 g</span> mozzarella</li><li><span class="step-ing-measure">1</span> tomato</li><li><span class="step-ing-measure">0.5</span> onion</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Sauté onion and tomato in <span class="ing-highlight">lard</span>, then melt cheese with it</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> lard</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Slice open chili without breaking the top (take out seeds), make a small incision</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Stuff with cheese mixture</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Make salsa: <span class="ing-highlight">tomatoes</span>, <span class="ing-highlight">onion</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">chicken boullion powder</span> (jalapenos optional), <span class="ing-highlight">water</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">5</span> tomatoes</li><li><span class="step-ing-measure">1</span> onion</li><li><span class="step-ing-measure">3</span> garlic cloves</li><li><span class="step-ing-measure">2 tbsp</span> chicken boullion powder</li><li><span class="step-ing-measure">2 cups</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Heat pan and cook salsa for 10 minutes, add <span class="ing-highlight">mexican oregano</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 tsp</span> mexican oregano</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Reduce slightly</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Cover chili in some <span class="ing-highlight">flour</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> flour</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Separate egg whites and yolks of <span class="ing-highlight">eggs</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> eggs</li></ul></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Whip egg whites until stiff</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Add egg yolks to whites and mix gently</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Add <span class="ing-highlight">flour</span> with <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> flour</li><li><span class="step-ing-measure">1 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Dip chili in egg mixture and fry in <span class="ing-highlight">lard</span> until golden brown</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cup</span> lard</li></ul></div></div>
+<div class="step"><span class="step-num">16</span><div class="step-content"><p>Place sauce on plate with cooked chili on top, and cover with more salsa</p></div></div>
     </div>
   </main>
 </body>

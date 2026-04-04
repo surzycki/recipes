@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -426,14 +449,14 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Make biga by mixing <span class="ing-highlight">water</span>, <span class="ing-highlight">flour</span>, and <span class="ing-highlight">yeast</span> in a bowl until rough.</p></div>
-<div class="step"><span class="step-num">2</span><p>Cover and let sit at room temperature for 30 minutes.</p></div>
-<div class="step"><span class="step-num">3</span><p>Put in the fridge for 24-48 hours.</p></div>
-<div class="step"><span class="step-num">4</span><p>To make dough add biga, <span class="ing-highlight">flour</span>, <span class="ing-highlight">water</span>, <span class="ing-highlight">yeast</span> and mix until dough it tough</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">salt</span> to <span class="ing-highlight">water</span> and mix until dissolved.</p></div>
-<div class="step"><span class="step-num">6</span><p>Slowly add water to dough as mixer is running, should take about 15 minutes.</p></div>
-<div class="step"><span class="step-num">7</span><p>Put dough in oiled bowl and cover with plastic wrap for 30 minutes.</p></div>
-<div class="step"><span class="step-num">8</span><p>Make balls and rest for 3 hours.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Make biga by mixing <span class="ing-highlight">water</span>, <span class="ing-highlight">flour</span>, and <span class="ing-highlight">yeast</span> in a bowl until rough.</p><ul class="step-ingredients"><li><span class="step-ing-measure">250 ml</span> water</li><li><span class="step-ing-measure">500 g</span> flour</li><li><span class="step-ing-measure">3 g</span> yeast</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Cover and let sit at room temperature for 30 minutes.</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Put in the fridge for 24-48 hours.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>To make dough add biga, <span class="ing-highlight">flour</span>, <span class="ing-highlight">water</span>, <span class="ing-highlight">yeast</span> and mix until dough it tough</p><ul class="step-ingredients"><li><span class="step-ing-measure">500 g</span> flour</li><li><span class="step-ing-measure">250 ml</span> water</li><li><span class="step-ing-measure">3 g</span> yeast</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">salt</span> to <span class="ing-highlight">water</span> and mix until dissolved.</p><ul class="step-ingredients"><li><span class="step-ing-measure">30 g</span> salt</li><li><span class="step-ing-measure">250 ml</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Slowly add water to dough as mixer is running, should take about 15 minutes.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Put dough in oiled bowl and cover with plastic wrap for 30 minutes.</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Make balls and rest for 3 hours.</p></div></div>
     </div>
   </main>
 </body>

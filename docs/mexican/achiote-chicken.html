@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -433,9 +456,9 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Marinate <span class="ing-highlight">chicken legs</span> overnight in juice from <span class="ing-highlight">orange</span>, juice from  <span class="ing-highlight">lemon</span>, juice from <span class="ing-highlight">lime</span>, <span class="ing-highlight">white vinegar</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">mexican oregano</span>, <span class="ing-highlight">pepper</span>, smashed <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">olive oil</span>, and <span class="ing-highlight">achiote paste</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Sous vide the chicken for 4 hours at 74°C, then finish in broiler.</p></div>
-<div class="step"><span class="step-num">3</span><p>Let rest 10 minutes before serving</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Marinate <span class="ing-highlight">chicken legs</span> overnight in juice from <span class="ing-highlight">orange</span>, juice from  <span class="ing-highlight">lemon</span>, juice from <span class="ing-highlight">lime</span>, <span class="ing-highlight">white vinegar</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">mexican oregano</span>, <span class="ing-highlight">pepper</span>, smashed <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">olive oil</span>, and <span class="ing-highlight">achiote paste</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> chicken legs</li><li><span class="step-ing-measure">100 g</span> orange</li><li><span class="step-ing-measure">70 g</span> lemon</li><li><span class="step-ing-measure">1</span> lime</li><li><span class="step-ing-measure">2 tbsp</span> white vinegar</li><li><span class="step-ing-measure">2 tsp</span> salt</li><li><span class="step-ing-measure">2 tsp</span> mexican oregano</li><li><span class="step-ing-measure">1 tsp</span> pepper</li><li><span class="step-ing-measure">4</span> garlic cloves</li><li><span class="step-ing-measure">1 tbsp</span> olive oil</li><li><span class="step-ing-measure">2 tbsp</span> achiote paste</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Sous vide the chicken for 4 hours at 74°C, then finish in broiler.</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Let rest 10 minutes before serving</p></div></div>
     </div>
   </main>
 </body>

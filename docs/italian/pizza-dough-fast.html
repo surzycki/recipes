@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -427,15 +450,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Mix <span class="ing-highlight">water</span> and <span class="ing-highlight">salt</span>.</p></div>
-<div class="step"><span class="step-num">2</span><p>Add 1/4 of <span class="ing-highlight">flour</span>, then add <span class="ing-highlight">yeast</span>.</p></div>
-<div class="step"><span class="step-num">3</span><p>Add the remaining <span class="ing-highlight">flour</span> and knead.</p></div>
-<div class="step"><span class="step-num">4</span><p>Cover and rest for 30 minutes.</p></div>
-<div class="step"><span class="step-num">5</span><p>Stretch and fold, then rest for 30 minutes.</p></div>
-<div class="step"><span class="step-num">6</span><p>Stretch and fold again, then form into a ball.</p></div>
-<div class="step"><span class="step-num">7</span><p>Coat with <span class="ing-highlight">olive oil</span>, then place in the fridge.</p></div>
-<div class="step"><span class="step-num">8</span><p>Before making pizza, divide into balls. Let them rest at room temperature for 4-6 hours.</p></div>
-<div class="step"><span class="step-num">9</span><p>If the dough is already in balls in the fridge, take them out 1 hour before making pizza.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Mix <span class="ing-highlight">water</span> and <span class="ing-highlight">salt</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">650 g</span> water</li><li><span class="step-ing-measure">25 g</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add 1/4 of <span class="ing-highlight">flour</span>, then add <span class="ing-highlight">yeast</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">250 g</span> flour</li><li><span class="step-ing-measure">2 g</span> yeast</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add the remaining <span class="ing-highlight">flour</span> and knead.</p><ul class="step-ingredients"><li><span class="step-ing-measure">750 g</span> flour</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Cover and rest for 30 minutes.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Stretch and fold, then rest for 30 minutes.</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Stretch and fold again, then form into a ball.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Coat with <span class="ing-highlight">olive oil</span>, then place in the fridge.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> olive oil</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Before making pizza, divide into balls. Let them rest at room temperature for 4-6 hours.</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>If the dough is already in balls in the fridge, take them out 1 hour before making pizza.</p></div></div>
     </div>
   </main>
 </body>

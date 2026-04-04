@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -427,12 +450,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Chop <span class="ing-highlight">beef loin</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Heat <span class="ing-highlight"><span class="ing-highlight">nitter kibbeh</span></span> with <span class="ing-highlight">mitmita</span>, ground <span class="ing-highlight">black peppercorns</span>, ground <span class="ing-highlight">korerima</span>, <span class="ing-highlight">salt</span> and <span class="ing-highlight"><span class="ing-highlight">nitter kibbeh</span></span> in a pan</p></div>
-<div class="step"><span class="step-num">3</span><p>Pour over beef and mix well.</p></div>
-<div class="step"><span class="step-num">4</span><p>Season more with mitmita and salt if needed</p></div>
-<div class="step"><span class="step-num">5</span><p>Heat <span class="ing-highlight">nitter kibbeh</span> and pour over top</p></div>
-<div class="step"><span class="step-num">6</span><p>Warm beef in pan and serve</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Chop <span class="ing-highlight">beef loin</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">300 g</span> beef loin</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Heat <span class="ing-highlight"><span class="ing-highlight">nitter kibbeh</span></span> with <span class="ing-highlight">mitmita</span>, ground <span class="ing-highlight">black peppercorns</span>, ground <span class="ing-highlight">korerima</span>, <span class="ing-highlight">salt</span> and <span class="ing-highlight"><span class="ing-highlight">nitter kibbeh</span></span> in a pan</p><ul class="step-ingredients"><li><span class="step-ing-measure">5 tbsp</span> nitter kibbeh</li><li><span class="step-ing-measure">1 tbsp</span> mitmita</li><li><span class="step-ing-measure">1 tsp</span> black peppercorns</li><li><span class="step-ing-measure">1 pinch</span> korerima</li><li><span class="step-ing-measure">1 tsp</span> salt</li><li><span class="step-ing-measure">1 tbsp</span> nitter kibbeh</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Pour over beef and mix well.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Season more with mitmita and salt if needed</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Heat <span class="ing-highlight">nitter kibbeh</span> and pour over top</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> nitter kibbeh</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Warm beef in pan and serve</p></div></div>
     </div>
   </main>
 </body>

@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -441,16 +464,16 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Deseed put in pan <span class="ing-highlight">guajillo chilis</span>, <span class="ing-highlight">pasilla chilis</span>, <span class="ing-highlight">onion</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">chipotle pepper</span>, ground  <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">mexican oregano</span>, ground <span class="ing-highlight">cinnamon</span>, <span class="ing-highlight">achiote</span>, and <span class="ing-highlight">black peppercorns</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Add about <span class="ing-highlight">water</span> and cook for 10 minutes</p></div>
-<div class="step"><span class="step-num">3</span><p>Cut <span class="ing-highlight">pork shoulder</span> into thin slices</p></div>
-<div class="step"><span class="step-num">4</span><p>Take chilis and put in blender with <span class="ing-highlight">pineapple juice</span>, juice of <span class="ing-highlight">orange</span>, and <span class="ing-highlight">lime</span> blend until smooth</p></div>
-<div class="step"><span class="step-num">5</span><p>Slice <span class="ing-highlight">onion</span> and mix with pork, <span class="ing-highlight">salt</span>, <span class="ing-highlight">white vinegar</span>, and chili mixture</p></div>
-<div class="step"><span class="step-num">6</span><p>Let marinate  2 hours</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">lard</span> to hot pan, then add some of the pork (don't crowd the pan)</p></div>
-<div class="step"><span class="step-num">8</span><p>Cook until most of liquid disappears</p></div>
-<div class="step"><span class="step-num">9</span><p>Add sliced <span class="ing-highlight">pineapple</span></p></div>
-<div class="step"><span class="step-num">10</span><p>Continue cooking until starts to crisp up, add more lard if necessary</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Deseed put in pan <span class="ing-highlight">guajillo chilis</span>, <span class="ing-highlight">pasilla chilis</span>, <span class="ing-highlight">onion</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">chipotle pepper</span>, ground  <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">mexican oregano</span>, ground <span class="ing-highlight">cinnamon</span>, <span class="ing-highlight">achiote</span>, and <span class="ing-highlight">black peppercorns</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">5</span> guajillo chilis</li><li><span class="step-ing-measure">2</span> pasilla chilis</li><li><span class="step-ing-measure">1</span> onion</li><li><span class="step-ing-measure">5</span> garlic cloves</li><li><span class="step-ing-measure">1</span> chipotle pepper</li><li><span class="step-ing-measure">1 tbsp</span> cumin seeds</li><li><span class="step-ing-measure">1 tbsp</span> mexican oregano</li><li><span class="step-ing-measure">1.5 tbsp</span> cinnamon</li><li><span class="step-ing-measure">4 tbsp</span> achiote</li><li><span class="step-ing-measure">10</span> black peppercorns</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add about <span class="ing-highlight">water</span> and cook for 10 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Cut <span class="ing-highlight">pork shoulder</span> into thin slices</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kilo</span> pork shoulder</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Take chilis and put in blender with <span class="ing-highlight">pineapple juice</span>, juice of <span class="ing-highlight">orange</span>, and <span class="ing-highlight">lime</span> blend until smooth</p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 cups</span> pineapple juice</li><li><span class="step-ing-measure">1</span> orange</li><li><span class="step-ing-measure">1</span> lime</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Slice <span class="ing-highlight">onion</span> and mix with pork, <span class="ing-highlight">salt</span>, <span class="ing-highlight">white vinegar</span>, and chili mixture</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> onion</li><li><span class="step-ing-measure">1 tbsp</span> salt</li><li><span class="step-ing-measure">3 tbsp</span> white vinegar</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Let marinate  2 hours</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">lard</span> to hot pan, then add some of the pork (don't crowd the pan)</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.25 cup</span> lard</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Cook until most of liquid disappears</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Add sliced <span class="ing-highlight">pineapple</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> pineapple</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Continue cooking until starts to crisp up, add more lard if necessary</p></div></div>
     </div>
   </main>
 </body>

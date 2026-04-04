@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -397,14 +420,14 @@ a { color: inherit; text-decoration: none; }
   <header class="hero">
     <p class="hero-label">A Personal Collection</p>
     <h1>Recipes</h1>
-    <p class="hero-stats"><strong>225</strong> recipes across <strong>27</strong> cuisines</p>
+    <p class="hero-stats"><strong>228</strong> recipes across <strong>27</strong> cuisines</p>
   </header>
 
   <main class="index-main">
     <section id="american" class="cuisine-section">
   <div class="section-header">
     <h2>American</h2>
-    <span class="section-count">27 recipes</span>
+    <span class="section-count">28 recipes</span>
   </div>
   <div class="recipe-grid"><a href="american/apple-cheddar-sausages.html" class="recipe-card">
   <div class="card-body">
@@ -458,6 +481,12 @@ a { color: inherit; text-decoration: none; }
   <div class="card-body">
     <h3>Detroit Pizza</h3>
     <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 8 hours</span><span class="card-ing">1 ingredients</span></div>
+  </div>
+</a>
+<a href="american/five-guys-burger.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Five Guys Burger</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 30 minutes</span><span class="card-ing">15 ingredients</span></div>
   </div>
 </a>
 <a href="american/ginger-miso-butternut.html" class="recipe-card">
@@ -1484,7 +1513,7 @@ a { color: inherit; text-decoration: none; }
 <section id="mexican" class="cuisine-section">
   <div class="section-header">
     <h2>Mexican</h2>
-    <span class="section-count">21 recipes</span>
+    <span class="section-count">22 recipes</span>
   </div>
   <div class="recipe-grid"><a href="mexican/achiote-chicken.html" class="recipe-card">
   <div class="card-body">
@@ -1532,6 +1561,12 @@ a { color: inherit; text-decoration: none; }
   <div class="card-body">
     <h3>Chilli Rellenos</h3>
     <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 3 hours</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="mexican/chipotle-salsa.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Chipotle Salsa</h3>
+    <div class="card-meta"><span class="card-tag">Ingredient</span><span class="card-ing">7 ingredients</span></div>
   </div>
 </a>
 <a href="mexican/chorizo.html" class="recipe-card">
@@ -1616,7 +1651,7 @@ a { color: inherit; text-decoration: none; }
 <section id="middle-eastern" class="cuisine-section">
   <div class="section-header">
     <h2>Middle Eastern</h2>
-    <span class="section-count">15 recipes</span>
+    <span class="section-count">16 recipes</span>
   </div>
   <div class="recipe-grid"><a href="middle-eastern/celebration-rice-and-sweet-spiced-lamb.html" class="recipe-card">
   <div class="card-body">
@@ -1700,6 +1735,12 @@ a { color: inherit; text-decoration: none; }
   <div class="card-body">
     <h3>Shawarma Spice Mix</h3>
     <div class="card-meta"><span class="card-tag">Spice</span><span class="card-time">⏱ 15 minutes</span><span class="card-ing">13 ingredients</span></div>
+  </div>
+</a>
+<a href="middle-eastern/sheet-pan-beef-kebabs.html" class="recipe-card">
+  <div class="card-body">
+    <h3>Sheet Pan Beef Kebabs</h3>
+    <div class="card-meta"><span class="card-tag">Main</span><span class="card-time">⏱ 40 minutes</span><span class="card-ing">20 ingredients</span></div>
   </div>
 </a>
 <a href="middle-eastern/sumac-onions.html" class="recipe-card">

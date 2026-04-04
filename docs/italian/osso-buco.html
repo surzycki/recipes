@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -444,43 +467,43 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>score the front and back of the sliced <span class="ing-highlight">veal shank</span> and season genrously with <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">2</span><p>cover veal in some <span class="ing-highlight">flour</span></p></div>
-<div class="step"><span class="step-num">3</span><p>heat <span class="ing-highlight">oil</span> in pan, and place veal in the pan</p></div>
-<div class="step"><span class="step-num">4</span><p>brown well a about 3 minutes on each side</p></div>
-<div class="step"><span class="step-num">5</span><p>add sliced <span class="ing-highlight">sweet onions</span></p></div>
-<div class="step"><span class="step-num">6</span><p>add sliced <span class="ing-highlight">carrots</span></p></div>
-<div class="step"><span class="step-num">7</span><p>add sliced <span class="ing-highlight">celery</span></p></div>
-<div class="step"><span class="step-num">8</span><p>add sliced <span class="ing-highlight">garlic cloves</span></p></div>
-<div class="step"><span class="step-num">9</span><p>add <span class="ing-highlight">rosemary</span></p></div>
-<div class="step"><span class="step-num">10</span><p>add <span class="ing-highlight">thyme</span></p></div>
-<div class="step"><span class="step-num">11</span><p>season well with salt</p></div>
-<div class="step"><span class="step-num">12</span><p>cook about 4 minutes</p></div>
-<div class="step"><span class="step-num">13</span><p>deglaze with <span class="ing-highlight">white wine</span></p></div>
-<div class="step"><span class="step-num">14</span><p>add <span class="ing-highlight">passatta</span> on top veggies</p></div>
-<div class="step"><span class="step-num">15</span><p>add <span class="ing-highlight">veal stock</span> on top veggies</p></div>
-<div class="step"><span class="step-num">16</span><p>add <span class="ing-highlight">chicken stock</span></p></div>
-<div class="step"><span class="step-num">17</span><p>mix everything well</p></div>
-<div class="step"><span class="step-num">18</span><p>cover with baking paper</p></div>
-<div class="step"><span class="step-num">19</span><p>cover with lid and bake at 140°C for 3 hours</p></div>
-<div class="step"><span class="step-num">20</span><p>make gremalta, chop <span class="ing-highlight">flat leaf parsely</span> really fine</p></div>
-<div class="step"><span class="step-num">21</span><p>finely chop <span class="ing-highlight">garlic cloves</span></p></div>
-<div class="step"><span class="step-num">22</span><p>zest <span class="ing-highlight">lemon</span> and add salt</p></div>
-<div class="step"><span class="step-num">23</span><p>mix all in bowl with <span class="ing-highlight">olive oil</span></p></div>
-<div class="step"><span class="step-num">24</span><p>cut <span class="ing-highlight">charlotte potatoes</span> in discs (use a circular form to punch out 2-3cm piecess)</p></div>
-<div class="step"><span class="step-num">25</span><p>boil potatoes in salted water for 5 minutes</p></div>
-<div class="step"><span class="step-num">26</span><p>cut ends off of <span class="ing-highlight">mushrooms</span></p></div>
-<div class="step"><span class="step-num">27</span><p>drain and fry in some olive oil until brown, season</p></div>
-<div class="step"><span class="step-num">28</span><p>add <span class="ing-highlight">cherry tomatoes</span> and mushrooms</p></div>
-<div class="step"><span class="step-num">29</span><p>add more olive oil and cook 4 minutes</p></div>
-<div class="step"><span class="step-num">30</span><p>remove osso buco from oven and gently remove meat</p></div>
-<div class="step"><span class="step-num">31</span><p>strain sauce and return to pan with <span class="ing-highlight">butter</span></p></div>
-<div class="step"><span class="step-num">32</span><p>reduce a bit if necessary</p></div>
-<div class="step"><span class="step-num">33</span><p>plate, place meat in middle plate, pour some sauce on top</p></div>
-<div class="step"><span class="step-num">34</span><p>add tomates on the side and top</p></div>
-<div class="step"><span class="step-num">35</span><p>place potated and mushrooms on top</p></div>
-<div class="step"><span class="step-num">36</span><p>and spoonful of gremolata on top in 3 places</p></div>
-<div class="step"><span class="step-num">37</span><p>top fresh grated <span class="ing-highlight">parmesean</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>score the front and back of the sliced <span class="ing-highlight">veal shank</span> and season genrously with <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> veal shank</li><li><span class="step-ing-measure">some</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>cover veal in some <span class="ing-highlight">flour</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> flour</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>heat <span class="ing-highlight">oil</span> in pan, and place veal in the pan</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> oil</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>brown well a about 3 minutes on each side</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>add sliced <span class="ing-highlight">sweet onions</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> sweet onions</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>add sliced <span class="ing-highlight">carrots</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> carrots</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>add sliced <span class="ing-highlight">celery</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 stalks</span> celery</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>add sliced <span class="ing-highlight">garlic cloves</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>add <span class="ing-highlight">rosemary</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 branch</span> rosemary</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>add <span class="ing-highlight">thyme</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 branch</span> thyme</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>season well with salt</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>cook about 4 minutes</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>deglaze with <span class="ing-highlight">white wine</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.3333333333333333 cup</span> white wine</li></ul></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>add <span class="ing-highlight">passatta</span> on top veggies</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> passatta</li></ul></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>add <span class="ing-highlight">veal stock</span> on top veggies</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 tbsp</span> veal stock</li></ul></div></div>
+<div class="step"><span class="step-num">16</span><div class="step-content"><p>add <span class="ing-highlight">chicken stock</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 cups</span> chicken stock</li></ul></div></div>
+<div class="step"><span class="step-num">17</span><div class="step-content"><p>mix everything well</p></div></div>
+<div class="step"><span class="step-num">18</span><div class="step-content"><p>cover with baking paper</p></div></div>
+<div class="step"><span class="step-num">19</span><div class="step-content"><p>cover with lid and bake at 140°C for 3 hours</p></div></div>
+<div class="step"><span class="step-num">20</span><div class="step-content"><p>make gremalta, chop <span class="ing-highlight">flat leaf parsely</span> really fine</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cup</span> flat leaf parsely</li></ul></div></div>
+<div class="step"><span class="step-num">21</span><div class="step-content"><p>finely chop <span class="ing-highlight">garlic cloves</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">22</span><div class="step-content"><p>zest <span class="ing-highlight">lemon</span> and add salt</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> lemon</li></ul></div></div>
+<div class="step"><span class="step-num">23</span><div class="step-content"><p>mix all in bowl with <span class="ing-highlight">olive oil</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> olive oil</li></ul></div></div>
+<div class="step"><span class="step-num">24</span><div class="step-content"><p>cut <span class="ing-highlight">charlotte potatoes</span> in discs (use a circular form to punch out 2-3cm piecess)</p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> charlotte potatoes</li></ul></div></div>
+<div class="step"><span class="step-num">25</span><div class="step-content"><p>boil potatoes in salted water for 5 minutes</p></div></div>
+<div class="step"><span class="step-num">26</span><div class="step-content"><p>cut ends off of <span class="ing-highlight">mushrooms</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">100 g</span> mushrooms</li></ul></div></div>
+<div class="step"><span class="step-num">27</span><div class="step-content"><p>drain and fry in some olive oil until brown, season</p></div></div>
+<div class="step"><span class="step-num">28</span><div class="step-content"><p>add <span class="ing-highlight">cherry tomatoes</span> and mushrooms</p><ul class="step-ingredients"><li><span class="step-ing-measure">10</span> cherry tomatoes</li></ul></div></div>
+<div class="step"><span class="step-num">29</span><div class="step-content"><p>add more olive oil and cook 4 minutes</p></div></div>
+<div class="step"><span class="step-num">30</span><div class="step-content"><p>remove osso buco from oven and gently remove meat</p></div></div>
+<div class="step"><span class="step-num">31</span><div class="step-content"><p>strain sauce and return to pan with <span class="ing-highlight">butter</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> butter</li></ul></div></div>
+<div class="step"><span class="step-num">32</span><div class="step-content"><p>reduce a bit if necessary</p></div></div>
+<div class="step"><span class="step-num">33</span><div class="step-content"><p>plate, place meat in middle plate, pour some sauce on top</p></div></div>
+<div class="step"><span class="step-num">34</span><div class="step-content"><p>add tomates on the side and top</p></div></div>
+<div class="step"><span class="step-num">35</span><div class="step-content"><p>place potated and mushrooms on top</p></div></div>
+<div class="step"><span class="step-num">36</span><div class="step-content"><p>and spoonful of gremolata on top in 3 places</p></div></div>
+<div class="step"><span class="step-num">37</span><div class="step-content"><p>top fresh grated <span class="ing-highlight">parmesean</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> parmesean</li></ul></div></div>
     </div>
   </main>
 </body>

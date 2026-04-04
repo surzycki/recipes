@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -430,15 +453,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>In pan mix together, <span class="ing-highlight">whole milk</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">honey</span>, and <span class="ing-highlight">cornstarch</span>.</p></div>
-<div class="step"><span class="step-num">2</span><p>Brind to boil while mixing; cook 1 minute longer.</p></div>
-<div class="step"><span class="step-num">3</span><p>Once mixture has thickened, add <span class="ing-highlight">orange blossom water</span>.</p></div>
-<div class="step"><span class="step-num">4</span><p>Pour into moulds, set aside in the fridge for 3 hours.</p></div>
-<div class="step"><span class="step-num">5</span><p>For the syrup; boil <span class="ing-highlight">water</span> and add <span class="ing-highlight">hibiscus flowers</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Remove from heat and infuse for 30 minutes.</p></div>
-<div class="step"><span class="step-num">7</span><p>Mix the mixuture with <span class="ing-highlight">sugar</span> and <span class="ing-highlight">rose water</span>.</p></div>
-<div class="step"><span class="step-num">8</span><p>Bring to boil, and make a syrup.</p></div>
-<div class="step"><span class="step-num">9</span><p>Serve with the flans.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>In pan mix together, <span class="ing-highlight">whole milk</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">honey</span>, and <span class="ing-highlight">cornstarch</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">4 cups</span> whole milk</li><li><span class="step-ing-measure">0.25 cup</span> sugar</li><li><span class="step-ing-measure">0.25 cup</span> honey</li><li><span class="step-ing-measure">0.5 cup</span> cornstarch</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Brind to boil while mixing; cook 1 minute longer.</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Once mixture has thickened, add <span class="ing-highlight">orange blossom water</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> orange blossom water</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Pour into moulds, set aside in the fridge for 3 hours.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>For the syrup; boil <span class="ing-highlight">water</span> and add <span class="ing-highlight">hibiscus flowers</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4 tbsp</span> water</li><li><span class="step-ing-measure">2</span> hibiscus flowers</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Remove from heat and infuse for 30 minutes.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Mix the mixuture with <span class="ing-highlight">sugar</span> and <span class="ing-highlight">rose water</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">8 tbsp</span> sugar</li><li><span class="step-ing-measure">2 tbsp</span> rose water</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Bring to boil, and make a syrup.</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Serve with the flans.</p></div></div>
     </div>
   </main>
 </body>

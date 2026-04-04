@@ -12,9 +12,15 @@ type Ingredient = {
   units: string;
 };
 
+type StepIngredient = {
+  name: string;
+  quantity: string;
+  units: string;
+};
+
 type Instruction = {
   content: string;
-  ingredients: string[];
+  ingredients: StepIngredient[];
 };
 
 type Recipe = {
@@ -94,7 +100,7 @@ function parseRecipe(filePath: string): Recipe {
   const instructions: Instruction[] = [];
   for (const step of parsed.steps) {
     let text = "";
-    const stepIngredients: string[] = [];
+    const stepIngredients: StepIngredient[] = [];
     for (const item of step) {
       switch (item.type) {
         case "text":
@@ -102,7 +108,11 @@ function parseRecipe(filePath: string): Recipe {
           break;
         case "ingredient":
           text += item.name;
-          stepIngredients.push(item.name);
+          stepIngredients.push({
+            name: item.name,
+            quantity: String(item.quantity ?? ""),
+            units: item.units ?? "",
+          });
           break;
         case "timer":
           text += `${item.quantity} ${item.units}`;
@@ -202,14 +212,29 @@ function renderRecipePage(recipe: Recipe, css: string): string {
     .map((inst, i) => {
       // Highlight ingredient names in the step text
       let html = escapeHtml(inst.content);
-      for (const ingName of inst.ingredients) {
-        const escaped = escapeHtml(ingName);
+      for (const ing of inst.ingredients) {
+        const escaped = escapeHtml(ing.name);
         html = html.replace(
           new RegExp(`\\b${escaped.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, "gi"),
           `<span class="ing-highlight">${escaped}</span>`
         );
       }
-      return `<div class="step"><span class="step-num">${i + 1}</span><p>${html}</p></div>`;
+
+      // Build ingredient list for this step
+      let ingList = "";
+      if (inst.ingredients.length > 0) {
+        const items = inst.ingredients.map((ing) => {
+          const qty = ing.quantity && ing.quantity !== "0" ? escapeHtml(ing.quantity) : "";
+          const unit = escapeHtml(ing.units);
+          const measure = [qty, unit].filter(Boolean).join(" ");
+          return measure
+            ? `<li><span class="step-ing-measure">${measure}</span> ${escapeHtml(ing.name)}</li>`
+            : `<li>${escapeHtml(ing.name)}</li>`;
+        }).join("");
+        ingList = `<ul class="step-ingredients">${items}</ul>`;
+      }
+
+      return `<div class="step"><span class="step-num">${i + 1}</span><div class="step-content"><p>${html}</p>${ingList}</div></div>`;
     })
     .join("\n");
 

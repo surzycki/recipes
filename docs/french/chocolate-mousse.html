@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -427,11 +450,11 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Melt chocolate 80% with <span class="ing-highlight">butter</span> and <span class="ing-highlight">salt</span> in a double boiler.</p></div>
-<div class="step"><span class="step-num">2</span><p>Whip the whites of <span class="ing-highlight">eggs</span> until they are firm then add <span class="ing-highlight">sugar</span></p></div>
-<div class="step"><span class="step-num">3</span><p>Add yolks of <span class="ing-highlight">eggs</span> in chocolate mixuture carefully.</p></div>
-<div class="step"><span class="step-num">4</span><p>Fold the whites of the eggs with chocolate mixture.</p></div>
-<div class="step"><span class="step-num">5</span><p>Put in the fridge for 3 hours.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Melt chocolate 80% with <span class="ing-highlight">butter</span> and <span class="ing-highlight">salt</span> in a double boiler.</p><ul class="step-ingredients"><li><span class="step-ing-measure">100 g</span> chocolate 80%</li><li><span class="step-ing-measure">50 g</span> butter</li><li><span class="step-ing-measure">1 pinch</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Whip the whites of <span class="ing-highlight">eggs</span> until they are firm then add <span class="ing-highlight">sugar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">7</span> eggs</li><li><span class="step-ing-measure">80 g</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add yolks of <span class="ing-highlight">eggs</span> in chocolate mixuture carefully.</p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> eggs</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Fold the whites of the eggs with chocolate mixture.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Put in the fridge for 3 hours.</p></div></div>
     </div>
   </main>
 </body>

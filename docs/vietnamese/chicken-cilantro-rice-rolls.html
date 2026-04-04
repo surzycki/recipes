@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -437,14 +460,14 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Add ground <span class="ing-highlight">chicken breast</span>, <span class="ing-highlight">green onions</span>, crushed <span class="ing-highlight">ginger</span>, crushed <span class="ing-highlight">garlic clove</span>, chopped <span class="ing-highlight">firm tofu</span>, chopped <span class="ing-highlight">cilantro</span>, <span class="ing-highlight">egg</span>, <span class="ing-highlight">sesame oil</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">pepper</span> to a bowl and mix well.</p></div>
-<div class="step"><span class="step-num">2</span><p>Add water to <span class="ing-highlight">cornstarch</span> to make a paste, add to mixture.</p></div>
-<div class="step"><span class="step-num">3</span><p>Soak breifly <span class="ing-highlight">rice paper</span> in water to soften.</p></div>
-<div class="step"><span class="step-num">4</span><p>Add 2tbps of the mixture to the center of the rice paper and fold the sides in and roll up.</p></div>
-<div class="step"><span class="step-num">5</span><p>Oil a steaming basket and place the rolls in the basket (do not let them touch, they stick).</p></div>
-<div class="step"><span class="step-num">6</span><p>Steam for 10 minutes. And let cool.</p></div>
-<div class="step"><span class="step-num">7</span><p>Mix <span class="ing-highlight">oyster sauce</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">water</span> in a bowl for the sauce.</p></div>
-<div class="step"><span class="step-num">8</span><p>Serve with sauce ontop and some cilantro and green onions.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Add ground <span class="ing-highlight">chicken breast</span>, <span class="ing-highlight">green onions</span>, crushed <span class="ing-highlight">ginger</span>, crushed <span class="ing-highlight">garlic clove</span>, chopped <span class="ing-highlight">firm tofu</span>, chopped <span class="ing-highlight">cilantro</span>, <span class="ing-highlight">egg</span>, <span class="ing-highlight">sesame oil</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">pepper</span> to a bowl and mix well.</p><ul class="step-ingredients"><li><span class="step-ing-measure">500 g</span> chicken breast</li><li><span class="step-ing-measure">1</span> green onions</li><li><span class="step-ing-measure">2 tbsp</span> ginger</li><li><span class="step-ing-measure">1</span> garlic clove</li><li><span class="step-ing-measure">100 g</span> firm tofu</li><li><span class="step-ing-measure">0.25 cup</span> cilantro</li><li><span class="step-ing-measure">1</span> egg</li><li><span class="step-ing-measure">2tsp</span> sesame oil</li><li><span class="step-ing-measure">2 tsp</span> soy sauce</li><li><span class="step-ing-measure">1 tsp</span> salt</li><li><span class="step-ing-measure">0.5 tsp</span> pepper</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add water to <span class="ing-highlight">cornstarch</span> to make a paste, add to mixture.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> cornstarch</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Soak breifly <span class="ing-highlight">rice paper</span> in water to soften.</p><ul class="step-ingredients"><li><span class="step-ing-measure">20</span> rice paper</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add 2tbps of the mixture to the center of the rice paper and fold the sides in and roll up.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Oil a steaming basket and place the rolls in the basket (do not let them touch, they stick).</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Steam for 10 minutes. And let cool.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Mix <span class="ing-highlight">oyster sauce</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">water</span> in a bowl for the sauce.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tsp</span> oyster sauce</li><li><span class="step-ing-measure">2 tbsp</span> soy sauce</li><li><span class="step-ing-measure">1 tbsp</span> sugar</li><li><span class="step-ing-measure">0.33 cup</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Serve with sauce ontop and some cilantro and green onions.</p></div></div>
     </div>
   </main>
 </body>

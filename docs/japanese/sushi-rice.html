@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,18 +452,18 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Rince <span class="ing-highlight">sushi rice</span> until water runs clear.</p></div>
-<div class="step"><span class="step-num">2</span><p>Drain rice in sieve for 30 minutes.</p></div>
-<div class="step"><span class="step-num">3</span><p>Put rice in the pan you are going to cook it in.</p></div>
-<div class="step"><span class="step-num">4</span><p>Add <span class="ing-highlight">filtered water</span> with <span class="ing-highlight">sake</span>.</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">kombu</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Soak rice for 30 minutes until rice is white.</p></div>
-<div class="step"><span class="step-num">7</span><p>Turn heat to boil, cover and reduce to simmer for 15 minutes</p></div>
-<div class="step"><span class="step-num">8</span><p>Turn heat off and steam for 20 minutes</p></div>
-<div class="step"><span class="step-num">9</span><p>Remove lid, fluff rice and cover again to steam for 5 minutes</p></div>
-<div class="step"><span class="step-num">10</span><p>Mix <span class="ing-highlight">rice vinegar</span>, <span class="ing-highlight">sugar</span> and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">11</span><p>Heat vinegar mixture if necessary</p></div>
-<div class="step"><span class="step-num">12</span><p>Dump rice into large bowl and pour vinegar mixture over little by little cooling the rice at the same time.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Rince <span class="ing-highlight">sushi rice</span> until water runs clear.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 cups</span> sushi rice</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Drain rice in sieve for 30 minutes.</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Put rice in the pan you are going to cook it in.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add <span class="ing-highlight">filtered water</span> with <span class="ing-highlight">sake</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2.33 cups</span> filtered water</li><li><span class="step-ing-measure">2 tbsp</span> sake</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">kombu</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4 in</span> kombu</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Soak rice for 30 minutes until rice is white.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Turn heat to boil, cover and reduce to simmer for 15 minutes</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Turn heat off and steam for 20 minutes</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Remove lid, fluff rice and cover again to steam for 5 minutes</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Mix <span class="ing-highlight">rice vinegar</span>, <span class="ing-highlight">sugar</span> and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4 tbsp</span> rice vinegar</li><li><span class="step-ing-measure">5 tbsp</span> sugar</li><li><span class="step-ing-measure">0.5 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Heat vinegar mixture if necessary</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Dump rice into large bowl and pour vinegar mixture over little by little cooling the rice at the same time.</p></div></div>
     </div>
   </main>
 </body>

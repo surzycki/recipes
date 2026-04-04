@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -438,14 +461,14 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Peel and roughly chop <span class="ing-highlight">carrot</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Julienne <span class="ing-highlight">ginger</span></p></div>
-<div class="step"><span class="step-num">3</span><p>Heat some <span class="ing-highlight">oil</span> in a pan, place <span class="ing-highlight">mace</span>, <span class="ing-highlight">fennel seed</span>, <span class="ing-highlight">mustard seed</span>, <span class="ing-highlight">turmeric</span>, <span class="ing-highlight">green cardamom pod</span>, <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">nutmeg</span>, <span class="ing-highlight">msg</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Brown until fragrant, add carrots and ginger</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">coconut milk</span> and <span class="ing-highlight">veggie stock</span> and <span class="ing-highlight">thyme</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Cool and blend until smooth</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">salt</span> to taste and strain.</p></div>
-<div class="step"><span class="step-num">8</span><p>Cool and serve with <span class="ing-highlight">heavy cream</span> and pickled onions</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Peel and roughly chop <span class="ing-highlight">carrot</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4 cups</span> carrot</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Julienne <span class="ing-highlight">ginger</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.25 cup</span> ginger</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Heat some <span class="ing-highlight">oil</span> in a pan, place <span class="ing-highlight">mace</span>, <span class="ing-highlight">fennel seed</span>, <span class="ing-highlight">mustard seed</span>, <span class="ing-highlight">turmeric</span>, <span class="ing-highlight">green cardamom pod</span>, <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">nutmeg</span>, <span class="ing-highlight">msg</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> oil</li><li><span class="step-ing-measure">0.5 tsp</span> mace</li><li><span class="step-ing-measure">1 tbsp</span> fennel seed</li><li><span class="step-ing-measure">1 tbsp</span> mustard seed</li><li><span class="step-ing-measure">1 tbsp</span> turmeric</li><li><span class="step-ing-measure">4</span> green cardamom pod</li><li><span class="step-ing-measure">4 cm</span> cinnamon stick</li><li><span class="step-ing-measure">0.25 tsp</span> nutmeg</li><li><span class="step-ing-measure">0.5 tbsp</span> msg</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Brown until fragrant, add carrots and ginger</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">coconut milk</span> and <span class="ing-highlight">veggie stock</span> and <span class="ing-highlight">thyme</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">400 ml</span> coconut milk</li><li><span class="step-ing-measure">400 ml</span> veggie stock</li><li><span class="step-ing-measure">1 sprig</span> thyme</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Cool and blend until smooth</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">salt</span> to taste and strain.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Cool and serve with <span class="ing-highlight">heavy cream</span> and pickled onions</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> heavy cream</li></ul></div></div>
     </div>
   </main>
 </body>

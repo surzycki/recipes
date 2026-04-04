@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,14 +452,14 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>If using wooden skewers, soak them in water for a few hours before grilling.</p></div>
-<div class="step"><span class="step-num">2</span><p>Cut <span class="ing-highlight">chicken thighs</span> into roughly 1-inch pieces.</p></div>
-<div class="step"><span class="step-num">3</span><p>In a bowl, add the chopped chicken, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">oregano</span>, <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">dijon mustard</span>, zest of <span class="ing-highlight"><span class="ing-highlight">lemon</span></span>, and juice of a <span class="ing-highlight"><span class="ing-highlight">lemon</span></span>. Mix well.</p></div>
-<div class="step"><span class="step-num">4</span><p>Cover and refrigerate to marinate for at least 30 minutes and up to 24 hours.</p></div>
-<div class="step"><span class="step-num">5</span><p>Preheat a grill to 285°C.</p></div>
-<div class="step"><span class="step-num">6</span><p>Thread the marinated chicken onto skewers.</p></div>
-<div class="step"><span class="step-num">7</span><p>Grill the chicken skewers for 12-15 minutes, turning occasionally, until well charred on all sides.</p></div>
-<div class="step"><span class="step-num">8</span><p>(Optional) Grill pita bread on the grill for 2 minutes per side.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>If using wooden skewers, soak them in water for a few hours before grilling.</p></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Cut <span class="ing-highlight">chicken thighs</span> into roughly 1-inch pieces.</p><ul class="step-ingredients"><li><span class="step-ing-measure">900 g</span> chicken thighs</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>In a bowl, add the chopped chicken, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">oregano</span>, <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">dijon mustard</span>, zest of <span class="ing-highlight"><span class="ing-highlight">lemon</span></span>, and juice of a <span class="ing-highlight"><span class="ing-highlight">lemon</span></span>. Mix well.</p><ul class="step-ingredients"><li><span class="step-ing-measure">125 g</span> olive oil</li><li><span class="step-ing-measure">15 g</span> salt</li><li><span class="step-ing-measure">30 g</span> garlic cloves</li><li><span class="step-ing-measure">5 g</span> oregano</li><li><span class="step-ing-measure">5 g</span> black pepper</li><li><span class="step-ing-measure">100 g</span> dijon mustard</li><li><span class="step-ing-measure">2</span> lemon</li><li><span class="step-ing-measure">30 g</span> lemon</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Cover and refrigerate to marinate for at least 30 minutes and up to 24 hours.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Preheat a grill to 285°C.</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Thread the marinated chicken onto skewers.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Grill the chicken skewers for 12-15 minutes, turning occasionally, until well charred on all sides.</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>(Optional) Grill pita bread on the grill for 2 minutes per side.</p></div></div>
     </div>
   </main>
 </body>

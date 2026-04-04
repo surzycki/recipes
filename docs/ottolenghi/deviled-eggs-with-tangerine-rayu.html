@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -437,13 +460,13 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Fry finely chopped <span class="ing-highlight">spring onions</span>, grated <span class="ing-highlight">ginger</span>, minced <span class="ing-highlight">garlic cloves</span>, pinch <span class="ing-highlight">salt</span> in <span class="ing-highlight">oil</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Fry for 10 minutes then add remaining <span class="ing-highlight">oil</span> and fry for 1 minute</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">aleppo pepper</span>, <span class="ing-highlight">red bell pepper flakes</span>, toasted <span class="ing-highlight">sesame seeds</span>, black <span class="ing-highlight">sesame seeds</span>, zest and juice from <span class="ing-highlight">tangerine</span> 2.5tsp and 1tsp respectively</p></div>
-<div class="step"><span class="step-num">4</span><p>Seal in jar and let sit for 2 hour</p></div>
-<div class="step"><span class="step-num">5</span><p>Cut hardboiled <span class="ing-highlight">eggs</span> in half and remove yolks</p></div>
-<div class="step"><span class="step-num">6</span><p>Put yolks in bowl and mash with 100g of above rayu solids (avoid adding any oil), add <span class="ing-highlight">mayonnaise</span> and whip.</p></div>
-<div class="step"><span class="step-num">7</span><p>Fill egg whites with mixture, dirzzle with rayu oil, <span class="ing-highlight">chives</span>, reserved sesame seeds, and <span class="ing-highlight">rice vinegar</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Fry finely chopped <span class="ing-highlight">spring onions</span>, grated <span class="ing-highlight">ginger</span>, minced <span class="ing-highlight">garlic cloves</span>, pinch <span class="ing-highlight">salt</span> in <span class="ing-highlight">oil</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> spring onions</li><li><span class="step-ing-measure">4 cm</span> ginger</li><li><span class="step-ing-measure">3</span> garlic cloves</li><li><span class="step-ing-measure">some</span> salt</li><li><span class="step-ing-measure">45 ml</span> oil</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Fry for 10 minutes then add remaining <span class="ing-highlight">oil</span> and fry for 1 minute</p><ul class="step-ingredients"><li><span class="step-ing-measure">45 ml</span> oil</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">aleppo pepper</span>, <span class="ing-highlight">red bell pepper flakes</span>, toasted <span class="ing-highlight">sesame seeds</span>, black <span class="ing-highlight">sesame seeds</span>, zest and juice from <span class="ing-highlight">tangerine</span> 2.5tsp and 1tsp respectively</p><ul class="step-ingredients"><li><span class="step-ing-measure">2.5 tbsp</span> soy sauce</li><li><span class="step-ing-measure">1.5 tsp</span> aleppo pepper</li><li><span class="step-ing-measure">1.5 tbsp</span> red bell pepper flakes</li><li><span class="step-ing-measure">1.75 tbsp</span> sesame seeds</li><li><span class="step-ing-measure">1 tbsp</span> black sesame seeds</li><li><span class="step-ing-measure">2</span> tangerine</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Seal in jar and let sit for 2 hour</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Cut hardboiled <span class="ing-highlight">eggs</span> in half and remove yolks</p><ul class="step-ingredients"><li><span class="step-ing-measure">6</span> eggs</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Put yolks in bowl and mash with 100g of above rayu solids (avoid adding any oil), add <span class="ing-highlight">mayonnaise</span> and whip.</p><ul class="step-ingredients"><li><span class="step-ing-measure">30 g</span> mayonnaise</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Fill egg whites with mixture, dirzzle with rayu oil, <span class="ing-highlight">chives</span>, reserved sesame seeds, and <span class="ing-highlight">rice vinegar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> chives</li><li><span class="step-ing-measure">tiny splash</span> rice vinegar</li></ul></div></div>
     </div>
   </main>
 </body>

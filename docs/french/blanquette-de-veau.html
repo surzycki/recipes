@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -449,33 +472,33 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Blanch large cut pieces  <span class="ing-highlight">veal shoulder</span> in water</p></div>
-<div class="step"><span class="step-num">2</span><p>Skim off impurities as they rise</p></div>
-<div class="step"><span class="step-num">3</span><p>Make bouquet garni, cut <span class="ing-highlight">leek</span> 3/4 way through to open it up</p></div>
-<div class="step"><span class="step-num">4</span><p>Inside put <span class="ing-highlight">thyme</span>, <span class="ing-highlight">bay leaves</span>, and <span class="ing-highlight">parsely</span>; tie with twine.</p></div>
-<div class="step"><span class="step-num">5</span><p>Peel <span class="ing-highlight">onion</span> with <span class="ing-highlight">cloves</span> 4 pushed inside each.</p></div>
-<div class="step"><span class="step-num">6</span><p>Strain meat.</p></div>
-<div class="step"><span class="step-num">7</span><p>Chop <span class="ing-highlight">carrots</span> into bite sized pieces</p></div>
-<div class="step"><span class="step-num">8</span><p>Chop <span class="ing-highlight">celery</span> into large pieces</p></div>
-<div class="step"><span class="step-num">9</span><p>Add blanched veal, bouquet garni, onion, carrots, celery, and <span class="ing-highlight">garlic cloves</span> to a dutch oven</p></div>
-<div class="step"><span class="step-num">10</span><p>Add <span class="ing-highlight">chicken stock</span> and season with salt.</p></div>
-<div class="step"><span class="step-num">11</span><p>Add <span class="ing-highlight">white wine</span></p></div>
-<div class="step"><span class="step-num">12</span><p>Add <span class="ing-highlight">black peppercorns</span>, <span class="ing-highlight">juniper berries</span>, <span class="ing-highlight">corriander seeds</span></p></div>
-<div class="step"><span class="step-num">13</span><p>Simmer covered on low heat for 90 minutes</p></div>
-<div class="step"><span class="step-num">14</span><p>Remove carrots and leek, save carrots, and continue cooking for 45 minutes until meat is tender</p></div>
-<div class="step"><span class="step-num">15</span><p>Strain and save meat, carrots, and stock.</p></div>
-<div class="step"><span class="step-num">16</span><p>Wash and cut <span class="ing-highlight">mushrooms</span></p></div>
-<div class="step"><span class="step-num">17</span><p>Cover mushrooms with water, season with salt, pepper, <span class="ing-highlight">butter</span>, and juice of 1/2 of <span class="ing-highlight">lemon</span></p></div>
-<div class="step"><span class="step-num">18</span><p>Add a splash of <span class="ing-highlight">white wine</span> and boil for 15 minutes.</p></div>
-<div class="step"><span class="step-num">19</span><p>For the <span class="ing-highlight">pearl onions</span>, blanche for 2 minutes and place in cold water, you can then peel easily by squeezing them.</p></div>
-<div class="step"><span class="step-num">20</span><p>Saute the pearl onions in <span class="ing-highlight">butter</span> with <span class="ing-highlight">sugar</span> and <span class="ing-highlight">water</span></p></div>
-<div class="step"><span class="step-num">21</span><p>Carmelize the onions (when the water is evaporated)</p></div>
-<div class="step"><span class="step-num">22</span><p>Melt <span class="ing-highlight">butter</span> with <span class="ing-highlight">flour</span> in the dutch oven to make a light roux.</p></div>
-<div class="step"><span class="step-num">23</span><p>Add saved stock to make a veloute</p></div>
-<div class="step"><span class="step-num">24</span><p>Add veal and carrots, mushrooms, and simmer gently for 20 minutes</p></div>
-<div class="step"><span class="step-num">25</span><p>Mix yolks of <span class="ing-highlight">eggs</span> with <span class="ing-highlight">heavy cream</span></p></div>
-<div class="step"><span class="step-num">26</span><p>And mix in mixture, do not let boil anymore.</p></div>
-<div class="step"><span class="step-num">27</span><p>Add 1/2 of juice from lemon.  Season with salt and pepper</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Blanch large cut pieces  <span class="ing-highlight">veal shoulder</span> in water</p><ul class="step-ingredients"><li><span class="step-ing-measure">1.2 kg</span> veal shoulder</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Skim off impurities as they rise</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Make bouquet garni, cut <span class="ing-highlight">leek</span> 3/4 way through to open it up</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> leek</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Inside put <span class="ing-highlight">thyme</span>, <span class="ing-highlight">bay leaves</span>, and <span class="ing-highlight">parsely</span>; tie with twine.</p><ul class="step-ingredients"><li><span class="step-ing-measure">10 branches</span> thyme</li><li><span class="step-ing-measure">3</span> bay leaves</li><li><span class="step-ing-measure">3 branches</span> parsely</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Peel <span class="ing-highlight">onion</span> with <span class="ing-highlight">cloves</span> 4 pushed inside each.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> onion</li><li><span class="step-ing-measure">8</span> cloves</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Strain meat.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Chop <span class="ing-highlight">carrots</span> into bite sized pieces</p><ul class="step-ingredients"><li><span class="step-ing-measure">200 g</span> carrots</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Chop <span class="ing-highlight">celery</span> into large pieces</p><ul class="step-ingredients"><li><span class="step-ing-measure">100 g</span> celery</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Add blanched veal, bouquet garni, onion, carrots, celery, and <span class="ing-highlight">garlic cloves</span> to a dutch oven</p><ul class="step-ingredients"><li><span class="step-ing-measure">25 g</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Add <span class="ing-highlight">chicken stock</span> and season with salt.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 litres</span> chicken stock</li><li><span class="step-ing-measure">some</span> salt.</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Add <span class="ing-highlight">white wine</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">250 ml</span> white wine</li></ul></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Add <span class="ing-highlight">black peppercorns</span>, <span class="ing-highlight">juniper berries</span>, <span class="ing-highlight">corriander seeds</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 g</span> black peppercorns</li><li><span class="step-ing-measure">12</span> juniper berries</li><li><span class="step-ing-measure">3 g</span> corriander seeds</li></ul></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Simmer covered on low heat for 90 minutes</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Remove carrots and leek, save carrots, and continue cooking for 45 minutes until meat is tender</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Strain and save meat, carrots, and stock.</p></div></div>
+<div class="step"><span class="step-num">16</span><div class="step-content"><p>Wash and cut <span class="ing-highlight">mushrooms</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">250 g</span> mushrooms</li></ul></div></div>
+<div class="step"><span class="step-num">17</span><div class="step-content"><p>Cover mushrooms with water, season with salt, pepper, <span class="ing-highlight">butter</span>, and juice of 1/2 of <span class="ing-highlight">lemon</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> salt,</li><li><span class="step-ing-measure">some</span> pepper,</li><li><span class="step-ing-measure">1 tbsp</span> butter</li><li><span class="step-ing-measure">1</span> lemon</li></ul></div></div>
+<div class="step"><span class="step-num">18</span><div class="step-content"><p>Add a splash of <span class="ing-highlight">white wine</span> and boil for 15 minutes.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> white wine</li></ul></div></div>
+<div class="step"><span class="step-num">19</span><div class="step-content"><p>For the <span class="ing-highlight">pearl onions</span>, blanche for 2 minutes and place in cold water, you can then peel easily by squeezing them.</p><ul class="step-ingredients"><li><span class="step-ing-measure">300 g</span> pearl onions</li></ul></div></div>
+<div class="step"><span class="step-num">20</span><div class="step-content"><p>Saute the pearl onions in <span class="ing-highlight">butter</span> with <span class="ing-highlight">sugar</span> and <span class="ing-highlight">water</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">15 g</span> butter</li><li><span class="step-ing-measure">20 g</span> sugar</li><li><span class="step-ing-measure">30 g</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">21</span><div class="step-content"><p>Carmelize the onions (when the water is evaporated)</p></div></div>
+<div class="step"><span class="step-num">22</span><div class="step-content"><p>Melt <span class="ing-highlight">butter</span> with <span class="ing-highlight">flour</span> in the dutch oven to make a light roux.</p><ul class="step-ingredients"><li><span class="step-ing-measure">60 g</span> butter</li><li><span class="step-ing-measure">60 g</span> flour</li></ul></div></div>
+<div class="step"><span class="step-num">23</span><div class="step-content"><p>Add saved stock to make a veloute</p></div></div>
+<div class="step"><span class="step-num">24</span><div class="step-content"><p>Add veal and carrots, mushrooms, and simmer gently for 20 minutes</p></div></div>
+<div class="step"><span class="step-num">25</span><div class="step-content"><p>Mix yolks of <span class="ing-highlight">eggs</span> with <span class="ing-highlight">heavy cream</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> eggs</li><li><span class="step-ing-measure">20 cl</span> heavy cream</li></ul></div></div>
+<div class="step"><span class="step-num">26</span><div class="step-content"><p>And mix in mixture, do not let boil anymore.</p></div></div>
+<div class="step"><span class="step-num">27</span><div class="step-content"><p>Add 1/2 of juice from lemon.  Season with salt and pepper</p></div></div>
     </div>
   </main>
 </body>

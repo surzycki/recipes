@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,15 +452,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>In a hot skillet add <span class="ing-highlight">lard</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Add chopped <span class="ing-highlight">onion</span> and <span class="ing-highlight">jalapeno pepper</span></p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">mexican chorizo</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Cook for 10 minutes</p></div>
-<div class="step"><span class="step-num">5</span><p>Add fire roasted <span class="ing-highlight">pablano peppers</span> and chopped <span class="ing-highlight">tomato</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Remove hald of the mixuture and flatten mixture in pan</p></div>
-<div class="step"><span class="step-num">7</span><p>Add shredded <span class="ing-highlight">mozzarella</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Add remaining mixture</p></div>
-<div class="step"><span class="step-num">9</span><p>Cook in oven at 200C for 10 minutes</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>In a hot skillet add <span class="ing-highlight">lard</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> lard</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add chopped <span class="ing-highlight">onion</span> and <span class="ing-highlight">jalapeno pepper</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cup</span> onion</li><li><span class="step-ing-measure">1</span> jalapeno pepper</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">mexican chorizo</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">300 g</span> mexican chorizo</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Cook for 10 minutes</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add fire roasted <span class="ing-highlight">pablano peppers</span> and chopped <span class="ing-highlight">tomato</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> pablano peppers</li><li><span class="step-ing-measure">1</span> tomato</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Remove hald of the mixuture and flatten mixture in pan</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add shredded <span class="ing-highlight">mozzarella</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">350 g</span> mozzarella</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add remaining mixture</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Cook in oven at 200C for 10 minutes</p></div></div>
     </div>
   </main>
 </body>

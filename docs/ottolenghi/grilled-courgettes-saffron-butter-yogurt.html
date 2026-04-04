@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -434,14 +457,14 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Mix <span class="ing-highlight">butter</span> and <span class="ing-highlight">saffron</span> on medium heat, infuse for 1 hour</p></div>
-<div class="step"><span class="step-num">2</span><p>Slice <span class="ing-highlight">courgettes</span> in half lengthwise, put on baking tray, drizzle with <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">salt</span> and <span class="ing-highlight">pepper</span>.</p></div>
-<div class="step"><span class="step-num">3</span><p>Grill in oven on high grill setting for 10-15 minutes until nicely browned.</p></div>
-<div class="step"><span class="step-num">4</span><p>Whisk <span class="ing-highlight">corn starch</span> and <span class="ing-highlight">water</span> in a bowl</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">yogurt</span>, <span class="ing-highlight">garlic clove</span>, dried <span class="ing-highlight">mint</span>, <span class="ing-highlight">olive oil</span>, and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Cook on medium heat until thickened, stirring constantly, DON'T BOIL</p></div>
-<div class="step"><span class="step-num">7</span><p>Trasnfer mixture to plate, top with grilled corgettes, sprinkly with butter, roasted semi crushed <span class="ing-highlight">corriander seeds</span>, and leaves from <span class="ing-highlight">mint</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Squeeze some lemon juice on top and serve</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Mix <span class="ing-highlight">butter</span> and <span class="ing-highlight">saffron</span> on medium heat, infuse for 1 hour</p><ul class="step-ingredients"><li><span class="step-ing-measure">40 g</span> butter</li><li><span class="step-ing-measure">0.25 tsp</span> saffron</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Slice <span class="ing-highlight">courgettes</span> in half lengthwise, put on baking tray, drizzle with <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">salt</span> and <span class="ing-highlight">pepper</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> courgettes</li><li><span class="step-ing-measure">2 tbsp</span> olive oil</li><li><span class="step-ing-measure">some</span> salt</li><li><span class="step-ing-measure">1 tsp</span> pepper</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Grill in oven on high grill setting for 10-15 minutes until nicely browned.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Whisk <span class="ing-highlight">corn starch</span> and <span class="ing-highlight">water</span> in a bowl</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> corn starch</li><li><span class="step-ing-measure">3 tbsp</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">yogurt</span>, <span class="ing-highlight">garlic clove</span>, dried <span class="ing-highlight">mint</span>, <span class="ing-highlight">olive oil</span>, and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">300 g</span> yogurt</li><li><span class="step-ing-measure">2</span> garlic clove</li><li><span class="step-ing-measure">0.5 tsp</span> mint</li><li><span class="step-ing-measure">1 tsp</span> olive oil</li><li><span class="step-ing-measure">pinch</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Cook on medium heat until thickened, stirring constantly, DON'T BOIL</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Trasnfer mixture to plate, top with grilled corgettes, sprinkly with butter, roasted semi crushed <span class="ing-highlight">corriander seeds</span>, and leaves from <span class="ing-highlight">mint</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> corriander seeds</li><li><span class="step-ing-measure">1.5 tbsp</span> mint</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Squeeze some lemon juice on top and serve</p></div></div>
     </div>
   </main>
 </body>

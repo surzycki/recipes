@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -435,15 +458,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Crush whole spices to coarse grind, <span class="ing-highlight">cinnamon sticks</span>, <span class="ing-highlight">star anise</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">green cardamom pods</span>, <span class="ing-highlight">black pepper</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Toast the crushed spices for a few minutes</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">water</span>, chopped <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">nutmeg</span> to a pan</p></div>
-<div class="step"><span class="step-num">4</span><p>Add toasted spices and bring to a boil</p></div>
-<div class="step"><span class="step-num">5</span><p>Reduce heat and simmer for 10 minutes</p></div>
-<div class="step"><span class="step-num">6</span><p>Return to a boil and remove from heat</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">black tea</span> and steep for 3 minutes</p></div>
-<div class="step"><span class="step-num">8</span><p>Strain tea and add <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">honey</span>, <span class="ing-highlight">maple syrup</span>, and <span class="ing-highlight">vanilla</span></p></div>
-<div class="step"><span class="step-num">9</span><p>Let cool to room temp then bottle and keep in fridge</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Crush whole spices to coarse grind, <span class="ing-highlight">cinnamon sticks</span>, <span class="ing-highlight">star anise</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">green cardamom pods</span>, <span class="ing-highlight">black pepper</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">3 in</span> cinnamon sticks</li><li><span class="step-ing-measure">3</span> star anise</li><li><span class="step-ing-measure">12</span> cloves</li><li><span class="step-ing-measure">8</span> green cardamom pods</li><li><span class="step-ing-measure">1 tbsp</span> black pepper</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Toast the crushed spices for a few minutes</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">water</span>, chopped <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">nutmeg</span> to a pan</p><ul class="step-ingredients"><li><span class="step-ing-measure">5 cups</span> water</li><li><span class="step-ing-measure">0.33 cups</span> ginger</li><li><span class="step-ing-measure">0.25 tsp</span> nutmeg</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add toasted spices and bring to a boil</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Reduce heat and simmer for 10 minutes</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Return to a boil and remove from heat</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">black tea</span> and steep for 3 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">4 tbsp</span> black tea</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Strain tea and add <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">honey</span>, <span class="ing-highlight">maple syrup</span>, and <span class="ing-highlight">vanilla</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> brown sugar</li><li><span class="step-ing-measure">1 tbsp</span> honey</li><li><span class="step-ing-measure">1 tbsp</span> maple syrup</li><li><span class="step-ing-measure">0.25 tsp</span> vanilla</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Let cool to room temp then bottle and keep in fridge</p></div></div>
     </div>
   </main>
 </body>

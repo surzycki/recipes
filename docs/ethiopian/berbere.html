@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -440,12 +463,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>In blender roughly chop, <span class="ing-highlight">guajillo chilis</span>, <span class="ing-highlight">onion</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">rosemary</span>, <span class="ing-highlight">besobela</span>.</p></div>
-<div class="step"><span class="step-num">2</span><p>Add <span class="ing-highlight">water</span> if necessary</p></div>
-<div class="step"><span class="step-num">3</span><p>Bag up and let ferment at room temperature 24 hours and up to 72 hours</p></div>
-<div class="step"><span class="step-num">4</span><p>Dehydrate in oven</p></div>
-<div class="step"><span class="step-num">5</span><p>Toast <span class="ing-highlight">ajwan seeds</span>, <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">korerima</span>, <span class="ing-highlight">fenugreek seeds</span>, <span class="ing-highlight">black peppercorns</span>, dried <span class="ing-highlight">rosemary</span>, <span class="ing-highlight">nigella seeds</span>, <span class="ing-highlight">cinnamon berry</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">ruta berry</span>, <span class="ing-highlight">nutmeg</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Blend all to powder.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>In blender roughly chop, <span class="ing-highlight">guajillo chilis</span>, <span class="ing-highlight">onion</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">rosemary</span>, <span class="ing-highlight">besobela</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">400 g</span> guajillo chilis</li><li><span class="step-ing-measure">125 g</span> onion</li><li><span class="step-ing-measure">250 g</span> garlic cloves</li><li><span class="step-ing-measure">120 g</span> ginger</li><li><span class="step-ing-measure">20 g</span> rosemary</li><li><span class="step-ing-measure">1 tbsp</span> besobela</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add <span class="ing-highlight">water</span> if necessary</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Bag up and let ferment at room temperature 24 hours and up to 72 hours</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Dehydrate in oven</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Toast <span class="ing-highlight">ajwan seeds</span>, <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">korerima</span>, <span class="ing-highlight">fenugreek seeds</span>, <span class="ing-highlight">black peppercorns</span>, dried <span class="ing-highlight">rosemary</span>, <span class="ing-highlight">nigella seeds</span>, <span class="ing-highlight">cinnamon berry</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">ruta berry</span>, <span class="ing-highlight">nutmeg</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.75 tbs</span> ajwan seeds</li><li><span class="step-ing-measure">0.75 tbs</span> cumin seeds</li><li><span class="step-ing-measure">0.75 tbs</span> salt</li><li><span class="step-ing-measure">0.75 tbs</span> corriander seeds</li><li><span class="step-ing-measure">0.5 tbsp</span> korerima</li><li><span class="step-ing-measure">0.5 tbsp</span> fenugreek seeds</li><li><span class="step-ing-measure">0.5 tbsp</span> black peppercorns</li><li><span class="step-ing-measure">0.5 tbsp</span> rosemary</li><li><span class="step-ing-measure">0.5 tbsp</span> nigella seeds</li><li><span class="step-ing-measure">1 tsp</span> cinnamon berry</li><li><span class="step-ing-measure">1 tsp</span> cloves</li><li><span class="step-ing-measure">0.5 tsp</span> ruta berry</li><li><span class="step-ing-measure">0.5 tsp</span> nutmeg</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Blend all to powder.</p></div></div>
     </div>
   </main>
 </body>

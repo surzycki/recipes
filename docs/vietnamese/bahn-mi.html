@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -437,13 +460,13 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Shred <span class="ing-highlight">carrots</span> and <span class="ing-highlight">daikon radish</span>.</p></div>
-<div class="step"><span class="step-num">2</span><p>Mix <span class="ing-highlight">sugar</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">white vinegar</span>, and <span class="ing-highlight">sesame seeds</span>.</p></div>
-<div class="step"><span class="step-num">3</span><p>Pickle 24 hours.</p></div>
-<div class="step"><span class="step-num">4</span><p>Make sandwich with lemongrass chicken recipe, char siu pork.</p></div>
-<div class="step"><span class="step-num">5</span><p>Cut <span class="ing-highlight">baguette</span> in three pieces and partially slice open and pull out some of the white to make room for filling</p></div>
-<div class="step"><span class="step-num">6</span><p>Assemble sandwiches with a fat (<span class="ing-highlight">butter</span> / <span class="ing-highlight">avocado</span> / mayonaise), a meat, <span class="ing-highlight">maggi sauce</span>, <span class="ing-highlight">cucumber</span> slices, herbs (<span class="ing-highlight">mint</span> / <span class="ing-highlight">thai basil</span> / cilantro), and the carrot pickle from above.</p></div>
-<div class="step"><span class="step-num">7</span><p>Start with a dash of maggi sauce, then the fat, then the meat, then the herbs, then the cucumber and finish with the carrot / daikon pickle.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Shred <span class="ing-highlight">carrots</span> and <span class="ing-highlight">daikon radish</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> carrots</li><li><span class="step-ing-measure">0.5</span> daikon radish</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Mix <span class="ing-highlight">sugar</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">white vinegar</span>, and <span class="ing-highlight">sesame seeds</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cups</span> sugar</li><li><span class="step-ing-measure">1 tsp</span> salt</li><li><span class="step-ing-measure">300 ml</span> white vinegar</li><li><span class="step-ing-measure">2 tsp</span> sesame seeds</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Pickle 24 hours.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Make sandwich with lemongrass chicken recipe, char siu pork.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Cut <span class="ing-highlight">baguette</span> in three pieces and partially slice open and pull out some of the white to make room for filling</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> baguette</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Assemble sandwiches with a fat (<span class="ing-highlight">butter</span> / <span class="ing-highlight">avocado</span> / mayonaise), a meat, <span class="ing-highlight">maggi sauce</span>, <span class="ing-highlight">cucumber</span> slices, herbs (<span class="ing-highlight">mint</span> / <span class="ing-highlight">thai basil</span> / cilantro), and the carrot pickle from above.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> butter</li><li><span class="step-ing-measure">some</span> avocado</li><li><span class="step-ing-measure">some</span> mayonaise),</li><li><span class="step-ing-measure">dash</span> maggi sauce</li><li><span class="step-ing-measure">1</span> cucumber</li><li><span class="step-ing-measure">some</span> mint</li><li><span class="step-ing-measure">some</span> thai basil</li><li><span class="step-ing-measure">some</span> cilantro),</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Start with a dash of maggi sauce, then the fat, then the meat, then the herbs, then the cucumber and finish with the carrot / daikon pickle.</p></div></div>
     </div>
   </main>
 </body>

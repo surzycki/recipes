@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -437,13 +460,13 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Combine cubed <span class="ing-highlight">chicken thighs</span>, <span class="ing-highlight">chicken breast</span>, <span class="ing-highlight">duck breast</span>, <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">basil</span>, <span class="ing-highlight">cherry tomatoes</span>, <span class="ing-highlight">sun dried tomatoes</span>, <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">milk powder</span> and <span class="ing-highlight">curing salt</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Chill mixture and grind through small die</p></div>
-<div class="step"><span class="step-num">3</span><p>Use paddle attachment and on low speed mix for 1 minute</p></div>
-<div class="step"><span class="step-num">4</span><p>Add <span class="ing-highlight"><span class="ing-highlight">red wine</span> vinegar</span>, <span class="ing-highlight">heavy cream</span>, and <span class="ing-highlight">red wine</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Increase speed to medium and mix for 1 minute</p></div>
-<div class="step"><span class="step-num">6</span><p>Test seasoning</p></div>
-<div class="step"><span class="step-num">7</span><p>Stuff sausages and cook to internal 71°C</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Combine cubed <span class="ing-highlight">chicken thighs</span>, <span class="ing-highlight">chicken breast</span>, <span class="ing-highlight">duck breast</span>, <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">basil</span>, <span class="ing-highlight">cherry tomatoes</span>, <span class="ing-highlight">sun dried tomatoes</span>, <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">milk powder</span> and <span class="ing-highlight">curing salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> chicken thighs</li><li><span class="step-ing-measure">500 g</span> chicken breast</li><li><span class="step-ing-measure">500 g</span> duck breast</li><li><span class="step-ing-measure">2 g</span> black pepper</li><li><span class="step-ing-measure">10 g</span> garlic cloves</li><li><span class="step-ing-measure">24 g</span> basil</li><li><span class="step-ing-measure">100 g</span> cherry tomatoes</li><li><span class="step-ing-measure">100 g</span> sun dried tomatoes</li><li><span class="step-ing-measure">30 g</span> brown sugar</li><li><span class="step-ing-measure">50 g</span> milk powder</li><li><span class="step-ing-measure">30 g</span> curing salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Chill mixture and grind through small die</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Use paddle attachment and on low speed mix for 1 minute</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add <span class="ing-highlight"><span class="ing-highlight">red wine</span> vinegar</span>, <span class="ing-highlight">heavy cream</span>, and <span class="ing-highlight">red wine</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">40 ml</span> red wine vinegar</li><li><span class="step-ing-measure">60 ml</span> heavy cream</li><li><span class="step-ing-measure">40 ml</span> red wine</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Increase speed to medium and mix for 1 minute</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Test seasoning</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Stuff sausages and cook to internal 71°C</p></div></div>
     </div>
   </main>
 </body>

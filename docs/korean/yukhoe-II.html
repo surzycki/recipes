@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -433,12 +456,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Freeze <span class="ing-highlight">beef</span> for tartar 1.5 hours before eating</p></div>
-<div class="step"><span class="step-num">2</span><p>Make seasoning with minced <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">green onion</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">honey</span>, ground <span class="ing-highlight">black peppercorns</span>, <span class="ing-highlight">sesame oil</span>, toasted <span class="ing-highlight">sesame seeds</span></p></div>
-<div class="step"><span class="step-num">3</span><p>Mix cold <span class="ing-highlight">water</span> with <span class="ing-highlight">sugar</span> peel the <span class="ing-highlight">asian pear</span> cut into matchsticks and soak in the <span class="ing-highlight">water</span> for 10 minutes</p></div>
-<div class="step"><span class="step-num">4</span><p>Cut beef into thin matchsticks and mix with the seasoning</p></div>
-<div class="step"><span class="step-num">5</span><p>Drain the pear plate, making a bed of pear matchsticks and top with the beef</p></div>
-<div class="step"><span class="step-num">6</span><p>Sprinkle with more sesame seeds and or <span class="ing-highlight">pine nuts</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Freeze <span class="ing-highlight">beef</span> for tartar 1.5 hours before eating</p><ul class="step-ingredients"><li><span class="step-ing-measure">225 g</span> beef</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Make seasoning with minced <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">green onion</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">honey</span>, ground <span class="ing-highlight">black peppercorns</span>, <span class="ing-highlight">sesame oil</span>, toasted <span class="ing-highlight">sesame seeds</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">6</span> garlic cloves</li><li><span class="step-ing-measure">1</span> green onion</li><li><span class="step-ing-measure">1 tbsp</span> soy sauce</li><li><span class="step-ing-measure">1 tbsp</span> honey</li><li><span class="step-ing-measure">1 pinch</span> black peppercorns</li><li><span class="step-ing-measure">2 tbsp</span> sesame oil</li><li><span class="step-ing-measure">1 tbsp</span> sesame seeds</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Mix cold <span class="ing-highlight">water</span> with <span class="ing-highlight">sugar</span> peel the <span class="ing-highlight">asian pear</span> cut into matchsticks and soak in the <span class="ing-highlight">water</span> for 10 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 cups</span> water</li><li><span class="step-ing-measure">1 tbsp</span> sugar</li><li><span class="step-ing-measure">0.5</span> asian pear</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Cut beef into thin matchsticks and mix with the seasoning</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Drain the pear plate, making a bed of pear matchsticks and top with the beef</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Sprinkle with more sesame seeds and or <span class="ing-highlight">pine nuts</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">7</span> pine nuts</li></ul></div></div>
     </div>
   </main>
 </body>

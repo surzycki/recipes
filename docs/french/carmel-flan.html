@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,16 +452,16 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>In pan add <span class="ing-highlight">brown sugar</span> and <span class="ing-highlight">water</span> heat until 160°C</p></div>
-<div class="step"><span class="step-num">2</span><p>Quickly divide between jars, about 1cm in each</p></div>
-<div class="step"><span class="step-num">3</span><p>Preheat food jacuzzi to 85°C</p></div>
-<div class="step"><span class="step-num">4</span><p>Heat up <span class="ing-highlight">whole milk</span> to 80°C</p></div>
-<div class="step"><span class="step-num">5</span><p>In a bowl mix <span class="ing-highlight"><span class="ing-highlight">eggs</span></span> and yolks of <span class="ing-highlight"><span class="ing-highlight">eggs</span></span> with <span class="ing-highlight">sugar</span> and <span class="ing-highlight">vanilla</span> and shot of <span class="ing-highlight">rum</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Pour warm milk into eggs and temper slowly.</p></div>
-<div class="step"><span class="step-num">7</span><p>Let sit for 30 minutes and then strain</p></div>
-<div class="step"><span class="step-num">8</span><p>Pour into jars and cook for 1 hour sous vide</p></div>
-<div class="step"><span class="step-num">9</span><p>Chill overnight</p></div>
-<div class="step"><span class="step-num">10</span><p>To serve, boil water and put in pan, place jars in water up to the caramel, let sit 15 minutes then unmould</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>In pan add <span class="ing-highlight">brown sugar</span> and <span class="ing-highlight">water</span> heat until 160°C</p><ul class="step-ingredients"><li><span class="step-ing-measure">250 g</span> brown sugar</li><li><span class="step-ing-measure">50 g</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Quickly divide between jars, about 1cm in each</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Preheat food jacuzzi to 85°C</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Heat up <span class="ing-highlight">whole milk</span> to 80°C</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 litre</span> whole milk</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>In a bowl mix <span class="ing-highlight"><span class="ing-highlight">eggs</span></span> and yolks of <span class="ing-highlight"><span class="ing-highlight">eggs</span></span> with <span class="ing-highlight">sugar</span> and <span class="ing-highlight">vanilla</span> and shot of <span class="ing-highlight">rum</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">7</span> eggs</li><li><span class="step-ing-measure">7</span> eggs</li><li><span class="step-ing-measure">175 g</span> sugar</li><li><span class="step-ing-measure">2 tsp</span> vanilla</li><li><span class="step-ing-measure">2 shots</span> rum</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Pour warm milk into eggs and temper slowly.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Let sit for 30 minutes and then strain</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Pour into jars and cook for 1 hour sous vide</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Chill overnight</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>To serve, boil water and put in pan, place jars in water up to the caramel, let sit 15 minutes then unmould</p></div></div>
     </div>
   </main>
 </body>

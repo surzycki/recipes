@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -442,20 +465,20 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Rub <span class="ing-highlight">duck leg</span> and <span class="ing-highlight">pork belly</span> with <span class="ing-highlight">thyme</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">ground ginger</span>.</p></div>
-<div class="step"><span class="step-num">2</span><p>Place on a sheet pan and chill in the fridge for 4 hours.</p></div>
-<div class="step"><span class="step-num">3</span><p>Remove excess seasoning. Transfer meat to a large pot.</p></div>
-<div class="step"><span class="step-num">4</span><p>Add thyme, <span class="ing-highlight">duck stock</span>, <span class="ing-highlight">whole pepper</span>, <span class="ing-highlight">garlic</span>, <span class="ing-highlight">bay leaf</span>, <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">wine</span>.</p></div>
-<div class="step"><span class="step-num">5</span><p>Cook on low heat for 2 hours.</p></div>
-<div class="step"><span class="step-num">6</span><p>Remove from heat and place pot in the fridge for 2 hours.</p></div>
-<div class="step"><span class="step-num">7</span><p>Scrape off the <span class="ing-highlight">duck fat</span> and set aside.</p></div>
-<div class="step"><span class="step-num">8</span><p>Shred the meat.</p></div>
-<div class="step"><span class="step-num">9</span><p>Strain the cooking liquid through a strainer and reserve <span class="ing-highlight">stock</span>.</p></div>
-<div class="step"><span class="step-num">10</span><p>Mix shredded meat with reserved stock, <span class="ing-highlight">brandy</span>, <span class="ing-highlight">orange zest</span>, <span class="ing-highlight">ground cloves</span>, additional salt, and <span class="ing-highlight">black pepper</span>. Combine well.</p></div>
-<div class="step"><span class="step-num">11</span><p>Pack mixture tightly into ramekins.</p></div>
-<div class="step"><span class="step-num">12</span><p>Melt the reserved duck fat and pour over the top.</p></div>
-<div class="step"><span class="step-num">13</span><p>Refrigerate until set.</p></div>
-<div class="step"><span class="step-num">14</span><p>Serve with <span class="ing-highlight">cornichones</span> and <span class="ing-highlight">radish</span>.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Rub <span class="ing-highlight">duck leg</span> and <span class="ing-highlight">pork belly</span> with <span class="ing-highlight">thyme</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">ground ginger</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">700 g</span> duck leg</li><li><span class="step-ing-measure">150 g</span> pork belly</li><li><span class="step-ing-measure">30 ml</span> thyme</li><li><span class="step-ing-measure">30 ml</span> salt</li><li><span class="step-ing-measure">1 tbsp</span> ground ginger</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Place on a sheet pan and chill in the fridge for 4 hours.</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Remove excess seasoning. Transfer meat to a large pot.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add thyme, <span class="ing-highlight">duck stock</span>, <span class="ing-highlight">whole pepper</span>, <span class="ing-highlight">garlic</span>, <span class="ing-highlight">bay leaf</span>, <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">wine</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> thyme,</li><li><span class="step-ing-measure">1.18 l</span> duck stock</li><li><span class="step-ing-measure">0.5 tbsp</span> whole pepper</li><li><span class="step-ing-measure">5 cloves</span> garlic</li><li><span class="step-ing-measure">1</span> bay leaf</li><li><span class="step-ing-measure">2.5 cm</span> ginger</li><li><span class="step-ing-measure">60 ml</span> wine</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Cook on low heat for 2 hours.</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Remove from heat and place pot in the fridge for 2 hours.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Scrape off the <span class="ing-highlight">duck fat</span> and set aside.</p><ul class="step-ingredients"><li><span class="step-ing-measure">120 ml</span> duck fat</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Shred the meat.</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Strain the cooking liquid through a strainer and reserve <span class="ing-highlight">stock</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">30 ml</span> stock</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Mix shredded meat with reserved stock, <span class="ing-highlight">brandy</span>, <span class="ing-highlight">orange zest</span>, <span class="ing-highlight">ground cloves</span>, additional salt, and <span class="ing-highlight">black pepper</span>. Combine well.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> brandy</li><li><span class="step-ing-measure">0.25 tbsp</span> orange zest</li><li><span class="step-ing-measure">0.125 tsp</span> ground cloves</li><li><span class="step-ing-measure">some</span> salt,</li><li><span class="step-ing-measure">some</span> black pepper</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Pack mixture tightly into ramekins.</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Melt the reserved duck fat and pour over the top.</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Refrigerate until set.</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Serve with <span class="ing-highlight">cornichones</span> and <span class="ing-highlight">radish</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> cornichones</li><li><span class="step-ing-measure">some</span> radish</li></ul></div></div>
     </div>
   </main>
 </body>

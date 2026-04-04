@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -447,36 +470,36 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Pat dry <span class="ing-highlight">lamb neck</span> in large pieces.</p></div>
-<div class="step"><span class="step-num">2</span><p>Soak <span class="ing-highlight">basmati rice</span> in water for at least 30 minutes</p></div>
-<div class="step"><span class="step-num">3</span><p>Season with <span class="ing-highlight">salt</span> and <span class="ing-highlight">pepper</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Heat <span class="ing-highlight">ghee</span> and sear the lamb, remove</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">tomatoes</span>, <span class="ing-highlight">onion</span>, <span class="ing-highlight">jalepenos</span>, and <span class="ing-highlight">cilantro</span> in food processor until chopped</p></div>
-<div class="step"><span class="step-num">6</span><p>Transfer garlic puree into pan and cook until fragrant</p></div>
-<div class="step"><span class="step-num">7</span><p>Add ground <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">cinnamon</span>, <span class="ing-highlight">allspice</span> cook for 30s</p></div>
-<div class="step"><span class="step-num">8</span><p>Return lamb to pan with <span class="ing-highlight">water</span>, <span class="ing-highlight">salt</span> and <span class="ing-highlight">pepper</span></p></div>
-<div class="step"><span class="step-num">9</span><p>Bring to boil cover and transfer to oven 165C°</p></div>
-<div class="step"><span class="step-num">10</span><p>Cook for 3 hours</p></div>
-<div class="step"><span class="step-num">11</span><p>Remove lamb from oven and baste with juices.</p></div>
-<div class="step"><span class="step-num">12</span><p>Return to oven uncovered for 30 minutes basting 1 time in between</p></div>
-<div class="step"><span class="step-num">13</span><p>Remove when lamb is brown and sauce thickened</p></div>
-<div class="step"><span class="step-num">14</span><p>Remove from oven</p></div>
-<div class="step"><span class="step-num">15</span><p>In last 30 minutes make the rice</p></div>
-<div class="step"><span class="step-num">16</span><p>Drain rice</p></div>
-<div class="step"><span class="step-num">17</span><p>Add <span class="ing-highlight">saffron</span> to <span class="ing-highlight">water</span> of hot <span class="ing-highlight">water</span>, let sit for 10 minutes</p></div>
-<div class="step"><span class="step-num">18</span><p>Add <span class="ing-highlight">butter</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">cinnamon stick</span> cook until <span class="ing-highlight">butter</span> melts</p></div>
-<div class="step"><span class="step-num">19</span><p>Add rice to pan and coat with butter</p></div>
-<div class="step"><span class="step-num">20</span><p>Add boiling <span class="ing-highlight">water</span> and <span class="ing-highlight">salt</span> and bring to boil.</p></div>
-<div class="step"><span class="step-num">21</span><p>Cover and cook on low for 15 minutes</p></div>
-<div class="step"><span class="step-num">22</span><p>Turn heat off and cook for 15 minutes</p></div>
-<div class="step"><span class="step-num">23</span><p>Add <span class="ing-highlight">raisins</span>, <span class="ing-highlight">apple cider vinegar</span> let plump up</p></div>
-<div class="step"><span class="step-num">24</span><p>In <span class="ing-highlight">butter</span> brown <span class="ing-highlight">almonds</span> and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">25</span><p>Stir in raisin misture, chopped <span class="ing-highlight">cilantro</span> and <span class="ing-highlight">parsely</span></p></div>
-<div class="step"><span class="step-num">26</span><p>Open rice and pour in saffron water to stain some of the rice, stir gently</p></div>
-<div class="step"><span class="step-num">27</span><p>Transfer 2/3 of lamb sauce and lamb into bowl, remove bones</p></div>
-<div class="step"><span class="step-num">28</span><p>Whisk <span class="ing-highlight">yogurt</span>, cilantro, <span class="ing-highlight">parsely</span> in remaining sauce for gravey</p></div>
-<div class="step"><span class="step-num">29</span><p>Spoon half half of rice on serving plate, top with half the lamb mixture, and repeat.</p></div>
-<div class="step"><span class="step-num">30</span><p>Top with nut garnish</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Pat dry <span class="ing-highlight">lamb neck</span> in large pieces.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> lamb neck</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Soak <span class="ing-highlight">basmati rice</span> in water for at least 30 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">400 g</span> basmati rice</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Season with <span class="ing-highlight">salt</span> and <span class="ing-highlight">pepper</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> salt</li><li><span class="step-ing-measure">some</span> pepper</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Heat <span class="ing-highlight">ghee</span> and sear the lamb, remove</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> ghee</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">tomatoes</span>, <span class="ing-highlight">onion</span>, <span class="ing-highlight">jalepenos</span>, and <span class="ing-highlight">cilantro</span> in food processor until chopped</p><ul class="step-ingredients"><li><span class="step-ing-measure">6</span> garlic cloves</li><li><span class="step-ing-measure">50 g</span> ginger</li><li><span class="step-ing-measure">3</span> tomatoes</li><li><span class="step-ing-measure">1</span> onion</li><li><span class="step-ing-measure">2</span> jalepenos</li><li><span class="step-ing-measure">20 g</span> cilantro</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Transfer garlic puree into pan and cook until fragrant</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add ground <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">cinnamon</span>, <span class="ing-highlight">allspice</span> cook for 30s</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> cumin seed</li><li><span class="step-ing-measure">1 tbsp</span> cinnamon</li><li><span class="step-ing-measure">1.5 tsp</span> allspice</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Return lamb to pan with <span class="ing-highlight">water</span>, <span class="ing-highlight">salt</span> and <span class="ing-highlight">pepper</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4.5 cups</span> water</li><li><span class="step-ing-measure">1.5 tsp</span> salt</li><li><span class="step-ing-measure">some</span> pepper</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Bring to boil cover and transfer to oven 165C°</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Cook for 3 hours</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Remove lamb from oven and baste with juices.</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Return to oven uncovered for 30 minutes basting 1 time in between</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Remove when lamb is brown and sauce thickened</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Remove from oven</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>In last 30 minutes make the rice</p></div></div>
+<div class="step"><span class="step-num">16</span><div class="step-content"><p>Drain rice</p></div></div>
+<div class="step"><span class="step-num">17</span><div class="step-content"><p>Add <span class="ing-highlight">saffron</span> to <span class="ing-highlight">water</span> of hot <span class="ing-highlight">water</span>, let sit for 10 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 threads</span> saffron</li><li><span class="step-ing-measure">1 tbsp</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">18</span><div class="step-content"><p>Add <span class="ing-highlight">butter</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">cinnamon stick</span> cook until <span class="ing-highlight">butter</span> melts</p><ul class="step-ingredients"><li><span class="step-ing-measure">30 g</span> butter</li><li><span class="step-ing-measure">5</span> cloves</li><li><span class="step-ing-measure">3</span> cinnamon stick</li></ul></div></div>
+<div class="step"><span class="step-num">19</span><div class="step-content"><p>Add rice to pan and coat with butter</p></div></div>
+<div class="step"><span class="step-num">20</span><div class="step-content"><p>Add boiling <span class="ing-highlight">water</span> and <span class="ing-highlight">salt</span> and bring to boil.</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 cups</span> water</li><li><span class="step-ing-measure">1 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">21</span><div class="step-content"><p>Cover and cook on low for 15 minutes</p></div></div>
+<div class="step"><span class="step-num">22</span><div class="step-content"><p>Turn heat off and cook for 15 minutes</p></div></div>
+<div class="step"><span class="step-num">23</span><div class="step-content"><p>Add <span class="ing-highlight">raisins</span>, <span class="ing-highlight">apple cider vinegar</span> let plump up</p><ul class="step-ingredients"><li><span class="step-ing-measure">80 g</span> raisins</li><li><span class="step-ing-measure">2.5 tbsp</span> apple cider vinegar</li></ul></div></div>
+<div class="step"><span class="step-num">24</span><div class="step-content"><p>In <span class="ing-highlight">butter</span> brown <span class="ing-highlight">almonds</span> and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">30 g</span> butter</li><li><span class="step-ing-measure">80 g</span> almonds</li><li><span class="step-ing-measure">some</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">25</span><div class="step-content"><p>Stir in raisin misture, chopped <span class="ing-highlight">cilantro</span> and <span class="ing-highlight">parsely</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">5 g</span> cilantro</li><li><span class="step-ing-measure">10 g</span> parsely</li></ul></div></div>
+<div class="step"><span class="step-num">26</span><div class="step-content"><p>Open rice and pour in saffron water to stain some of the rice, stir gently</p></div></div>
+<div class="step"><span class="step-num">27</span><div class="step-content"><p>Transfer 2/3 of lamb sauce and lamb into bowl, remove bones</p></div></div>
+<div class="step"><span class="step-num">28</span><div class="step-content"><p>Whisk <span class="ing-highlight">yogurt</span>, cilantro, <span class="ing-highlight">parsely</span> in remaining sauce for gravey</p><ul class="step-ingredients"><li><span class="step-ing-measure">150 g</span> yogurt</li><li><span class="step-ing-measure">some</span> cilantro,</li><li><span class="step-ing-measure">some</span> parsely</li></ul></div></div>
+<div class="step"><span class="step-num">29</span><div class="step-content"><p>Spoon half half of rice on serving plate, top with half the lamb mixture, and repeat.</p></div></div>
+<div class="step"><span class="step-num">30</span><div class="step-content"><p>Top with nut garnish</p></div></div>
     </div>
   </main>
 </body>

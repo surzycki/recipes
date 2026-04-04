@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -431,21 +454,21 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Remove silverskin from <span class="ing-highlight">duck breast</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Cut half of a filet in thin strips</p></div>
-<div class="step"><span class="step-num">3</span><p>Cut the rest in large chunks</p></div>
-<div class="step"><span class="step-num">4</span><p>Cut <span class="ing-highlight">dried figs</span> in thin slices</p></div>
-<div class="step"><span class="step-num">5</span><p>Cut <span class="ing-highlight">shallots</span> in thin slices</p></div>
-<div class="step"><span class="step-num">6</span><p>Mix large chunks of duck with the shallots and <span class="ing-highlight">congnac</span> (or other alchohol, white porto, armagnac, maderia)</p></div>
-<div class="step"><span class="step-num">7</span><p>Marinate for 1 hour</p></div>
-<div class="step"><span class="step-num">8</span><p>Grind the marinating mixture and then add chopped <span class="ing-highlight">foie gras</span>, figs, <span class="ing-highlight">salt</span>, and ground <span class="ing-highlight">pepper</span></p></div>
-<div class="step"><span class="step-num">9</span><p>Add in <span class="ing-highlight">egg</span> and mix gently</p></div>
-<div class="step"><span class="step-num">10</span><p>Add half the pate mixture into a terrine, then layer with strips of duck from above and finish with the rest of the pate</p></div>
-<div class="step"><span class="step-num">11</span><p>Add some fresh <span class="ing-highlight">thyme</span> on top</p></div>
-<div class="step"><span class="step-num">12</span><p>Seal tightly with aluminum foil</p></div>
-<div class="step"><span class="step-num">13</span><p>Place in a pan with boiling water in 180°C oven for 40 minutes</p></div>
-<div class="step"><span class="step-num">14</span><p>Remove from oven, remove foil and create a foil lined lid from some cardboard</p></div>
-<div class="step"><span class="step-num">15</span><p>Place on top with some weight (1kg) and let cook 3 hours, then wrap and chill overnight</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Remove silverskin from <span class="ing-highlight">duck breast</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> duck breast</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Cut half of a filet in thin strips</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Cut the rest in large chunks</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Cut <span class="ing-highlight">dried figs</span> in thin slices</p><ul class="step-ingredients"><li><span class="step-ing-measure">7</span> dried figs</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Cut <span class="ing-highlight">shallots</span> in thin slices</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> shallots</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Mix large chunks of duck with the shallots and <span class="ing-highlight">congnac</span> (or other alchohol, white porto, armagnac, maderia)</p><ul class="step-ingredients"><li><span class="step-ing-measure">50 ml</span> congnac</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Marinate for 1 hour</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Grind the marinating mixture and then add chopped <span class="ing-highlight">foie gras</span>, figs, <span class="ing-highlight">salt</span>, and ground <span class="ing-highlight">pepper</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">150 g</span> foie gras</li><li><span class="step-ing-measure">15 g</span> salt</li><li><span class="step-ing-measure">some</span> pepper</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Add in <span class="ing-highlight">egg</span> and mix gently</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> egg</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Add half the pate mixture into a terrine, then layer with strips of duck from above and finish with the rest of the pate</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Add some fresh <span class="ing-highlight">thyme</span> on top</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> thyme</li></ul></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Seal tightly with aluminum foil</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Place in a pan with boiling water in 180°C oven for 40 minutes</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Remove from oven, remove foil and create a foil lined lid from some cardboard</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Place on top with some weight (1kg) and let cook 3 hours, then wrap and chill overnight</p></div></div>
     </div>
   </main>
 </body>

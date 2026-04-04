@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -433,10 +456,10 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Mix <span class="ing-highlight">onion powder</span>, <span class="ing-highlight">baking powder</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">paprika</span>, ground <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">garlic powder</span>, <span class="ing-highlight">brown sugar</span>, ground <span class="ing-highlight">black peppercorns</span>, <span class="ing-highlight">tajin</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Mix <span class="ing-highlight">chicken wings</span> with <span class="ing-highlight">olive oil</span> and rub, let sit at least 60 minutes to overnight</p></div>
-<div class="step"><span class="step-num">3</span><p>Smoke until internal temperature in 75°C about 2 hrs</p></div>
-<div class="step"><span class="step-num">4</span><p>Can be finished in the over at 230°C</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Mix <span class="ing-highlight">onion powder</span>, <span class="ing-highlight">baking powder</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">paprika</span>, ground <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">garlic powder</span>, <span class="ing-highlight">brown sugar</span>, ground <span class="ing-highlight">black peppercorns</span>, <span class="ing-highlight">tajin</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 tsp</span> onion powder</li><li><span class="step-ing-measure">1 tbsp</span> baking powder</li><li><span class="step-ing-measure">1 tsp</span> salt</li><li><span class="step-ing-measure">0.5 tsp</span> paprika</li><li><span class="step-ing-measure">0.5 tsp</span> cumin seed</li><li><span class="step-ing-measure">0.5 tsp</span> garlic powder</li><li><span class="step-ing-measure">1 tbsp</span> brown sugar</li><li><span class="step-ing-measure">1 tsp</span> black peppercorns</li><li><span class="step-ing-measure">0.5 tsp</span> tajin</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Mix <span class="ing-highlight">chicken wings</span> with <span class="ing-highlight">olive oil</span> and rub, let sit at least 60 minutes to overnight</p><ul class="step-ingredients"><li><span class="step-ing-measure">750 g</span> chicken wings</li><li><span class="step-ing-measure">2 tbsp</span> olive oil</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Smoke until internal temperature in 75°C about 2 hrs</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Can be finished in the over at 230°C</p></div></div>
     </div>
   </main>
 </body>

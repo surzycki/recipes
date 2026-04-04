@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -437,13 +460,13 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Put in bowl <span class="ing-highlight">star anise</span>, <span class="ing-highlight">dried ginger</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">cassia bark</span>, <span class="ing-highlight">red peppercorns</span>, <span class="ing-highlight">sichuan peppercorns</span>, <span class="ing-highlight">bay leaves</span>, <span class="ing-highlight">red chili</span>, and <span class="ing-highlight">green anise</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Cover with <span class="ing-highlight">shaoxing wine</span> and let sit 15 minutes</p></div>
-<div class="step"><span class="step-num">3</span><p>Pour mixture over <span class="ing-highlight">peanuts</span> and add <span class="ing-highlight">salt</span>, mix until dissolved</p></div>
-<div class="step"><span class="step-num">4</span><p>Add <span class="ing-highlight">oil</span> to pan and heat medium heat</p></div>
-<div class="step"><span class="step-num">5</span><p>Add peanuts when oil is hot</p></div>
-<div class="step"><span class="step-num">6</span><p>Season with <span class="ing-highlight">chili powder</span> and <span class="ing-highlight">five spice powder</span></p></div>
-<div class="step"><span class="step-num">7</span><p>Cook until golden brown and serve</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Put in bowl <span class="ing-highlight">star anise</span>, <span class="ing-highlight">dried ginger</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">cassia bark</span>, <span class="ing-highlight">red peppercorns</span>, <span class="ing-highlight">sichuan peppercorns</span>, <span class="ing-highlight">bay leaves</span>, <span class="ing-highlight">red chili</span>, and <span class="ing-highlight">green anise</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> star anise</li><li><span class="step-ing-measure">1 tsp</span> dried ginger</li><li><span class="step-ing-measure">3</span> cloves</li><li><span class="step-ing-measure">1</span> cassia bark</li><li><span class="step-ing-measure">2 tsp</span> red peppercorns</li><li><span class="step-ing-measure">1 tbsp</span> sichuan peppercorns</li><li><span class="step-ing-measure">2</span> bay leaves</li><li><span class="step-ing-measure">1</span> red chili</li><li><span class="step-ing-measure">0.5 tsp</span> green anise</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Cover with <span class="ing-highlight">shaoxing wine</span> and let sit 15 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.3333333333333333 cup</span> shaoxing wine</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Pour mixture over <span class="ing-highlight">peanuts</span> and add <span class="ing-highlight">salt</span>, mix until dissolved</p><ul class="step-ingredients"><li><span class="step-ing-measure">400 g</span> peanuts</li><li><span class="step-ing-measure">1 tbsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add <span class="ing-highlight">oil</span> to pan and heat medium heat</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> oil</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add peanuts when oil is hot</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Season with <span class="ing-highlight">chili powder</span> and <span class="ing-highlight">five spice powder</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> chili powder</li><li><span class="step-ing-measure">1 tbsp</span> five spice powder</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Cook until golden brown and serve</p></div></div>
     </div>
   </main>
 </body>

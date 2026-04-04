@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -436,15 +459,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Cut <span class="ing-highlight">jalapeno peppers</span>, <span class="ing-highlight">carrots</span> into slices</p></div>
-<div class="step"><span class="step-num">2</span><p>Slice <span class="ing-highlight">onion</span> into thin slices</p></div>
-<div class="step"><span class="step-num">3</span><p>Roughly chop the <span class="ing-highlight">garlic cloves</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Heat <span class="ing-highlight">olive oil</span> in pan and lightly saute the garlic and onions</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">mexican oregano</span>, and <span class="ing-highlight">black peppercorns</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Add jalapeno and carrots and saute for a couple minutes</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">white vinegar</span>, <span class="ing-highlight">water</span>, <span class="ing-highlight">bay leaves</span>, <span class="ing-highlight">thyme</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">kosher salt</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Simmer until jalapenos are army green</p></div>
-<div class="step"><span class="step-num">9</span><p>Bottle in mason jar and let cool.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Cut <span class="ing-highlight">jalapeno peppers</span>, <span class="ing-highlight">carrots</span> into slices</p><ul class="step-ingredients"><li><span class="step-ing-measure">10</span> jalapeno peppers</li><li><span class="step-ing-measure">2</span> carrots</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Slice <span class="ing-highlight">onion</span> into thin slices</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> onion</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Roughly chop the <span class="ing-highlight">garlic cloves</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">6</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Heat <span class="ing-highlight">olive oil</span> in pan and lightly saute the garlic and onions</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> olive oil</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">mexican oregano</span>, and <span class="ing-highlight">black peppercorns</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 tsp</span> cumin seeds</li><li><span class="step-ing-measure">0.5 tsp</span> mexican oregano</li><li><span class="step-ing-measure">10</span> black peppercorns</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add jalapeno and carrots and saute for a couple minutes</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">white vinegar</span>, <span class="ing-highlight">water</span>, <span class="ing-highlight">bay leaves</span>, <span class="ing-highlight">thyme</span>, <span class="ing-highlight">sugar</span>, and <span class="ing-highlight">kosher salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 cups</span> white vinegar</li><li><span class="step-ing-measure">1 cup</span> water</li><li><span class="step-ing-measure">1</span> bay leaves</li><li><span class="step-ing-measure">1 sprig</span> thyme</li><li><span class="step-ing-measure">1 tbsp</span> sugar</li><li><span class="step-ing-measure">1 tbsp</span> kosher salt</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Simmer until jalapenos are army green</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Bottle in mason jar and let cool.</p></div></div>
     </div>
   </main>
 </body>

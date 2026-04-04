@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,13 +452,13 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Make marinade, mix <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">soy sauce</span>, minced <span class="ing-highlight">garlic cloves</span>, minced <span class="ing-highlight">ginger</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Slice <span class="ing-highlight">pork butt</span> into 5cm pieces</p></div>
-<div class="step"><span class="step-num">3</span><p>Marinate 24 hours</p></div>
-<div class="step"><span class="step-num">4</span><p>Heat smoker to 95°C</p></div>
-<div class="step"><span class="step-num">5</span><p>Smoke 4 hours, until internal temp of 62°C</p></div>
-<div class="step"><span class="step-num">6</span><p>Remove from smoker, slice into bite-sized pieces</p></div>
-<div class="step"><span class="step-num">7</span><p>Start in cold pan and fry, add <span class="ing-highlight">guava jelly</span>, sliced <span class="ing-highlight">sweet onion</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Make marinade, mix <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">soy sauce</span>, minced <span class="ing-highlight">garlic cloves</span>, minced <span class="ing-highlight">ginger</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> brown sugar</li><li><span class="step-ing-measure">1 cup</span> soy sauce</li><li><span class="step-ing-measure">3</span> garlic cloves</li><li><span class="step-ing-measure">3 cm</span> ginger</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Slice <span class="ing-highlight">pork butt</span> into 5cm pieces</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> pork butt</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Marinate 24 hours</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Heat smoker to 95°C</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Smoke 4 hours, until internal temp of 62°C</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Remove from smoker, slice into bite-sized pieces</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Start in cold pan and fry, add <span class="ing-highlight">guava jelly</span>, sliced <span class="ing-highlight">sweet onion</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> guava jelly</li><li><span class="step-ing-measure">1</span> sweet onion</li></ul></div></div>
     </div>
   </main>
 </body>

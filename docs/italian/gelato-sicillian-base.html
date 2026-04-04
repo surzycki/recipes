@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -427,13 +450,13 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Mix <span class="ing-highlight">milk</span> and <span class="ing-highlight">heavy cream</span> in a pan.</p></div>
-<div class="step"><span class="step-num">2</span><p>Warm over medium heat until it bubbles around the edge.</p></div>
-<div class="step"><span class="step-num">3</span><p>Whisk remaining <span class="ing-highlight">milk</span>, <span class="ing-highlight">granulated sugar</span>, and <span class="ing-highlight">cornstarch</span> together.</p></div>
-<div class="step"><span class="step-num">4</span><p>Remove milk from heat, whisk in cornstarch mixture. Return to medium heat, cook until sugar is dissolved and mixture thickens, 6-8 minutes.</p></div>
-<div class="step"><span class="step-num">5</span><p>Mix <span class="ing-highlight">egg</span> until pale and thickene.</p></div>
-<div class="step"><span class="step-num">6</span><p>Temper egg yolk with milk mixture</p></div>
-<div class="step"><span class="step-num">7</span><p>Remove from heat. Cool to room temperature, then refrigerate for a few hours or overnight.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Mix <span class="ing-highlight">milk</span> and <span class="ing-highlight">heavy cream</span> in a pan.</p><ul class="step-ingredients"><li><span class="step-ing-measure">250 ml</span> milk</li><li><span class="step-ing-measure">250 ml</span> heavy cream</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Warm over medium heat until it bubbles around the edge.</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Whisk remaining <span class="ing-highlight">milk</span>, <span class="ing-highlight">granulated sugar</span>, and <span class="ing-highlight">cornstarch</span> together.</p><ul class="step-ingredients"><li><span class="step-ing-measure">250 ml</span> milk</li><li><span class="step-ing-measure">150 g</span> granulated sugar</li><li><span class="step-ing-measure">16 g</span> cornstarch</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Remove milk from heat, whisk in cornstarch mixture. Return to medium heat, cook until sugar is dissolved and mixture thickens, 6-8 minutes.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Mix <span class="ing-highlight">egg</span> until pale and thickene.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 yolk</span> egg</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Temper egg yolk with milk mixture</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Remove from heat. Cool to room temperature, then refrigerate for a few hours or overnight.</p></div></div>
     </div>
   </main>
 </body>

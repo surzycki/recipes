@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -444,24 +467,24 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Medium Sauce</p></div>
-<div class="step"><span class="step-num">2</span><p>Mix <span class="ing-highlight">hot sauce</span>, <span class="ing-highlight">oil</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">garlic powder</span>, <span class="ing-highlight">worcestershire sauce</span>, and <span class="ing-highlight">black pepper</span> in a small pan</p></div>
-<div class="step"><span class="step-num">3</span><p>Heat until boiling; simmer for several minutes, then take off heat</p></div>
-<div class="step"><span class="step-num">4</span><p>Mix yolk of <span class="ing-highlight">egg</span>, <span class="ing-highlight">cornstarch</span>, and <span class="ing-highlight">water</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Temper yolk mixture with hot sauce mixture</p></div>
-<div class="step"><span class="step-num">6</span><p>Parmesan Garlic Sauce</p></div>
-<div class="step"><span class="step-num">7</span><p>Mix <span class="ing-highlight">butter</span>, <span class="ing-highlight">garlic clove</span>, <span class="ing-highlight">black pepper</span>, shredded <span class="ing-highlight">parmesan cheese</span>, and <span class="ing-highlight">mayonaise</span> (or yogurt).</p></div>
-<div class="step"><span class="step-num">8</span><p>Heat until everything is mixed.</p></div>
-<div class="step"><span class="step-num">9</span><p>Asian wing sauce</p></div>
-<div class="step"><span class="step-num">10</span><p>Mix <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">rice vinegar</span>, <span class="ing-highlight">sake</span>, <span class="ing-highlight">sesame oil</span>, <span class="ing-highlight">sugar</span></p></div>
-<div class="step"><span class="step-num">11</span><p>Heat pan with oil add minced <span class="ing-highlight">garlic cloves</span>, julliened <span class="ing-highlight">ginger</span></p></div>
-<div class="step"><span class="step-num">12</span><p>Add liquid and cook until thick</p></div>
-<div class="step"><span class="step-num">13</span><p>Korean Gochujang Chicken Wings</p></div>
-<div class="step"><span class="step-num">14</span><p>Add <span class="ing-highlight">butter</span>, minced <span class="ing-highlight">garlic clove</span>, minced <span class="ing-highlight">ginger</span></p></div>
-<div class="step"><span class="step-num">15</span><p>Cook for a couple minutes</p></div>
-<div class="step"><span class="step-num">16</span><p>Add <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">rice vinegar</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">gochujang</span></p></div>
-<div class="step"><span class="step-num">17</span><p>Whisk and cook until thickens</p></div>
-<div class="step"><span class="step-num">18</span><p>Server with chopped <span class="ing-highlight">green chilis</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Medium Sauce</p></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Mix <span class="ing-highlight">hot sauce</span>, <span class="ing-highlight">oil</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">garlic powder</span>, <span class="ing-highlight">worcestershire sauce</span>, and <span class="ing-highlight">black pepper</span> in a small pan</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> hot sauce</li><li><span class="step-ing-measure">0.3333333333333333 cup</span> oil</li><li><span class="step-ing-measure">1 tsp</span> sugar</li><li><span class="step-ing-measure">0.5 tsp</span> garlic powder</li><li><span class="step-ing-measure">0.5 tsp</span> worcestershire sauce</li><li><span class="step-ing-measure">1/8tsp</span> black pepper</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Heat until boiling; simmer for several minutes, then take off heat</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Mix yolk of <span class="ing-highlight">egg</span>, <span class="ing-highlight">cornstarch</span>, and <span class="ing-highlight">water</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> egg</li><li><span class="step-ing-measure">2 tsp</span> cornstarch</li><li><span class="step-ing-measure">2 tsp</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Temper yolk mixture with hot sauce mixture</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Parmesan Garlic Sauce</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Mix <span class="ing-highlight">butter</span>, <span class="ing-highlight">garlic clove</span>, <span class="ing-highlight">black pepper</span>, shredded <span class="ing-highlight">parmesan cheese</span>, and <span class="ing-highlight">mayonaise</span> (or yogurt).</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> butter</li><li><span class="step-ing-measure">1</span> garlic clove</li><li><span class="step-ing-measure">0.25 tsp</span> black pepper</li><li><span class="step-ing-measure">0.3333333333333333 cup</span> parmesan cheese</li><li><span class="step-ing-measure">0.3333333333333333 cup</span> mayonaise</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Heat until everything is mixed.</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Asian wing sauce</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Mix <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">rice vinegar</span>, <span class="ing-highlight">sake</span>, <span class="ing-highlight">sesame oil</span>, <span class="ing-highlight">sugar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4 tbsp</span> soy sauce</li><li><span class="step-ing-measure">4 tbsp</span> rice vinegar</li><li><span class="step-ing-measure">4 tbsp</span> sake</li><li><span class="step-ing-measure">4 tbsp</span> sesame oil</li><li><span class="step-ing-measure">4 tbsp</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Heat pan with oil add minced <span class="ing-highlight">garlic cloves</span>, julliened <span class="ing-highlight">ginger</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">6</span> garlic cloves</li><li><span class="step-ing-measure">2 tsp</span> ginger</li></ul></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Add liquid and cook until thick</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Korean Gochujang Chicken Wings</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>Add <span class="ing-highlight">butter</span>, minced <span class="ing-highlight">garlic clove</span>, minced <span class="ing-highlight">ginger</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> butter</li><li><span class="step-ing-measure">1</span> garlic clove</li><li><span class="step-ing-measure">1 tbsp</span> ginger</li></ul></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>Cook for a couple minutes</p></div></div>
+<div class="step"><span class="step-num">16</span><div class="step-content"><p>Add <span class="ing-highlight">brown sugar</span>, <span class="ing-highlight">rice vinegar</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">gochujang</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> brown sugar</li><li><span class="step-ing-measure">1 tbsp</span> rice vinegar</li><li><span class="step-ing-measure">2 tbsp</span> soy sauce</li><li><span class="step-ing-measure">3 tbsp</span> gochujang</li></ul></div></div>
+<div class="step"><span class="step-num">17</span><div class="step-content"><p>Whisk and cook until thickens</p></div></div>
+<div class="step"><span class="step-num">18</span><div class="step-content"><p>Server with chopped <span class="ing-highlight">green chilis</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> green chilis</li></ul></div></div>
     </div>
   </main>
 </body>

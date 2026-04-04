@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -431,15 +454,15 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Mash / mix together <span class="ing-highlight">feta</span>, <span class="ing-highlight">baking powder</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">water</span>, <span class="ing-highlight">oil</span>, <span class="ing-highlight">creme fraiche</span>, and <span class="ing-highlight">eggs</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Add melted <span class="ing-highlight">butter</span> to spring form pan</p></div>
-<div class="step"><span class="step-num">3</span><p>Lay a couple sheets of <span class="ing-highlight">filo pastry</span> in spring form pan and paint with remaining butter and some water.</p></div>
-<div class="step"><span class="step-num">4</span><p>Soak sheets of filo in the liquid mixture, squeeze out excess  and fill pan.</p></div>
-<div class="step"><span class="step-num">5</span><p>Cover with remaining 2 filo sheets, brsh with beaten egg</p></div>
-<div class="step"><span class="step-num">6</span><p>use a fork to poke holes on top</p></div>
-<div class="step"><span class="step-num">7</span><p>Bake 5 minutes at 200°C then ruduce to 185°C for 40 minutes</p></div>
-<div class="step"><span class="step-num">8</span><p>Place under broiler for a couple minutes to brown</p></div>
-<div class="step"><span class="step-num">9</span><p>Let cool 10 minutes</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Mash / mix together <span class="ing-highlight">feta</span>, <span class="ing-highlight">baking powder</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">water</span>, <span class="ing-highlight">oil</span>, <span class="ing-highlight">creme fraiche</span>, and <span class="ing-highlight">eggs</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">350 g</span> feta</li><li><span class="step-ing-measure">10 g</span> baking powder</li><li><span class="step-ing-measure">0.5 tsp</span> salt</li><li><span class="step-ing-measure">125 ml</span> water</li><li><span class="step-ing-measure">0.5 cup</span> oil</li><li><span class="step-ing-measure">0.25 c</span> creme fraiche</li><li><span class="step-ing-measure">3</span> eggs</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add melted <span class="ing-highlight">butter</span> to spring form pan</p><ul class="step-ingredients"><li><span class="step-ing-measure">4 tbsp</span> butter</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Lay a couple sheets of <span class="ing-highlight">filo pastry</span> in spring form pan and paint with remaining butter and some water.</p><ul class="step-ingredients"><li><span class="step-ing-measure">450 g</span> filo pastry</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Soak sheets of filo in the liquid mixture, squeeze out excess  and fill pan.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Cover with remaining 2 filo sheets, brsh with beaten egg</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>use a fork to poke holes on top</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Bake 5 minutes at 200°C then ruduce to 185°C for 40 minutes</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Place under broiler for a couple minutes to brown</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Let cool 10 minutes</p></div></div>
     </div>
   </main>
 </body>

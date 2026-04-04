@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -438,18 +461,18 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Cut <span class="ing-highlight">napa cabbage</span> in quarters and remove the stem</p></div>
-<div class="step"><span class="step-num">2</span><p>Rub <span class="ing-highlight">kosher salt</span> into all the leaves and put in a covered container</p></div>
-<div class="step"><span class="step-num">3</span><p>Turn every 30 minutes for 2 hours</p></div>
-<div class="step"><span class="step-num">4</span><p>Make paste by combining <span class="ing-highlight">water</span>, <span class="ing-highlight">glutinous rice flour</span> and heat until bubbling 10 minutes</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">brown sugar</span> and continue cooking for 1 minute, let cook completely</p></div>
-<div class="step"><span class="step-num">6</span><p>Add <span class="ing-highlight">daikon radish</span> matchsticks, <span class="ing-highlight">carrots</span> matchsticks, <span class="ing-highlight">green onions</span> 3in pieces, <span class="ing-highlight">garlic chives</span> 3in pieces</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">asian pear</span>, <span class="ing-highlight">onion</span> into blender to make paste</p></div>
-<div class="step"><span class="step-num">8</span><p>Mix with cooled rice paste, <span class="ing-highlight">gochugaru</span>, <span class="ing-highlight">fish sauce</span>, <span class="ing-highlight">bonito flakes</span></p></div>
-<div class="step"><span class="step-num">9</span><p>Mix in veggies.</p></div>
-<div class="step"><span class="step-num">10</span><p>Rince salt from cabbage under water, ring out extra moisture</p></div>
-<div class="step"><span class="step-num">11</span><p>Spread paste well on cabbage, fold in half, put in mason jars</p></div>
-<div class="step"><span class="step-num">12</span><p>Ferment for 3 days then move to fridge</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Cut <span class="ing-highlight">napa cabbage</span> in quarters and remove the stem</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 kilo</span> napa cabbage</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Rub <span class="ing-highlight">kosher salt</span> into all the leaves and put in a covered container</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 cup</span> kosher salt</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Turn every 30 minutes for 2 hours</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Make paste by combining <span class="ing-highlight">water</span>, <span class="ing-highlight">glutinous rice flour</span> and heat until bubbling 10 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">2.5 cups</span> water</li><li><span class="step-ing-measure">3 tbsp</span> glutinous rice flour</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">brown sugar</span> and continue cooking for 1 minute, let cook completely</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 tbsp</span> brown sugar</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add <span class="ing-highlight">daikon radish</span> matchsticks, <span class="ing-highlight">carrots</span> matchsticks, <span class="ing-highlight">green onions</span> 3in pieces, <span class="ing-highlight">garlic chives</span> 3in pieces</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 cups</span> daikon radish</li><li><span class="step-ing-measure">1 cup</span> carrots</li><li><span class="step-ing-measure">12</span> green onions</li><li><span class="step-ing-measure">1 bunch</span> garlic chives</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">asian pear</span>, <span class="ing-highlight">onion</span> into blender to make paste</p><ul class="step-ingredients"><li><span class="step-ing-measure">30</span> garlic cloves</li><li><span class="step-ing-measure">30 g</span> ginger</li><li><span class="step-ing-measure">1</span> asian pear</li><li><span class="step-ing-measure">0.5</span> onion</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Mix with cooled rice paste, <span class="ing-highlight">gochugaru</span>, <span class="ing-highlight">fish sauce</span>, <span class="ing-highlight">bonito flakes</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 cups</span> gochugaru</li><li><span class="step-ing-measure">0.5 cups</span> fish sauce</li><li><span class="step-ing-measure">0.25 cups</span> bonito flakes</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Mix in veggies.</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Rince salt from cabbage under water, ring out extra moisture</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Spread paste well on cabbage, fold in half, put in mason jars</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Ferment for 3 days then move to fridge</p></div></div>
     </div>
   </main>
 </body>

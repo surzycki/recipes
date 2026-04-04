@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -424,16 +447,16 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Use a 8x10 pan.</p></div>
-<div class="step"><span class="step-num">2</span><p>Place dough{250%g} in the pan. From the pizza-dough-fast recipe.</p></div>
-<div class="step"><span class="step-num">3</span><p>Preheat oven to 290C.</p></div>
-<div class="step"><span class="step-num">4</span><p>Parbake for 4 minutes.</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">low moisture mozzarella</span>, cubed.</p></div>
-<div class="step"><span class="step-num">6</span><p>Add toppings</p></div>
-<div class="step"><span class="step-num">7</span><p>Bake for 14 minutes, rotating 50% through.</p></div>
-<div class="step"><span class="step-num">8</span><p>Watch the top resistance to ensure it isn't too hot.</p></div>
-<div class="step"><span class="step-num">9</span><p>Remove from oven, release from pan, and place on a rack.</p></div>
-<div class="step"><span class="step-num">10</span><p>Top with warm tomato sauce.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Use a 8x10 pan.</p></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Place dough{250%g} in the pan. From the pizza-dough-fast recipe.</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Preheat oven to 290C.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Parbake for 4 minutes.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">low moisture mozzarella</span>, cubed.</p><ul class="step-ingredients"><li><span class="step-ing-measure">230 g</span> low moisture mozzarella</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add toppings</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Bake for 14 minutes, rotating 50% through.</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Watch the top resistance to ensure it isn't too hot.</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Remove from oven, release from pan, and place on a rack.</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Top with warm tomato sauce.</p></div></div>
     </div>
   </main>
 </body>

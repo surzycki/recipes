@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -435,18 +458,18 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Take <span class="ing-highlight">cellophane noodles</span> in bowl and cover with warm water.</p></div>
-<div class="step"><span class="step-num">2</span><p>Stir fry <span class="ing-highlight">shallots</span> until golden brown, remove</p></div>
-<div class="step"><span class="step-num">3</span><p>Then stir fry <span class="ing-highlight">garlic cloves</span> and <span class="ing-highlight">ginger</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Add <span class="ing-highlight">ground pork</span> with a bit more oil and fry until brown</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">doubanjiang</span> and fry</p></div>
-<div class="step"><span class="step-num">6</span><p>Add <span class="ing-highlight">sichuan peppercorn oil</span></p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">water</span> and simmer</p></div>
-<div class="step"><span class="step-num">8</span><p>Add <span class="ing-highlight">chicken boullion powder</span>, <span class="ing-highlight">dark soy sauce</span> and <span class="ing-highlight">sugar</span> and cook for a bit</p></div>
-<div class="step"><span class="step-num">9</span><p>Turn off heat and add noodles</p></div>
-<div class="step"><span class="step-num">10</span><p>Allow to absorb gravy and turn heat back on</p></div>
-<div class="step"><span class="step-num">11</span><p>Add cooked shallots</p></div>
-<div class="step"><span class="step-num">12</span><p>Add <span class="ing-highlight">sesame oil</span> and chopped <span class="ing-highlight">green onions</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Take <span class="ing-highlight">cellophane noodles</span> in bowl and cover with warm water.</p><ul class="step-ingredients"><li><span class="step-ing-measure">150 g</span> cellophane noodles</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Stir fry <span class="ing-highlight">shallots</span> until golden brown, remove</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> shallots</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Then stir fry <span class="ing-highlight">garlic cloves</span> and <span class="ing-highlight">ginger</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> garlic cloves</li><li><span class="step-ing-measure">1 tbsp</span> ginger</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add <span class="ing-highlight">ground pork</span> with a bit more oil and fry until brown</p><ul class="step-ingredients"><li><span class="step-ing-measure">200 g</span> ground pork</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">doubanjiang</span> and fry</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> doubanjiang</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add <span class="ing-highlight">sichuan peppercorn oil</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> sichuan peppercorn oil</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">water</span> and simmer</p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 cups</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add <span class="ing-highlight">chicken boullion powder</span>, <span class="ing-highlight">dark soy sauce</span> and <span class="ing-highlight">sugar</span> and cook for a bit</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> chicken boullion powder</li><li><span class="step-ing-measure">1 tbsp</span> dark soy sauce</li><li><span class="step-ing-measure">1 tbsp</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Turn off heat and add noodles</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Allow to absorb gravy and turn heat back on</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Add cooked shallots</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Add <span class="ing-highlight">sesame oil</span> and chopped <span class="ing-highlight">green onions</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> sesame oil</li><li><span class="step-ing-measure">4</span> green onions</li></ul></div></div>
     </div>
   </main>
 </body>

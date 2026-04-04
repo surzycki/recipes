@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -447,16 +470,16 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Carmelize <span class="ing-highlight">carrots</span> and sliced <span class="ing-highlight">onions</span> in <span class="ing-highlight">ghee</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Add <span class="ing-highlight">turmeric</span>, <span class="ing-highlight">ras-el-hanout</span>, <span class="ing-highlight">paprika</span>, ground <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">cinnamon</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">rose petals</span> to <span class="ing-highlight">water</span> and mix well</p></div>
-<div class="step"><span class="step-num">3</span><p>Add onion minxture to tagine and <span class="ing-highlight">lamb neck</span>, <span class="ing-highlight">lamb shoulder</span>; leaving space for steam.</p></div>
-<div class="step"><span class="step-num">4</span><p>Coat meat with spice mixture.</p></div>
-<div class="step"><span class="step-num">5</span><p>Add chopped <span class="ing-highlight">tomatoes</span>, chopped <span class="ing-highlight">garlic cloves</span>, chopped <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">cilantro</span> to tagine.</p></div>
-<div class="step"><span class="step-num">6</span><p>Salt and cover to cook at 160°C for 90 minutes</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">dried apricots</span>, <span class="ing-highlight">golden raisins</span>, <span class="ing-highlight">sugar</span> to pan and cook with <span class="ing-highlight">orange blossom water</span> for 10 minutes</p></div>
-<div class="step"><span class="step-num">8</span><p>Add fruit mixture to tagine and cook for another 60 minutes</p></div>
-<div class="step"><span class="step-num">9</span><p>Heat <span class="ing-highlight">olive oil</span> and <span class="ing-highlight">butter</span> in a pan and add <span class="ing-highlight">almond slivers</span> until golder brown</p></div>
-<div class="step"><span class="step-num">10</span><p>Add nuts to tagine and garnish with <span class="ing-highlight">cilantro</span> and <span class="ing-highlight">pomegranate seeds</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Carmelize <span class="ing-highlight">carrots</span> and sliced <span class="ing-highlight">onions</span> in <span class="ing-highlight">ghee</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> carrots</li><li><span class="step-ing-measure">3</span> onions</li><li><span class="step-ing-measure">3 tbsp</span> ghee</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add <span class="ing-highlight">turmeric</span>, <span class="ing-highlight">ras-el-hanout</span>, <span class="ing-highlight">paprika</span>, ground <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">cinnamon</span>, <span class="ing-highlight">salt</span>, and <span class="ing-highlight">rose petals</span> to <span class="ing-highlight">water</span> and mix well</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 tsp</span> turmeric</li><li><span class="step-ing-measure">1 tsp</span> ras-el-hanout</li><li><span class="step-ing-measure">2 tsp</span> paprika</li><li><span class="step-ing-measure">1 tsp</span> cumin seeds</li><li><span class="step-ing-measure">1.5 cm</span> cinnamon</li><li><span class="step-ing-measure">2 tsp</span> salt</li><li><span class="step-ing-measure">0.5 tsp</span> rose petals</li><li><span class="step-ing-measure">1 cup</span> water</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add onion minxture to tagine and <span class="ing-highlight">lamb neck</span>, <span class="ing-highlight">lamb shoulder</span>; leaving space for steam.</p><ul class="step-ingredients"><li><span class="step-ing-measure">500 g</span> lamb neck</li><li><span class="step-ing-measure">500 g</span> lamb shoulder</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Coat meat with spice mixture.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add chopped <span class="ing-highlight">tomatoes</span>, chopped <span class="ing-highlight">garlic cloves</span>, chopped <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">cilantro</span> to tagine.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> tomatoes</li><li><span class="step-ing-measure">4</span> garlic cloves</li><li><span class="step-ing-measure">2.5 cm</span> ginger</li><li><span class="step-ing-measure">1 bunch</span> cilantro</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Salt and cover to cook at 160°C for 90 minutes</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">dried apricots</span>, <span class="ing-highlight">golden raisins</span>, <span class="ing-highlight">sugar</span> to pan and cook with <span class="ing-highlight">orange blossom water</span> for 10 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">150 g</span> dried apricots</li><li><span class="step-ing-measure">100 g</span> golden raisins</li><li><span class="step-ing-measure">1 tbsp</span> sugar</li><li><span class="step-ing-measure">2 tbsp</span> orange blossom water</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add fruit mixture to tagine and cook for another 60 minutes</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Heat <span class="ing-highlight">olive oil</span> and <span class="ing-highlight">butter</span> in a pan and add <span class="ing-highlight">almond slivers</span> until golder brown</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> olive oil</li><li><span class="step-ing-measure">2 tbsp</span> butter</li><li><span class="step-ing-measure">50 g</span> almond slivers</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Add nuts to tagine and garnish with <span class="ing-highlight">cilantro</span> and <span class="ing-highlight">pomegranate seeds</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> cilantro</li><li><span class="step-ing-measure">1 tbsp</span> pomegranate seeds</li></ul></div></div>
     </div>
   </main>
 </body>

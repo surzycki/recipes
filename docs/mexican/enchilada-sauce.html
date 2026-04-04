@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -422,21 +445,21 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>8 New Mexico Chile pods</p></div>
-<div class="step"><span class="step-num">2</span><p>1 chile ancho/pasilla</p></div>
-<div class="step"><span class="step-num">3</span><p>5 chile arbol</p></div>
-<div class="step"><span class="step-num">4</span><p>1/4 onion</p></div>
-<div class="step"><span class="step-num">5</span><p>2 garlic cloves</p></div>
-<div class="step"><span class="step-num">6</span><p>1/2 tsp whole black pepper</p></div>
-<div class="step"><span class="step-num">7</span><p>1/2 tsp oregano</p></div>
-<div class="step"><span class="step-num">8</span><p>1/4 tsp whole cumin seeds</p></div>
-<div class="step"><span class="step-num">9</span><p>2tsp chicken powder bulllion</p></div>
-<div class="step"><span class="step-num">10</span><p>1Tbsp brown sugar</p></div>
-<div class="step"><span class="step-num">11</span><p>Salt I used 2 1/4 tsp</p></div>
-<div class="step"><span class="step-num">12</span><p>deeseed and toast chilis</p></div>
-<div class="step"><span class="step-num">13</span><p>add chilis to pan with 1/4 onion and cover with water</p></div>
-<div class="step"><span class="step-num">14</span><p>blend with 3 cups of water</p></div>
-<div class="step"><span class="step-num">15</span><p>simmer sauce for 5min until thickens a bit</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>8 New Mexico Chile pods</p></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>1 chile ancho/pasilla</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>5 chile arbol</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>1/4 onion</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>2 garlic cloves</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>1/2 tsp whole black pepper</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>1/2 tsp oregano</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>1/4 tsp whole cumin seeds</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>2tsp chicken powder bulllion</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>1Tbsp brown sugar</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Salt I used 2 1/4 tsp</p></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>deeseed and toast chilis</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>add chilis to pan with 1/4 onion and cover with water</p></div></div>
+<div class="step"><span class="step-num">14</span><div class="step-content"><p>blend with 3 cups of water</p></div></div>
+<div class="step"><span class="step-num">15</span><div class="step-content"><p>simmer sauce for 5min until thickens a bit</p></div></div>
     </div>
   </main>
 </body>

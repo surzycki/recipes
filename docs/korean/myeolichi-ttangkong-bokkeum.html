@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -431,12 +454,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Shake <span class="ing-highlight">dried anchovies</span> in a collander to remove any small pieces.</p></div>
-<div class="step"><span class="step-num">2</span><p>Combine <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">water</span>, <span class="ing-highlight">brown sugar</span>, and <span class="ing-highlight">rice syrup</span> in a small bowl</p></div>
-<div class="step"><span class="step-num">3</span><p>Heat a small pan, add <span class="ing-highlight">oil</span> and <span class="ing-highlight">garlic clove</span>, and stir for a few seconds.</p></div>
-<div class="step"><span class="step-num">4</span><p>Add the anchovies and roasted <span class="ing-highlight">peanuts</span>, turn to medium and fry for few minutes until browned.</p></div>
-<div class="step"><span class="step-num">5</span><p>Take off heat and add seasoning.</p></div>
-<div class="step"><span class="step-num">6</span><p>Stir in <span class="ing-highlight">sesame oil</span> and <span class="ing-highlight">sesame seeds</span>.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Shake <span class="ing-highlight">dried anchovies</span> in a collander to remove any small pieces.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cup</span> dried anchovies</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Combine <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">water</span>, <span class="ing-highlight">brown sugar</span>, and <span class="ing-highlight">rice syrup</span> in a small bowl</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> soy sauce</li><li><span class="step-ing-measure">1 tsp</span> water</li><li><span class="step-ing-measure">1 tbsp</span> brown sugar</li><li><span class="step-ing-measure">1 tsp</span> rice syrup</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Heat a small pan, add <span class="ing-highlight">oil</span> and <span class="ing-highlight">garlic clove</span>, and stir for a few seconds.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> oil</li><li><span class="step-ing-measure">1</span> garlic clove</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add the anchovies and roasted <span class="ing-highlight">peanuts</span>, turn to medium and fry for few minutes until browned.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.23 cup</span> peanuts</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Take off heat and add seasoning.</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Stir in <span class="ing-highlight">sesame oil</span> and <span class="ing-highlight">sesame seeds</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> sesame oil</li><li><span class="step-ing-measure">1 tsp</span> sesame seeds</li></ul></div></div>
     </div>
   </main>
 </body>

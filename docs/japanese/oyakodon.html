@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -433,16 +456,16 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Combine <span class="ing-highlight">dashi</span>, <span class="ing-highlight">mirin</span>, <span class="ing-highlight">sake</span>, <span class="ing-highlight">soy sauce</span>, and <span class="ing-highlight">sugar</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Thinly slice <span class="ing-highlight">onion</span> and chop the green <span class="ing-highlight">onion</span></p></div>
-<div class="step"><span class="step-num">3</span><p>Slick the <span class="ing-highlight">chicken thighs</span> into 4cm pieces</p></div>
-<div class="step"><span class="step-num">4</span><p>With heat off in a small pan add 1/2 of the onion and enough broth to cover onions</p></div>
-<div class="step"><span class="step-num">5</span><p>Add 1/2 of the chicken, then turn on heat and bring to boil</p></div>
-<div class="step"><span class="step-num">6</span><p>Once boiling, medium heat, cover and cook 5 minutes</p></div>
-<div class="step"><span class="step-num">7</span><p>Add one of the <span class="ing-highlight">egg</span> and lightly beat with chopsticks</p></div>
-<div class="step"><span class="step-num">8</span><p>Cover until egg is just set</p></div>
-<div class="step"><span class="step-num">9</span><p>Add green onions and slide onto steamed <span class="ing-highlight">rice</span></p></div>
-<div class="step"><span class="step-num">10</span><p>Can add <span class="ing-highlight">shichimi togarashi</span> on the side (japanese 7 spice powder}</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Combine <span class="ing-highlight">dashi</span>, <span class="ing-highlight">mirin</span>, <span class="ing-highlight">sake</span>, <span class="ing-highlight">soy sauce</span>, and <span class="ing-highlight">sugar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cups</span> dashi</li><li><span class="step-ing-measure">1.5 tbsp</span> mirin</li><li><span class="step-ing-measure">1.5 tbsp</span> sake</li><li><span class="step-ing-measure">1.5 tbsp</span> soy sauce</li><li><span class="step-ing-measure">1.5 tsp</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Thinly slice <span class="ing-highlight">onion</span> and chop the green <span class="ing-highlight">onion</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5</span> onion</li><li><span class="step-ing-measure">2</span> green onion</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Slick the <span class="ing-highlight">chicken thighs</span> into 4cm pieces</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> chicken thighs</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>With heat off in a small pan add 1/2 of the onion and enough broth to cover onions</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add 1/2 of the chicken, then turn on heat and bring to boil</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Once boiling, medium heat, cover and cook 5 minutes</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add one of the <span class="ing-highlight">egg</span> and lightly beat with chopsticks</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> egg</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Cover until egg is just set</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Add green onions and slide onto steamed <span class="ing-highlight">rice</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> rice</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Can add <span class="ing-highlight">shichimi togarashi</span> on the side (japanese 7 spice powder}</p><ul class="step-ingredients"><li><span class="step-ing-measure">pinch</span> shichimi togarashi</li></ul></div></div>
     </div>
   </main>
 </body>

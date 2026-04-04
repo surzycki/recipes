@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -432,10 +455,10 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Place sliced <span class="ing-highlight">red onion</span> in bowl of cold water for 10 minutes, drain.</p></div>
-<div class="step"><span class="step-num">2</span><p>In bowl combine red onion, de-seeded sliced <span class="ing-highlight">cucumber</span>, <span class="ing-highlight">cilantro</span>, <span class="ing-highlight">peanuts</span>, and <span class="ing-highlight">jalapeno pepper</span>.</p></div>
-<div class="step"><span class="step-num">3</span><p>Make dressing, combine juice of <span class="ing-highlight">lime</span>, <span class="ing-highlight">oil</span>, <span class="ing-highlight">fish sauce</span>, <span class="ing-highlight">sugar</span>, and smashed <span class="ing-highlight">garlic clove</span>.</p></div>
-<div class="step"><span class="step-num">4</span><p>Toss salad</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Place sliced <span class="ing-highlight">red onion</span> in bowl of cold water for 10 minutes, drain.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5</span> red onion</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>In bowl combine red onion, de-seeded sliced <span class="ing-highlight">cucumber</span>, <span class="ing-highlight">cilantro</span>, <span class="ing-highlight">peanuts</span>, and <span class="ing-highlight">jalapeno pepper</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> cucumber</li><li><span class="step-ing-measure">0.33 cup</span> cilantro</li><li><span class="step-ing-measure">0.25 cups</span> peanuts</li><li><span class="step-ing-measure">1</span> jalapeno pepper</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Make dressing, combine juice of <span class="ing-highlight">lime</span>, <span class="ing-highlight">oil</span>, <span class="ing-highlight">fish sauce</span>, <span class="ing-highlight">sugar</span>, and smashed <span class="ing-highlight">garlic clove</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> lime</li><li><span class="step-ing-measure">2 tbsp</span> oil</li><li><span class="step-ing-measure">1.5 tbsp</span> fish sauce</li><li><span class="step-ing-measure">2 tbsp</span> sugar</li><li><span class="step-ing-measure">1</span> garlic clove</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Toss salad</p></div></div>
     </div>
   </main>
 </body>

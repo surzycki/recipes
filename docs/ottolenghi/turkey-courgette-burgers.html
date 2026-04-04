@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -437,10 +460,10 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Make sauce combine, <span class="ing-highlight">creme fraiche</span>, <span class="ing-highlight">yogurt</span>, zest 1tsp <span class="ing-highlight">lemon</span>, 1tbs juice <span class="ing-highlight">lemon</span>, <span class="ing-highlight">garlic clove</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">sumac</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">pepper</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Mix in bowl, minced <span class="ing-highlight">turkey breast</span>, grated <span class="ing-highlight">zucchini</span>, sliced <span class="ing-highlight">spring onions</span>, <span class="ing-highlight">egg</span>, <span class="ing-highlight">mint</span>, <span class="ing-highlight">cilantro</span>, <span class="ing-highlight">garlic clove</span>, ground <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">pepper</span>.</p></div>
-<div class="step"><span class="step-num">3</span><p>Make 45g balls, flatten, fry in pan with a fat to brown.</p></div>
-<div class="step"><span class="step-num">4</span><p>Bake at 200C in oven in lined pan for 5 minutes</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Make sauce combine, <span class="ing-highlight">creme fraiche</span>, <span class="ing-highlight">yogurt</span>, zest 1tsp <span class="ing-highlight">lemon</span>, 1tbs juice <span class="ing-highlight">lemon</span>, <span class="ing-highlight">garlic clove</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">sumac</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">pepper</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">100 g</span> creme fraiche</li><li><span class="step-ing-measure">150 g</span> yogurt</li><li><span class="step-ing-measure">1</span> lemon</li><li><span class="step-ing-measure">1</span> garlic clove</li><li><span class="step-ing-measure">1.5 tbsp</span> olive oil</li><li><span class="step-ing-measure">1 tbsp</span> sumac</li><li><span class="step-ing-measure">pinch</span> salt</li><li><span class="step-ing-measure">pinch</span> pepper</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Mix in bowl, minced <span class="ing-highlight">turkey breast</span>, grated <span class="ing-highlight">zucchini</span>, sliced <span class="ing-highlight">spring onions</span>, <span class="ing-highlight">egg</span>, <span class="ing-highlight">mint</span>, <span class="ing-highlight">cilantro</span>, <span class="ing-highlight">garlic clove</span>, ground <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">pepper</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">500 g</span> turkey breast</li><li><span class="step-ing-measure">200 g</span> zucchini</li><li><span class="step-ing-measure">40 g</span> spring onions</li><li><span class="step-ing-measure">1</span> egg</li><li><span class="step-ing-measure">2 tbsp</span> mint</li><li><span class="step-ing-measure">2 tbsp</span> cilantro</li><li><span class="step-ing-measure">2</span> garlic clove</li><li><span class="step-ing-measure">1 tsp</span> cumin seed</li><li><span class="step-ing-measure">pinch</span> salt</li><li><span class="step-ing-measure">pinch</span> pepper</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Make 45g balls, flatten, fry in pan with a fat to brown.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Bake at 200C in oven in lined pan for 5 minutes</p></div></div>
     </div>
   </main>
 </body>

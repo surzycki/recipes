@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -437,12 +460,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Crush <span class="ing-highlight">tumeric root</span> and <span class="ing-highlight">salt</span> and add to <span class="ing-highlight">chicken thighs</span> and marinate for 60 minutes to overnight</p></div>
-<div class="step"><span class="step-num">2</span><p>In a mortar and pestal make paste with toasted <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">shallots</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">candlenuts</span>, <span class="ing-highlight">galanga</span> pience, and <span class="ing-highlight">tumeric root</span></p></div>
-<div class="step"><span class="step-num">3</span><p>Sautee the paste in <span class="ing-highlight">coconut oil</span> until fragrant</p></div>
-<div class="step"><span class="step-num">4</span><p>Add Chicken to the pan and fry for 10 minutes</p></div>
-<div class="step"><span class="step-num">5</span><p>Add bruised <span class="ing-highlight">lemongrass</span>, <span class="ing-highlight">bay leaves</span>, <span class="ing-highlight">coconut milk</span>, <span class="ing-highlight">baby potatoes</span>, <span class="ing-highlight">celery</span>, and <span class="ing-highlight">tarragon</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Cook until chicken is tender</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Crush <span class="ing-highlight">tumeric root</span> and <span class="ing-highlight">salt</span> and add to <span class="ing-highlight">chicken thighs</span> and marinate for 60 minutes to overnight</p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> tumeric root</li><li><span class="step-ing-measure">1 tbsp</span> salt</li><li><span class="step-ing-measure">1.2 kg</span> chicken thighs</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>In a mortar and pestal make paste with toasted <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">shallots</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">candlenuts</span>, <span class="ing-highlight">galanga</span> pience, and <span class="ing-highlight">tumeric root</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 tsp</span> corriander seeds</li><li><span class="step-ing-measure">6</span> shallots</li><li><span class="step-ing-measure">4</span> garlic cloves</li><li><span class="step-ing-measure">2</span> candlenuts</li><li><span class="step-ing-measure">5 cm</span> galanga</li><li><span class="step-ing-measure">6 cm</span> tumeric root</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Sautee the paste in <span class="ing-highlight">coconut oil</span> until fragrant</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 tbsp</span> coconut oil</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add Chicken to the pan and fry for 10 minutes</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add bruised <span class="ing-highlight">lemongrass</span>, <span class="ing-highlight">bay leaves</span>, <span class="ing-highlight">coconut milk</span>, <span class="ing-highlight">baby potatoes</span>, <span class="ing-highlight">celery</span>, and <span class="ing-highlight">tarragon</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 stalks</span> lemongrass</li><li><span class="step-ing-measure">2</span> bay leaves</li><li><span class="step-ing-measure">500 ml</span> coconut milk</li><li><span class="step-ing-measure">10</span> baby potatoes</li><li><span class="step-ing-measure">2 stalks</span> celery</li><li><span class="step-ing-measure">2 tbsp</span> tarragon</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Cook until chicken is tender</p></div></div>
     </div>
   </main>
 </body>

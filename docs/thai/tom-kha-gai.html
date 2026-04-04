@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -436,10 +459,10 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Bring <span class="ing-highlight">chicken stock</span> to a boil in a pot, then add <span class="ing-highlight">salt</span> and <span class="ing-highlight">chicken thigh</span>, cut into 1-inch pieces. Simmer gently for 15 minutes or until the chicken is fork-tender.</p></div>
-<div class="step"><span class="step-num">2</span><p>Add <span class="ing-highlight">coconut milk</span>, <span class="ing-highlight">lemongrass</span>, bottom half only, smashed and cut into 2-inch pieces, <span class="ing-highlight">galanga</span>, <span class="ing-highlight">kaffir lime leaves</span>, twisted to bruise and torn into chunks, <span class="ing-highlight">chilies</span>, smashed or cut into large pieces, <span class="ing-highlight">oyster mushrooms</span>, about half of the <span class="ing-highlight">fish sauce</span>, and <span class="ing-highlight">palm sugar</span>. Simmer for 5 minutes to infuse.</p></div>
-<div class="step"><span class="step-num">3</span><p>Taste and add more <span class="ing-highlight">fish sauce</span> as needed. Turn off the heat and add juide from <span class="ing-highlight">lime</span>, then taste and add more if needed. Top with <span class="ing-highlight">green onion</span> and/or <span class="ing-highlight">cilantro</span>, chopped.</p></div>
-<div class="step"><span class="step-num">4</span><p>Serve with <span class="ing-highlight">jasmine rice</span> if desired.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Bring <span class="ing-highlight">chicken stock</span> to a boil in a pot, then add <span class="ing-highlight">salt</span> and <span class="ing-highlight">chicken thigh</span>, cut into 1-inch pieces. Simmer gently for 15 minutes or until the chicken is fork-tender.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 cups</span> chicken stock</li><li><span class="step-ing-measure">0.5 tsp</span> salt</li><li><span class="step-ing-measure">500 g</span> chicken thigh</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add <span class="ing-highlight">coconut milk</span>, <span class="ing-highlight">lemongrass</span>, bottom half only, smashed and cut into 2-inch pieces, <span class="ing-highlight">galanga</span>, <span class="ing-highlight">kaffir lime leaves</span>, twisted to bruise and torn into chunks, <span class="ing-highlight">chilies</span>, smashed or cut into large pieces, <span class="ing-highlight">oyster mushrooms</span>, about half of the <span class="ing-highlight">fish sauce</span>, and <span class="ing-highlight">palm sugar</span>. Simmer for 5 minutes to infuse.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 cups</span> coconut milk</li><li><span class="step-ing-measure">1 stalk</span> lemongrass</li><li><span class="step-ing-measure">12 slices</span> galanga</li><li><span class="step-ing-measure">5</span> kaffir lime leaves</li><li><span class="step-ing-measure">1-3</span> chilies</li><li><span class="step-ing-measure">200 g</span> oyster mushrooms</li><li><span class="step-ing-measure">2 tbsp</span> fish sauce</li><li><span class="step-ing-measure">1 tsp</span> palm sugar</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Taste and add more <span class="ing-highlight">fish sauce</span> as needed. Turn off the heat and add juide from <span class="ing-highlight">lime</span>, then taste and add more if needed. Top with <span class="ing-highlight">green onion</span> and/or <span class="ing-highlight">cilantro</span>, chopped.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> fish sauce</li><li><span class="step-ing-measure">2.5 tbsp</span> lime</li><li><span class="step-ing-measure">some</span> green onion</li><li><span class="step-ing-measure">some</span> cilantro</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Serve with <span class="ing-highlight">jasmine rice</span> if desired.</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> jasmine rice</li></ul></div></div>
     </div>
   </main>
 </body>

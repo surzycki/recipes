@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,10 +452,10 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Slice <span class="ing-highlight">cucumbers</span> into thick slices and cover with <span class="ing-highlight">salt</span> for 30 minutes</p></div>
-<div class="step"><span class="step-num">2</span><p>Rince cucumbers and pat dry</p></div>
-<div class="step"><span class="step-num">3</span><p>Mix <span class="ing-highlight">rice vinegar</span>, <span class="ing-highlight">mirin</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">sesame oil</span>, <span class="ing-highlight">garlic cloves</span>.</p></div>
-<div class="step"><span class="step-num">4</span><p>Toss the cucumbers in the dressing and let sit for 24 hours before serving</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Slice <span class="ing-highlight">cucumbers</span> into thick slices and cover with <span class="ing-highlight">salt</span> for 30 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 large</span> cucumbers</li><li><span class="step-ing-measure">1 tbsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Rince cucumbers and pat dry</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Mix <span class="ing-highlight">rice vinegar</span>, <span class="ing-highlight">mirin</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">sesame oil</span>, <span class="ing-highlight">garlic cloves</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 tbsp</span> rice vinegar</li><li><span class="step-ing-measure">1.5 tbsp</span> mirin</li><li><span class="step-ing-measure">2 tbsp</span> sugar</li><li><span class="step-ing-measure">1.5 tbsp</span> sesame oil</li><li><span class="step-ing-measure">3</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Toss the cucumbers in the dressing and let sit for 24 hours before serving</p></div></div>
     </div>
   </main>
 </body>

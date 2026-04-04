@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -427,17 +450,17 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Take an un-baked <span class="ing-highlight">tarte shell</span> (16cm - 20cm)</p></div>
-<div class="step"><span class="step-num">2</span><p>Prick some holes in the bottom with a fork</p></div>
-<div class="step"><span class="step-num">3</span><p>Fill shell 1/2 - 2/3 way up with <span class="ing-highlight">almond cream</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Bake at 170°C for 25 minutes and Let cool.</p></div>
-<div class="step"><span class="step-num">5</span><p>Slice into quarters unpeeled <span class="ing-highlight">apricots</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Melt slowly in a pan <span class="ing-highlight">sugar</span> until light color</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">butter</span> and apricots and cook for 2 minutes</p></div>
-<div class="step"><span class="step-num">8</span><p>Spread on parchment paper and let cool</p></div>
-<div class="step"><span class="step-num">9</span><p>Whip cooled <span class="ing-highlight">pastry cream</span> until fluffy</p></div>
-<div class="step"><span class="step-num">10</span><p>Add pastry cream to cooled tarte shell.</p></div>
-<div class="step"><span class="step-num">11</span><p>Arrange apricots on top of pastry cream and cool for 30 minutes</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Take an un-baked <span class="ing-highlight">tarte shell</span> (16cm - 20cm)</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> tarte shell</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Prick some holes in the bottom with a fork</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Fill shell 1/2 - 2/3 way up with <span class="ing-highlight">almond cream</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> almond cream</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Bake at 170°C for 25 minutes and Let cool.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Slice into quarters unpeeled <span class="ing-highlight">apricots</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">14</span> apricots</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Melt slowly in a pan <span class="ing-highlight">sugar</span> until light color</p><ul class="step-ingredients"><li><span class="step-ing-measure">40 g</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">butter</span> and apricots and cook for 2 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">60 g</span> butter</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Spread on parchment paper and let cool</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Whip cooled <span class="ing-highlight">pastry cream</span> until fluffy</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> pastry cream</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Add pastry cream to cooled tarte shell.</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Arrange apricots on top of pastry cream and cool for 30 minutes</p></div></div>
     </div>
   </main>
 </body>

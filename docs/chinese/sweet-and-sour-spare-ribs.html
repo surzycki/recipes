@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -434,19 +457,19 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Place bite sized pieces <span class="ing-highlight">spare ribs</span> in a pan of water, bring to boil</p></div>
-<div class="step"><span class="step-num">2</span><p>Skim impurities, then add <span class="ing-highlight">ginger</span>, whites of <span class="ing-highlight">green onions</span>, <span class="ing-highlight">shaoxing wine</span>, and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">3</span><p>Boil for 15 minutes, drain and reserve 200ml of cooking liquid</p></div>
-<div class="step"><span class="step-num">4</span><p>Heat <span class="ing-highlight">frying oil</span> to 200°C add ribs until golden brown and drain</p></div>
-<div class="step"><span class="step-num">5</span><p>Add <span class="ing-highlight">oil</span> into pan on high, add <span class="ing-highlight">ginger</span> and chopped <span class="ing-highlight">green onions</span> fry until fragrant</p></div>
-<div class="step"><span class="step-num">6</span><p>Add ribs to mixture and toss</p></div>
-<div class="step"><span class="step-num">7</span><p>Add reserved cooking liquid, <span class="ing-highlight">dark soy sauce</span>, and <span class="ing-highlight">sugar</span></p></div>
-<div class="step"><span class="step-num">8</span><p>Boil and bath the ribs until sauce has reduced to syrup</p></div>
-<div class="step"><span class="step-num">9</span><p>Season with <span class="ing-highlight">salt</span> and add <span class="ing-highlight">black vinegar</span> and cook for a minute</p></div>
-<div class="step"><span class="step-num">10</span><p>Turn off heat and add <span class="ing-highlight">sesame oil</span> and leave to cool</p></div>
-<div class="step"><span class="step-num">11</span><p>Toast <span class="ing-highlight">sesame seeds</span> and sprkinle over when serving on bed of sliced cucumbers</p></div>
-<div class="step"><span class="step-num">12</span><p>Server room temp</p></div>
-<div class="step"><span class="step-num">13</span><p>Can make day ahead, return to room temp</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Place bite sized pieces <span class="ing-highlight">spare ribs</span> in a pan of water, bring to boil</p><ul class="step-ingredients"><li><span class="step-ing-measure">500 g</span> spare ribs</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Skim impurities, then add <span class="ing-highlight">ginger</span>, whites of <span class="ing-highlight">green onions</span>, <span class="ing-highlight">shaoxing wine</span>, and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">30 g</span> ginger</li><li><span class="step-ing-measure">2</span> green onions</li><li><span class="step-ing-measure">1 tbsp</span> shaoxing wine</li><li><span class="step-ing-measure">some</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Boil for 15 minutes, drain and reserve 200ml of cooking liquid</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Heat <span class="ing-highlight">frying oil</span> to 200°C add ribs until golden brown and drain</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> frying oil</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add <span class="ing-highlight">oil</span> into pan on high, add <span class="ing-highlight">ginger</span> and chopped <span class="ing-highlight">green onions</span> fry until fragrant</p><ul class="step-ingredients"><li><span class="step-ing-measure">3 tbsp</span> oil</li><li><span class="step-ing-measure">30 g</span> ginger</li><li><span class="step-ing-measure">2</span> green onions</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add ribs to mixture and toss</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add reserved cooking liquid, <span class="ing-highlight">dark soy sauce</span>, and <span class="ing-highlight">sugar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tsp</span> dark soy sauce</li><li><span class="step-ing-measure">60 g</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Boil and bath the ribs until sauce has reduced to syrup</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Season with <span class="ing-highlight">salt</span> and add <span class="ing-highlight">black vinegar</span> and cook for a minute</p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> salt</li><li><span class="step-ing-measure">1 tbsp</span> black vinegar</li></ul></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Turn off heat and add <span class="ing-highlight">sesame oil</span> and leave to cool</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> sesame oil</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Toast <span class="ing-highlight">sesame seeds</span> and sprkinle over when serving on bed of sliced cucumbers</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> sesame seeds</li></ul></div></div>
+<div class="step"><span class="step-num">12</span><div class="step-content"><p>Server room temp</p></div></div>
+<div class="step"><span class="step-num">13</span><div class="step-content"><p>Can make day ahead, return to room temp</p></div></div>
     </div>
   </main>
 </body>

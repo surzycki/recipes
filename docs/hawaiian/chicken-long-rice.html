@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -429,12 +452,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>In pot combine <span class="ing-highlight">chicken broth</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">sugar</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Bring to boil and add <span class="ing-highlight">chicken thighs</span>, reduce heat and simmer 40 minutes</p></div>
-<div class="step"><span class="step-num">3</span><p>Take <span class="ing-highlight">cellophane noodles</span> in bowl and cover with warm water.</p></div>
-<div class="step"><span class="step-num">4</span><p>When chicken is done remove, cool and shred. Remove any grease from broth and return chicken.</p></div>
-<div class="step"><span class="step-num">5</span><p>Stir noodles in broth and simmer for 5 minutes, until noodles are soft.</p></div>
-<div class="step"><span class="step-num">6</span><p>Garnish with green onions.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>In pot combine <span class="ing-highlight">chicken broth</span>, <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">garlic cloves</span>, <span class="ing-highlight">ginger</span>, and <span class="ing-highlight">sugar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 liter</span> chicken broth</li><li><span class="step-ing-measure">3 tbsp</span> soy sauce</li><li><span class="step-ing-measure">3</span> garlic cloves</li><li><span class="step-ing-measure">2 tbsp</span> ginger</li><li><span class="step-ing-measure">1 tsp</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Bring to boil and add <span class="ing-highlight">chicken thighs</span>, reduce heat and simmer 40 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">500 g</span> chicken thighs</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Take <span class="ing-highlight">cellophane noodles</span> in bowl and cover with warm water.</p><ul class="step-ingredients"><li><span class="step-ing-measure">250 g</span> cellophane noodles</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>When chicken is done remove, cool and shred. Remove any grease from broth and return chicken.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Stir noodles in broth and simmer for 5 minutes, until noodles are soft.</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Garnish with green onions.</p></div></div>
     </div>
   </main>
 </body>

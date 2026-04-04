@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -432,12 +455,12 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Wash <span class="ing-highlight">orange</span>, <span class="ing-highlight">lemon</span>, <span class="ing-highlight">lime</span>, <span class="ing-highlight">turmeric</span>, and <span class="ing-highlight">ginger</span>, <span class="ing-highlight">carrots</span>. Peel the <span class="ing-highlight">orange</span>, <span class="ing-highlight">lemon</span>, and <span class="ing-highlight">carrots</span>. Chop the <span class="ing-highlight">turmeric</span> and <span class="ing-highlight">ginger</span> into small pieces.</p></div>
-<div class="step"><span class="step-num">2</span><p>Add orange, lemon, turmeric, ginger, carrots, <span class="ing-highlight">coconut water</span>, <span class="ing-highlight">pineapple juice</span>, <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">honey</span>, and <span class="ing-highlight">cayenne pepper</span> to a blender.</p></div>
-<div class="step"><span class="step-num">3</span><p>Blend on high until smooth, about 2 minutes.</p></div>
-<div class="step"><span class="step-num">4</span><p>Strain the mixture through a fine mesh strainer or cheesecloth into a bowl.</p></div>
-<div class="step"><span class="step-num">5</span><p>Pour into small glass bottles or shot glasses to serve. Store in the refrigerator for up to 3 days.</p></div>
-<div class="step"><span class="step-num">6</span><p>Shake well before each use.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Wash <span class="ing-highlight">orange</span>, <span class="ing-highlight">lemon</span>, <span class="ing-highlight">lime</span>, <span class="ing-highlight">turmeric</span>, and <span class="ing-highlight">ginger</span>, <span class="ing-highlight">carrots</span>. Peel the <span class="ing-highlight">orange</span>, <span class="ing-highlight">lemon</span>, and <span class="ing-highlight">carrots</span>. Chop the <span class="ing-highlight">turmeric</span> and <span class="ing-highlight">ginger</span> into small pieces.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 small</span> orange</li><li><span class="step-ing-measure">2</span> lemon</li><li><span class="step-ing-measure">1</span> lime</li><li><span class="step-ing-measure">0.25 cups</span> turmeric</li><li><span class="step-ing-measure">0.25 cups</span> ginger</li><li><span class="step-ing-measure">3</span> carrots</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add orange, lemon, turmeric, ginger, carrots, <span class="ing-highlight">coconut water</span>, <span class="ing-highlight">pineapple juice</span>, <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">honey</span>, and <span class="ing-highlight">cayenne pepper</span> to a blender.</p><ul class="step-ingredients"><li><span class="step-ing-measure">0.5 cups</span> coconut water</li><li><span class="step-ing-measure">0.5 cups</span> pineapple juice</li><li><span class="step-ing-measure">0.125 tsp</span> black pepper</li><li><span class="step-ing-measure">2 tsp</span> honey</li><li><span class="step-ing-measure">0.25 tsp</span> cayenne pepper</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Blend on high until smooth, about 2 minutes.</p></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Strain the mixture through a fine mesh strainer or cheesecloth into a bowl.</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Pour into small glass bottles or shot glasses to serve. Store in the refrigerator for up to 3 days.</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Shake well before each use.</p></div></div>
     </div>
   </main>
 </body>

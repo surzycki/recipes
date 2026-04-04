@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -439,14 +462,14 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Deseed and rehydrate <span class="ing-highlight">guajillo chili</span> and <span class="ing-highlight">pasilla chili</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Toast and grind spices</p></div>
-<div class="step"><span class="step-num">3</span><p>Blend together <span class="ing-highlight">chipotle pepper</span>, <span class="ing-highlight">garlic <span class="ing-highlight">cloves</span></span>, juice from <span class="ing-highlight">lime</span>, <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">corriander seed</span>, <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">allspice</span>, <span class="ing-highlight">vinegar</span>, <span class="ing-highlight">chicken stock</span>, <span class="ing-highlight">chili powder</span>, and <span class="ing-highlight">salt</span>.</p></div>
-<div class="step"><span class="step-num">4</span><p>Add in <span class="ing-highlight">mexican oregano</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Boil some water and dip the <span class="ing-highlight">lamb shoulder</span> in it for a few minutes.</p></div>
-<div class="step"><span class="step-num">6</span><p>Bag it up with 2/3 of the marinade and cook sous vide for 24 hours at 37C.</p></div>
-<div class="step"><span class="step-num">7</span><p>Let it rest covered for 30 minutes.</p></div>
-<div class="step"><span class="step-num">8</span><p>Shred</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Deseed and rehydrate <span class="ing-highlight">guajillo chili</span> and <span class="ing-highlight">pasilla chili</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4</span> guajillo chili</li><li><span class="step-ing-measure">1</span> pasilla chili</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Toast and grind spices</p></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Blend together <span class="ing-highlight">chipotle pepper</span>, <span class="ing-highlight">garlic <span class="ing-highlight">cloves</span></span>, juice from <span class="ing-highlight">lime</span>, <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">corriander seed</span>, <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">allspice</span>, <span class="ing-highlight">vinegar</span>, <span class="ing-highlight">chicken stock</span>, <span class="ing-highlight">chili powder</span>, and <span class="ing-highlight">salt</span>.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> chipotle pepper</li><li><span class="step-ing-measure">6</span> garlic cloves</li><li><span class="step-ing-measure">1</span> lime</li><li><span class="step-ing-measure">2 tbsp</span> cumin seed</li><li><span class="step-ing-measure">2 tbsp</span> corriander seed</li><li><span class="step-ing-measure">1 in</span> cinnamon stick</li><li><span class="step-ing-measure">0.5 tsp</span> cloves</li><li><span class="step-ing-measure">0.5 tsp</span> allspice</li><li><span class="step-ing-measure">1 tbsp</span> vinegar</li><li><span class="step-ing-measure">1 cup</span> chicken stock</li><li><span class="step-ing-measure">1 tbsp</span> chili powder</li><li><span class="step-ing-measure">1 tbsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add in <span class="ing-highlight">mexican oregano</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tbsp</span> mexican oregano</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Boil some water and dip the <span class="ing-highlight">lamb shoulder</span> in it for a few minutes.</p><ul class="step-ingredients"><li><span class="step-ing-measure">2 kg</span> lamb shoulder</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Bag it up with 2/3 of the marinade and cook sous vide for 24 hours at 37C.</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Let it rest covered for 30 minutes.</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Shred</p></div></div>
     </div>
   </main>
 </body>

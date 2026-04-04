@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -431,13 +454,13 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Cut even steaks from <span class="ing-highlight">pork shoulder</span>, about 4cm thick</p></div>
-<div class="step"><span class="step-num">2</span><p>Season evenly with <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">3</span><p>Slice <span class="ing-highlight">ginger</span> and crush the <span class="ing-highlight">garlic cloves</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Mix with <span class="ing-highlight">pineapple</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">oregano</span>, and juice of <span class="ing-highlight">orange</span></p></div>
-<div class="step"><span class="step-num">5</span><p>Marinate for 24 hrs</p></div>
-<div class="step"><span class="step-num">6</span><p>Cook sous vide at 80°C for 8 hours</p></div>
-<div class="step"><span class="step-num">7</span><p>finished on grill</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Cut even steaks from <span class="ing-highlight">pork shoulder</span>, about 4cm thick</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> pork shoulder</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Season evenly with <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1O g</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Slice <span class="ing-highlight">ginger</span> and crush the <span class="ing-highlight">garlic cloves</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">15 g</span> ginger</li><li><span class="step-ing-measure">20</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Mix with <span class="ing-highlight">pineapple</span>, <span class="ing-highlight">olive oil</span>, <span class="ing-highlight">cumin seed</span>, <span class="ing-highlight">oregano</span>, and juice of <span class="ing-highlight">orange</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">230 g</span> pineapple</li><li><span class="step-ing-measure">30 g</span> olive oil</li><li><span class="step-ing-measure">5 g</span> cumin seed</li><li><span class="step-ing-measure">5 g</span> oregano</li><li><span class="step-ing-measure">1</span> orange</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Marinate for 24 hrs</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Cook sous vide at 80°C for 8 hours</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>finished on grill</p></div></div>
     </div>
   </main>
 </body>

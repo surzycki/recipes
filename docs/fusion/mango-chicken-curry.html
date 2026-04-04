@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -447,17 +470,17 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Make curry paste; blend <span class="ing-highlight">dried chilis</span>, <span class="ing-highlight">fresh chili</span>, <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">mustard seed</span>, <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">green cardamom pods</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">turmeric</span>, garlic <span class="ing-highlight">cloves</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">vinegar</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Heat <span class="ing-highlight">butter</span> and <span class="ing-highlight">coconut oil</span> in pan</p></div>
-<div class="step"><span class="step-num">3</span><p>Add <span class="ing-highlight">chicken thighs</span> sear on both sides, season with <span class="ing-highlight">salt</span> and pepper, remove from pan</p></div>
-<div class="step"><span class="step-num">4</span><p>Add sliced <span class="ing-highlight">onions</span> and minced <span class="ing-highlight">garlic cloves</span> cook until <span class="ing-highlight">onions</span> are translucent</p></div>
-<div class="step"><span class="step-num">5</span><p>Add chopped <span class="ing-highlight">tomatoes</span> cook for 5 minutes</p></div>
-<div class="step"><span class="step-num">6</span><p>Add curry paste (1 tsp, cook for 5 minutes</p></div>
-<div class="step"><span class="step-num">7</span><p>Add <span class="ing-highlight">chicken stock</span> and reduce by half</p></div>
-<div class="step"><span class="step-num">8</span><p>Add <span class="ing-highlight">coconut milk</span> and <span class="ing-highlight">brown sugar</span>, do NOT boil</p></div>
-<div class="step"><span class="step-num">9</span><p>Add back chicken thighs and simmer for 20 minutes</p></div>
-<div class="step"><span class="step-num">10</span><p>Add <span class="ing-highlight">mango</span> and stir in <span class="ing-highlight">heavy cream</span> and juice of <span class="ing-highlight">lime</span>, simmer a few minutes</p></div>
-<div class="step"><span class="step-num">11</span><p>Garnish with <span class="ing-highlight">cilantro</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Make curry paste; blend <span class="ing-highlight">dried chilis</span>, <span class="ing-highlight">fresh chili</span>, <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">mustard seed</span>, <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">green cardamom pods</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">turmeric</span>, garlic <span class="ing-highlight">cloves</span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">vinegar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">5</span> dried chilis</li><li><span class="step-ing-measure">1</span> fresh chili</li><li><span class="step-ing-measure">2 tsp</span> cumin seeds</li><li><span class="step-ing-measure">2 tsp</span> corriander seeds</li><li><span class="step-ing-measure">1 tsp</span> mustard seed</li><li><span class="step-ing-measure">0.5 in</span> cinnamon stick</li><li><span class="step-ing-measure">4</span> green cardamom pods</li><li><span class="step-ing-measure">4</span> cloves</li><li><span class="step-ing-measure">0.5 tsp</span> turmeric</li><li><span class="step-ing-measure">4</span> garlic cloves</li><li><span class="step-ing-measure">1 in</span> ginger</li><li><span class="step-ing-measure">0.25 cup</span> vinegar</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Heat <span class="ing-highlight">butter</span> and <span class="ing-highlight">coconut oil</span> in pan</p><ul class="step-ingredients"><li><span class="step-ing-measure">20 g</span> butter</li><li><span class="step-ing-measure">2 tbsp</span> coconut oil</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Add <span class="ing-highlight">chicken thighs</span> sear on both sides, season with <span class="ing-highlight">salt</span> and pepper, remove from pan</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> chicken thighs</li><li><span class="step-ing-measure">some</span> salt</li><li><span class="step-ing-measure">some</span> pepper,</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Add sliced <span class="ing-highlight">onions</span> and minced <span class="ing-highlight">garlic cloves</span> cook until <span class="ing-highlight">onions</span> are translucent</p><ul class="step-ingredients"><li><span class="step-ing-measure">3</span> onions</li><li><span class="step-ing-measure">4</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add chopped <span class="ing-highlight">tomatoes</span> cook for 5 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">7</span> tomatoes</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Add curry paste (1 tsp, cook for 5 minutes</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Add <span class="ing-highlight">chicken stock</span> and reduce by half</p><ul class="step-ingredients"><li><span class="step-ing-measure">300 ml</span> chicken stock</li></ul></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Add <span class="ing-highlight">coconut milk</span> and <span class="ing-highlight">brown sugar</span>, do NOT boil</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 can</span> coconut milk</li><li><span class="step-ing-measure">1 tbsp</span> brown sugar</li></ul></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Add back chicken thighs and simmer for 20 minutes</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Add <span class="ing-highlight">mango</span> and stir in <span class="ing-highlight">heavy cream</span> and juice of <span class="ing-highlight">lime</span>, simmer a few minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> mango</li><li><span class="step-ing-measure">4 tbsp</span> heavy cream</li><li><span class="step-ing-measure">1 tbsp</span> lime</li></ul></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Garnish with <span class="ing-highlight">cilantro</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">some</span> cilantro</li></ul></div></div>
     </div>
   </main>
 </body>

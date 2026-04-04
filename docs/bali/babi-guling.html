@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -443,9 +466,9 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Mix juice of <span class="ing-highlight">lime</span>, deseeded <span class="ing-highlight">red chilis</span>, <span class="ing-highlight">lemongrass</span>, <span class="ing-highlight">green onions</span>, <span class="ing-highlight">garlic <span class="ing-highlight">cloves</span></span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">galanga</span>, <span class="ing-highlight">tumeric root</span>, <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">coconut oil</span>, <span class="ing-highlight">palm sugar</span>, <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">bonito flakes</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">shallots</span>, <span class="ing-highlight">star anise</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">nutmeg</span>, kaffir <span class="ing-highlight">lime</span> leaves</p></div>
-<div class="step"><span class="step-num">2</span><p>Wash <span class="ing-highlight">pork belly</span> skin with <span class="ing-highlight">white vinegar</span> and salt.</p></div>
-<div class="step"><span class="step-num">3</span><p>Prick the meat side of the pork belly and spread all the paste.  Cover and marinate overnight.</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Mix juice of <span class="ing-highlight">lime</span>, deseeded <span class="ing-highlight">red chilis</span>, <span class="ing-highlight">lemongrass</span>, <span class="ing-highlight">green onions</span>, <span class="ing-highlight">garlic <span class="ing-highlight">cloves</span></span>, <span class="ing-highlight">ginger</span>, <span class="ing-highlight">galanga</span>, <span class="ing-highlight">tumeric root</span>, <span class="ing-highlight">corriander seeds</span>, <span class="ing-highlight">coconut oil</span>, <span class="ing-highlight">palm sugar</span>, <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">bonito flakes</span>, <span class="ing-highlight">salt</span>, <span class="ing-highlight">shallots</span>, <span class="ing-highlight">star anise</span>, <span class="ing-highlight">cloves</span>, <span class="ing-highlight">nutmeg</span>, kaffir <span class="ing-highlight">lime</span> leaves</p><ul class="step-ingredients"><li><span class="step-ing-measure">1</span> lime</li><li><span class="step-ing-measure">4</span> red chilis</li><li><span class="step-ing-measure">2</span> lemongrass</li><li><span class="step-ing-measure">4</span> green onions</li><li><span class="step-ing-measure">4</span> garlic cloves</li><li><span class="step-ing-measure">2 cm</span> ginger</li><li><span class="step-ing-measure">3 cm</span> galanga</li><li><span class="step-ing-measure">10 cm</span> tumeric root</li><li><span class="step-ing-measure">1 tbsp</span> corriander seeds</li><li><span class="step-ing-measure">1 tbsp</span> coconut oil</li><li><span class="step-ing-measure">1 tbsp</span> palm sugar</li><li><span class="step-ing-measure">2 tsp</span> black pepper</li><li><span class="step-ing-measure">2 tbsp</span> bonito flakes</li><li><span class="step-ing-measure">0.5 tsp</span> salt</li><li><span class="step-ing-measure">40 g</span> shallots</li><li><span class="step-ing-measure">0.5</span> star anise</li><li><span class="step-ing-measure">2</span> cloves</li><li><span class="step-ing-measure">pinch</span> nutmeg</li><li><span class="step-ing-measure">2</span> kaffir lime leaves</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Wash <span class="ing-highlight">pork belly</span> skin with <span class="ing-highlight">white vinegar</span> and salt.</p><ul class="step-ingredients"><li><span class="step-ing-measure">1.5 kg</span> pork belly</li><li><span class="step-ing-measure">3 tbsp</span> white vinegar</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Prick the meat side of the pork belly and spread all the paste.  Cover and marinate overnight.</p></div></div>
     </div>
   </main>
 </body>

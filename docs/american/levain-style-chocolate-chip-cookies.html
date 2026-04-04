@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -435,16 +458,16 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>In mixer cream cold <span class="ing-highlight">butter</span>, <span class="ing-highlight">brown <span class="ing-highlight">sugar</span></span>, <span class="ing-highlight">vanilla</span>, <span class="ing-highlight">nutmeg</span>, and <span class="ing-highlight">sugar</span></p></div>
-<div class="step"><span class="step-num">2</span><p>Add <span class="ing-highlight">eggs</span> one at a time and mix</p></div>
-<div class="step"><span class="step-num">3</span><p>Stir in <span class="ing-highlight">flour</span>, <span class="ing-highlight">cornstarch</span>, <span class="ing-highlight">baking powder</span>, <span class="ing-highlight">baking soda</span>, and <span class="ing-highlight">salt</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Do not overmix</p></div>
-<div class="step"><span class="step-num">5</span><p>Add chopped <span class="ing-highlight">dark chocolate</span></p></div>
-<div class="step"><span class="step-num">6</span><p>Weight out each cookie 170g</p></div>
-<div class="step"><span class="step-num">7</span><p>Best to refrigerate for 12 hours but not necessary</p></div>
-<div class="step"><span class="step-num">8</span><p>Heat oven to 180°C</p></div>
-<div class="step"><span class="step-num">9</span><p>Bake 4 at a time 22 minutes until internal tem is 80°C</p></div>
-<div class="step"><span class="step-num">10</span><p>Let cool on rack for at least 1 hour</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>In mixer cream cold <span class="ing-highlight">butter</span>, <span class="ing-highlight">brown <span class="ing-highlight">sugar</span></span>, <span class="ing-highlight">vanilla</span>, <span class="ing-highlight">nutmeg</span>, and <span class="ing-highlight">sugar</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">230 g</span> butter</li><li><span class="step-ing-measure">1 cup</span> brown sugar</li><li><span class="step-ing-measure">2 tsp</span> vanilla</li><li><span class="step-ing-measure">1 pinch</span> nutmeg</li><li><span class="step-ing-measure">0.5 cup</span> sugar</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Add <span class="ing-highlight">eggs</span> one at a time and mix</p><ul class="step-ingredients"><li><span class="step-ing-measure">2</span> eggs</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Stir in <span class="ing-highlight">flour</span>, <span class="ing-highlight">cornstarch</span>, <span class="ing-highlight">baking powder</span>, <span class="ing-highlight">baking soda</span>, and <span class="ing-highlight">salt</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2.75 cups</span> flour</li><li><span class="step-ing-measure">3 tbsp</span> cornstarch</li><li><span class="step-ing-measure">1.5 tsp</span> baking powder</li><li><span class="step-ing-measure">0.75 tsp</span> baking soda</li><li><span class="step-ing-measure">1.5 tsp</span> salt</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Do not overmix</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Add chopped <span class="ing-highlight">dark chocolate</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">400 g</span> dark chocolate</li></ul></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Weight out each cookie 170g</p></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Best to refrigerate for 12 hours but not necessary</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Heat oven to 180°C</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Bake 4 at a time 22 minutes until internal tem is 80°C</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>Let cool on rack for at least 1 hour</p></div></div>
     </div>
   </main>
 </body>

@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -430,17 +453,17 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Cut boneless <span class="ing-highlight">chicken thigh</span> into bite sized pieces</p></div>
-<div class="step"><span class="step-num">2</span><p>Grate <span class="ing-highlight">ginger</span> and mince <span class="ing-highlight">garlic cloves</span></p></div>
-<div class="step"><span class="step-num">3</span><p>Combine with <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">sake</span>, and <span class="ing-highlight">sesame oil</span></p></div>
-<div class="step"><span class="step-num">4</span><p>Marinate in cold for 30 minutes</p></div>
-<div class="step"><span class="step-num">5</span><p>Heat oil to 165°C</p></div>
-<div class="step"><span class="step-num">6</span><p>Place <span class="ing-highlight">potato starch</span> and <span class="ing-highlight">flour</span> on different plates for coating</p></div>
-<div class="step"><span class="step-num">7</span><p>Dredge chicken in flour then into the potatoe starch</p></div>
-<div class="step"><span class="step-num">8</span><p>Cook chicken in oil (not too crowded) for about 90 seconds until light gold</p></div>
-<div class="step"><span class="step-num">9</span><p>Remove chicken and transfer to rack to drain</p></div>
-<div class="step"><span class="step-num">10</span><p>For second fry, heat oil to 190°C and cook for 45 seconds</p></div>
-<div class="step"><span class="step-num">11</span><p>Remove and let drain</p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Cut boneless <span class="ing-highlight">chicken thigh</span> into bite sized pieces</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kg</span> chicken thigh</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Grate <span class="ing-highlight">ginger</span> and mince <span class="ing-highlight">garlic cloves</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">1 tsp</span> ginger</li><li><span class="step-ing-measure">2</span> garlic cloves</li></ul></div></div>
+<div class="step"><span class="step-num">3</span><div class="step-content"><p>Combine with <span class="ing-highlight">soy sauce</span>, <span class="ing-highlight">sake</span>, and <span class="ing-highlight">sesame oil</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">2 tbsp</span> soy sauce</li><li><span class="step-ing-measure">2 tbsp</span> sake</li><li><span class="step-ing-measure">2 tsp</span> sesame oil</li></ul></div></div>
+<div class="step"><span class="step-num">4</span><div class="step-content"><p>Marinate in cold for 30 minutes</p></div></div>
+<div class="step"><span class="step-num">5</span><div class="step-content"><p>Heat oil to 165°C</p></div></div>
+<div class="step"><span class="step-num">6</span><div class="step-content"><p>Place <span class="ing-highlight">potato starch</span> and <span class="ing-highlight">flour</span> on different plates for coating</p><ul class="step-ingredients"><li><span class="step-ing-measure">4 tbsp</span> potato starch</li><li><span class="step-ing-measure">4 tbsp</span> flour</li></ul></div></div>
+<div class="step"><span class="step-num">7</span><div class="step-content"><p>Dredge chicken in flour then into the potatoe starch</p></div></div>
+<div class="step"><span class="step-num">8</span><div class="step-content"><p>Cook chicken in oil (not too crowded) for about 90 seconds until light gold</p></div></div>
+<div class="step"><span class="step-num">9</span><div class="step-content"><p>Remove chicken and transfer to rack to drain</p></div></div>
+<div class="step"><span class="step-num">10</span><div class="step-content"><p>For second fry, heat oil to 190°C and cook for 45 seconds</p></div></div>
+<div class="step"><span class="step-num">11</span><div class="step-content"><p>Remove and let drain</p></div></div>
     </div>
   </main>
 </body>

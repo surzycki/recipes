@@ -342,8 +342,8 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: baseline;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .step-num {
@@ -362,6 +362,29 @@ a { color: inherit; text-decoration: none; }
 
 .ing-highlight {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.step-ingredients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.step-ingredients li {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.step-ing-measure {
+  color: var(--terracotta);
   font-weight: 600;
 }
 
@@ -437,8 +460,8 @@ a { color: inherit; text-decoration: none; }
 
     <div class="steps-panel">
       <h2>Method</h2>
-      <div class="step"><span class="step-num">1</span><p>Cube <span class="ing-highlight">pork belly</span>, place in freeze for 60 minutes</p></div>
-<div class="step"><span class="step-num">2</span><p>Mix <span class="ing-highlight">salt</span>, <span class="ing-highlight">paprika</span>, <span class="ing-highlight">ancho chili powder</span>, <span class="ing-highlight">pasilla chili powder</span> ground <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">mexican oregano</span>, <span class="ing-highlight">garlic powder</span>, <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">achiote</span>, ground <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">vinegar</span> and <span class="ing-highlight">msg</span></p></div>
+      <div class="step"><span class="step-num">1</span><div class="step-content"><p>Cube <span class="ing-highlight">pork belly</span>, place in freeze for 60 minutes</p><ul class="step-ingredients"><li><span class="step-ing-measure">1 kilo</span> pork belly</li></ul></div></div>
+<div class="step"><span class="step-num">2</span><div class="step-content"><p>Mix <span class="ing-highlight">salt</span>, <span class="ing-highlight">paprika</span>, <span class="ing-highlight">ancho chili powder</span>, <span class="ing-highlight">pasilla chili powder</span> ground <span class="ing-highlight">cumin seeds</span>, <span class="ing-highlight">mexican oregano</span>, <span class="ing-highlight">garlic powder</span>, <span class="ing-highlight">black pepper</span>, <span class="ing-highlight">achiote</span>, ground <span class="ing-highlight">cinnamon stick</span>, <span class="ing-highlight">sugar</span>, <span class="ing-highlight">vinegar</span> and <span class="ing-highlight">msg</span></p><ul class="step-ingredients"><li><span class="step-ing-measure">4 tsp</span> salt</li><li><span class="step-ing-measure">5 tbsp</span> paprika</li><li><span class="step-ing-measure">5 tbsp</span> ancho chili powder</li><li><span class="step-ing-measure">2 tsp</span> pasilla chili powder</li><li><span class="step-ing-measure">2 tsp</span> cumin seeds</li><li><span class="step-ing-measure">2 tsp</span> mexican oregano</li><li><span class="step-ing-measure">2 tsp</span> garlic powder</li><li><span class="step-ing-measure">2 tsp</span> black pepper</li><li><span class="step-ing-measure">4 tsp</span> achiote</li><li><span class="step-ing-measure">4 cm</span> cinnamon stick</li><li><span class="step-ing-measure">1 tsp</span> sugar</li><li><span class="step-ing-measure">5 tbp</span> vinegar</li><li><span class="step-ing-measure">1 tsp</span> msg</li></ul></div></div>
     </div>
   </main>
 </body>
