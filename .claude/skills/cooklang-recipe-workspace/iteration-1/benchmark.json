@@ -1,0 +1,136 @@
+{
+  "skill_name": "cooklang-recipe",
+  "iteration": 1,
+  "configurations": [
+    {
+      "name": "with_skill",
+      "label": "With CookLang Skill",
+      "evals": [
+        {
+          "eval_name": "pad-thai",
+          "assertions": [
+            {"text": "No standalone ingredient list", "passed": true},
+            {"text": "No underscores in ingredient names", "passed": true},
+            {"text": "Valid CookLang ingredient syntax", "passed": true},
+            {"text": "Has metadata block", "passed": true},
+            {"text": "Uses timers", "passed": true},
+            {"text": "Concise steps", "passed": true},
+            {"text": "Uses YAML front matter", "passed": true},
+            {"text": "Uses CookLang sections", "passed": false}
+          ],
+          "pass_rate": 0.875,
+          "total_tokens": 20022,
+          "duration_seconds": 69.6
+        },
+        {
+          "eval_name": "beef-bourguignon",
+          "assertions": [
+            {"text": "No standalone ingredient list", "passed": true},
+            {"text": "No underscores in ingredient names", "passed": true},
+            {"text": "Valid CookLang ingredient syntax", "passed": true},
+            {"text": "Has metadata block", "passed": true},
+            {"text": "Uses timers", "passed": true},
+            {"text": "Concise steps", "passed": true},
+            {"text": "Uses YAML front matter", "passed": true},
+            {"text": "Uses CookLang sections", "passed": false}
+          ],
+          "pass_rate": 0.875,
+          "total_tokens": 19223,
+          "duration_seconds": 41.5
+        },
+        {
+          "eval_name": "milk-bread",
+          "assertions": [
+            {"text": "No standalone ingredient list", "passed": true},
+            {"text": "No underscores in ingredient names", "passed": true},
+            {"text": "Valid CookLang ingredient syntax", "passed": true},
+            {"text": "Has metadata block", "passed": true},
+            {"text": "Uses timers", "passed": true},
+            {"text": "Concise steps", "passed": true},
+            {"text": "Uses YAML front matter", "passed": true},
+            {"text": "Uses CookLang sections", "passed": true}
+          ],
+          "pass_rate": 1.0,
+          "total_tokens": 19110,
+          "duration_seconds": 52.7
+        }
+      ],
+      "aggregate": {
+        "mean_pass_rate": 0.917,
+        "mean_tokens": 19452,
+        "mean_duration_seconds": 54.6
+      }
+    },
+    {
+      "name": "without_skill",
+      "label": "Baseline (No Skill)",
+      "evals": [
+        {
+          "eval_name": "pad-thai",
+          "assertions": [
+            {"text": "No standalone ingredient list", "passed": true},
+            {"text": "No underscores in ingredient names", "passed": true},
+            {"text": "Valid CookLang ingredient syntax", "passed": true},
+            {"text": "Has metadata block", "passed": true},
+            {"text": "Uses timers", "passed": true},
+            {"text": "Concise steps", "passed": true},
+            {"text": "Uses YAML front matter", "passed": false},
+            {"text": "Uses CookLang sections", "passed": false}
+          ],
+          "pass_rate": 0.75,
+          "total_tokens": 19024,
+          "duration_seconds": 56.4
+        },
+        {
+          "eval_name": "beef-bourguignon",
+          "assertions": [
+            {"text": "No standalone ingredient list", "passed": true},
+            {"text": "No underscores in ingredient names", "passed": true},
+            {"text": "Valid CookLang ingredient syntax", "passed": true},
+            {"text": "Has metadata block", "passed": true},
+            {"text": "Uses timers", "passed": true},
+            {"text": "Concise steps", "passed": true},
+            {"text": "Uses YAML front matter", "passed": false},
+            {"text": "Uses CookLang sections", "passed": false}
+          ],
+          "pass_rate": 0.75,
+          "total_tokens": 18982,
+          "duration_seconds": 55.6
+        },
+        {
+          "eval_name": "milk-bread",
+          "assertions": [
+            {"text": "No standalone ingredient list", "passed": true},
+            {"text": "No underscores in ingredient names", "passed": true},
+            {"text": "Valid CookLang ingredient syntax", "passed": true},
+            {"text": "Has metadata block", "passed": true},
+            {"text": "Uses timers", "passed": true},
+            {"text": "Concise steps", "passed": true},
+            {"text": "Uses YAML front matter", "passed": false},
+            {"text": "Uses CookLang sections", "passed": false}
+          ],
+          "pass_rate": 0.75,
+          "total_tokens": 18307,
+          "duration_seconds": 49.7
+        }
+      ],
+      "aggregate": {
+        "mean_pass_rate": 0.75,
+        "mean_tokens": 18771,
+        "mean_duration_seconds": 53.9
+      }
+    }
+  ],
+  "delta": {
+    "pass_rate": "+16.7%",
+    "tokens": "+3.6%",
+    "duration": "+1.3%"
+  },
+  "observations": [
+    "The skill consistently produces YAML front matter (3/3) vs baseline using old >> style (0/3)",
+    "The skill correctly uses CookLang sections for multi-phase recipes (milk bread) but both versions skip sections for simpler recipes — this is arguably correct behavior for pad thai and bourguignon",
+    "Ingredient matching is the biggest qualitative difference: with-skill maps 'tamarind paste' to 'tamarind concentrate', 'lime juice' to 'lime', 'instant yeast' to 'yeast', while baseline creates separate entries for these",
+    "Baseline flags 5 new ingredients for pad thai vs skill's 2 — the skill correctly identifies most as existing entries under different names",
+    "Both versions produce concise, well-formatted steps — the baseline already does a good job here since the model understands cooking prose"
+  ]
+}

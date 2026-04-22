@@ -1,0 +1,53 @@
+{
+  "skill_name": "cooklang-recipe",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "convert this recipe:\n\nPad Thai (serves 2)\n\n8 oz rice noodles\n2 tbsp tamarind paste\n2 tbsp fish sauce\n1 tbsp palm sugar\n1 tbsp lime juice\n200g shrimp, deveined\n2 eggs\n1 cup bean sprouts\n3 green onions, sliced\n1/4 cup roasted peanuts, crushed\n2 cloves garlic, minced\n1 tbsp vegetable oil\n\nSoak noodles in warm water for 30 minutes until pliable. Drain.\nMix tamarind paste, fish sauce, palm sugar, and lime juice to make the sauce.\nHeat oil in a wok over high heat. Sauté garlic for 30 seconds.\nAdd shrimp, cook 2 minutes until pink. Push to the side.\nCrack eggs into the wok, scramble them.\nAdd noodles and sauce, toss everything together for 2-3 minutes.\nAdd bean sprouts and green onions, toss for 30 seconds.\nServe topped with crushed peanuts and a lime wedge.",
+      "expected_output": "A .cook file in thai/ directory with all ingredients inline, proper CookLang syntax, no ingredient list, concise steps, no sections/comment headers. Should match tamarind paste->tamarind concentrate or tamarind pulp from aisle.conf, peanuts from [chinese], fish sauce from [chinese], etc.",
+      "files": [],
+      "assertions": [
+        {"text": "No standalone ingredient list", "type": "structural"},
+        {"text": "No underscores in ingredient names", "type": "structural"},
+        {"text": "Valid CookLang ingredient syntax", "type": "structural"},
+        {"text": "Uses YAML front matter", "type": "format"},
+        {"text": "Uses timers", "type": "structural"},
+        {"text": "Concise steps", "type": "quality"},
+        {"text": "No sections or comment headers", "type": "format"},
+        {"text": "Correct aisle.conf ingredient matching", "type": "semantic"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "hey can you add this recipe? it's from my grandmother:\n\nBeef bourguignon\n\nYou need about 1kg of beef chuck cut into large cubes. Season with salt and pepper. In a large dutch oven, brown the beef in batches in some oil, then set aside. In the same pot, cook 200g of lardons until crispy. Add 2 diced carrots, 2 stalks of celery chopped, and 1 large onion diced. Cook for about 5 minutes. Add 4 cloves of garlic and cook another minute. Pour in a whole bottle of red wine (750ml) and 2 cups of beef stock. Add a bouquet garni (thyme, bay leaves, parsley stems), 2 tablespoons of tomato paste. Bring to a boil, then reduce heat. Return the beef to the pot. Cover and cook in the oven at 160°C for about 3 hours. In the last 30 minutes, add 250g of pearl onions and 300g of cremini mushrooms that you've sautéed in butter. Adjust seasoning and serve with crusty bread.",
+      "expected_output": "A .cook file in french/ directory. Concise steps for a pro chef. No sections/comment headers.",
+      "files": [],
+      "assertions": [
+        {"text": "No standalone ingredient list", "type": "structural"},
+        {"text": "No underscores in ingredient names", "type": "structural"},
+        {"text": "Valid CookLang ingredient syntax", "type": "structural"},
+        {"text": "Uses YAML front matter", "type": "format"},
+        {"text": "Uses timers", "type": "structural"},
+        {"text": "Concise steps", "type": "quality"},
+        {"text": "No sections or comment headers", "type": "format"},
+        {"text": "Correct aisle.conf ingredient matching", "type": "semantic"}
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Japanese Milk Bread\n\nTangzhong:\n25g bread flour\n120ml whole milk\n\nDough:\n375g bread flour\n50g sugar\n7g salt\n7g instant yeast\n120ml whole milk (warm)\n1 large egg\n55g unsalted butter (softened)\n\nEgg wash: 1 egg + 1 tbsp milk\n\nMake tangzhong: whisk flour and milk in small saucepan over medium heat until thick paste forms (about 3 min). Cool to room temp.\n\nIn stand mixer with dough hook, combine flour, sugar, salt, yeast. Add warm milk, egg, and cooled tangzhong. Mix on low 2 min then medium 5 min. Add butter piece by piece, knead 10 min until windowpane.\n\nBulk ferment 1 hour covered until doubled. Punch down, divide into 4 pieces. Shape into balls, rest 15 min. Roll each into oval, fold in thirds like a letter. Roll into tight cylinder. Place in greased 9x5 loaf pan.\n\nFinal proof 45 min until dough rises 1 inch above pan rim. Brush with egg wash.\n\nBake 350°F (175°C) for 30-35 minutes until deep golden. Internal temp 190°F.\n\nCool 10 min in pan, then unmold onto wire rack.",
+      "expected_output": "A .cook file in japanese/ directory. NO sections (= Tangzhong =) or comment headers (-- Tangzhong). Just flat paragraphs flowing naturally from tangzhong through baking.",
+      "files": [],
+      "assertions": [
+        {"text": "No standalone ingredient list", "type": "structural"},
+        {"text": "No underscores in ingredient names", "type": "structural"},
+        {"text": "Valid CookLang ingredient syntax", "type": "structural"},
+        {"text": "Uses YAML front matter", "type": "format"},
+        {"text": "Uses timers", "type": "structural"},
+        {"text": "Concise steps", "type": "quality"},
+        {"text": "No sections or comment headers", "type": "format"},
+        {"text": "Correct aisle.conf ingredient matching", "type": "semantic"}
+      ]
+    }
+  ]
+}

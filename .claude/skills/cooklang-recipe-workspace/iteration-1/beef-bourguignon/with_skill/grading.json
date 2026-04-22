@@ -1,0 +1,13 @@
+{
+  "recipe": "beef-bourguignon-with_skill",
+  "expectations": [
+    {"text": "No standalone ingredient list", "passed": true, "evidence": "Max consecutive @-starting lines: 0"},
+    {"text": "No underscores in ingredient names", "passed": true, "evidence": "Checked for @word_word pattern"},
+    {"text": "Valid CookLang ingredient syntax", "passed": true, "evidence": "Checked for @name{} patterns"},
+    {"text": "Has metadata block", "passed": true, "evidence": "Checked for --- or >> at start"},
+    {"text": "Uses timers", "passed": true, "evidence": "Checked for ~{} pattern"},
+    {"text": "Concise steps (under 300 chars per line)", "passed": true, "evidence": "Found 0 lines over 300 chars"},
+    {"text": "Uses YAML front matter (not >> style)", "passed": true, "evidence": "First line starts with ---: true"},
+    {"text": "Uses CookLang sections", "passed": false, "evidence": "Found = Section lines: false"}
+  ]
+}

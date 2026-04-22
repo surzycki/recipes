@@ -1,0 +1,6 @@
+{
+  "eval_id": 1,
+  "eval_name": "pad-thai",
+  "prompt": "convert this recipe:\n\nPad Thai (serves 2)\n\n8 oz rice noodles\n2 tbsp tamarind paste\n2 tbsp fish sauce\n1 tbsp palm sugar\n1 tbsp lime juice\n200g shrimp, deveined\n2 eggs\n1 cup bean sprouts\n3 green onions, sliced\n1/4 cup roasted peanuts, crushed\n2 cloves garlic, minced\n1 tbsp vegetable oil\n\nSoak noodles in warm water for 30 minutes until pliable. Drain.\nMix tamarind paste, fish sauce, palm sugar, and lime juice to make the sauce.\nHeat oil in a wok over high heat. Sauté garlic for 30 seconds.\nAdd shrimp, cook 2 minutes until pink. Push to the side.\nCrack eggs into the wok, scramble them.\nAdd noodles and sauce, toss everything together for 2-3 minutes.\nAdd bean sprouts and green onions, toss for 30 seconds.\nServe topped with crushed peanuts and a lime wedge.",
+  "assertions": []
+}
