@@ -14,10 +14,27 @@
     <p class="hero-label">A Personal Collection</p>
     <h1>Recipes</h1>
     <p class="hero-stats"><strong>{{totalCount}}</strong> recipes across <strong>{{cuisineCount}}</strong> cuisines</p>
+
+    <!-- hidden until search.js runs, so no-JS visitors don't get a dead box -->
+    <div class="search-wrap" id="search-wrap" role="search" hidden>
+      <label class="visually-hidden" for="search-input">Search recipes by name or cuisine</label>
+      <div class="search-box">
+        <span class="search-icon" aria-hidden="true">&#9906;</span>
+        <input type="search" id="search-input" autocomplete="off" spellcheck="false"
+               placeholder="Search recipes&hellip;">
+        <button type="button" id="search-clear" class="search-clear" title="Clear search" hidden>&times;</button>
+      </div>
+      <p class="search-count" id="search-count"></p>
+    </div>
   </header>
 
   <main class="index-main">
     {{sections}}
+    <div class="no-results" id="no-results" hidden>
+      <p class="no-results-title">No recipes found</p>
+      <p class="no-results-hint">Try a shorter word, or search by cuisine &mdash; <em>french</em>, <em>thai</em>, <em>apéro</em>.</p>
+    </div>
   </main>
+  <script>{{searchScript}}</script>
 </body>
 </html>

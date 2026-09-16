@@ -50,6 +50,36 @@ const OUT_DIR = path.join(REPO_ROOT, "docs");
 // Dirs to skip
 const SKIP_DIRS = new Set(["app", "config", "node_modules", ".git", ".github", "docs"]);
 
+// Old "cuisine/slug" -> new "cuisine/slug", for files renamed during the spelling
+// cleanup. docs/ is wiped on every build, so these redirect stubs must be generated
+// rather than committed. Keep entries forever: they are what old bookmarks resolve to.
+const RENAMED: Record<string, string> = {
+  "american/chicken-basil-tomatoe-sausage": "american/chicken-basil-tomato-sausage",
+  "american/martins-potatoe-rolls": "american/martins-potato-rolls",
+  "american/roasted-gochujang-brussel-sprout": "american/roasted-gochujang-brussels-sprout",
+  "american/mergez": "american/merguez",
+  "american/peppermint-paddies": "american/peppermint-patties",
+  "bali/mi-goering": "bali/mi-goreng",
+  "brazillian/feijoada": "brazilian/feijoada",
+  "chinese/drunked-peanuts": "chinese/drunken-peanuts",
+  "chinese/sui-mai": "chinese/siu-mai",
+  "ethiopian/gomen-be-sega-wet": "ethiopian/gomen-be-sega-wat",
+  "french/carmel-flan": "french/caramel-flan",
+  "french/carmelized-fig-brie-compound-butter": "french/caramelized-fig-brie-compound-butter",
+  "french/roast-fennel-and-boulger": "french/roast-fennel-and-bulgur",
+  "hawaiian/lomi-lomi-salmmon": "hawaiian/lomi-lomi-salmon",
+  "hot-sauces/habenero-papaya": "hot-sauces/habanero-papaya",
+  "indian/spicy-banana-yougurt-pachadi": "indian/spicy-banana-yogurt-pachadi",
+  "italian/gelato-sicillian-base": "italian/gelato-sicilian-base",
+  "mexican/butterey-tortillas": "mexican/buttery-tortillas",
+  "mexican/chilli-rellenos": "mexican/chiles-rellenos",
+  "mexican/salsa-matcha": "mexican/salsa-macha",
+  "middle-eastern/chewey-tender-pita": "middle-eastern/chewy-tender-pita",
+  "middle-eastern/rose-harrissa": "middle-eastern/rose-harissa",
+  "ottolenghi/giant-couscous-with-golden-rasins-almonds": "ottolenghi/giant-couscous-with-golden-raisins-almonds",
+  "vietnamese/bahn-mi": "vietnamese/banh-mi",
+};
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -60,11 +90,14 @@ function titleCase(str: string): string {
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
+function foldAccents(str: string): string {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 function cuisineDisplayName(slug: string): string {
   const overrides: Record<string, string> = {
     "middle-eastern": "Middle Eastern",
     "hot-sauces": "Hot Sauces",
-    brazillian: "Brazilian",
     bali: "Balinese",
     apero: "Apéro",
     ottolenghi: "Ottolenghi",
@@ -247,15 +280,17 @@ function renderRecipePage(recipe: Recipe, css: string): string {
     ? `<a href="${escapeHtml(recipe.metadata.source)}" class="source-link" target="_blank" rel="noopener">View source →</a>`
     : "";
 
+  // Function replacements: recipe-derived HTML can contain $& / $` / $', which a
+  // string replacement would interpret as replacement patterns.
   return template
-    .replace(/\{\{title\}\}/g, escapeHtml(recipe.title))
-    .replace(/\{\{cuisine\}\}/g, escapeHtml(recipe.cuisine))
-    .replace(/\{\{cuisineSlug\}\}/g, escapeHtml(recipe.cuisineSlug))
-    .replace(/\{\{metaPills\}\}/g, metaPills.join("\n"))
-    .replace(/\{\{ingredients\}\}/g, ingredientRows)
-    .replace(/\{\{steps\}\}/g, steps)
-    .replace(/\{\{source\}\}/g, sourceHtml)
-    .replace(/\{\{css\}\}/g, css);
+    .replace(/\{\{title\}\}/g, () => escapeHtml(recipe.title))
+    .replace(/\{\{cuisine\}\}/g, () => escapeHtml(recipe.cuisine))
+    .replace(/\{\{cuisineSlug\}\}/g, () => escapeHtml(recipe.cuisineSlug))
+    .replace(/\{\{metaPills\}\}/g, () => metaPills.join("\n"))
+    .replace(/\{\{ingredients\}\}/g, () => ingredientRows)
+    .replace(/\{\{steps\}\}/g, () => steps)
+    .replace(/\{\{source\}\}/g, () => sourceHtml)
+    .replace(/\{\{css\}\}/g, () => css);
 }
 
 function renderIndexPage(groups: CuisineGroup[], totalCount: number, css: string): string {
@@ -266,13 +301,22 @@ function renderIndexPage(groups: CuisineGroup[], totalCount: number, css: string
     .map((g) => {
       const cards = g.recipes
         .map((r) => {
-          const course = r.metadata.course ? `<span class="card-tag">${escapeHtml(titleCase(r.metadata.course))}</span>` : "";
+          // apero/* recipes carry `course: apero`, which would render the same
+          // pill twice now that the cuisine is shown. Compare accent-insensitively
+          // so "Apero" is recognised as a duplicate of "Apéro".
+          const courseName = r.metadata.course ? titleCase(r.metadata.course) : "";
+          const course =
+            courseName && foldAccents(courseName) !== foldAccents(g.name)
+              ? `<span class="card-tag">${escapeHtml(courseName)}</span>`
+              : "";
           const time = r.metadata["time required"] ? `<span class="card-time">⏱ ${escapeHtml(r.metadata["time required"])}</span>` : "";
           const ingCount = r.ingredients.length;
+          // .card-cuisine is both a visual label and the cuisine term search reads
+          // off the card — see templates/search.js.
           return `<a href="${g.slug}/${r.slug}.html" class="recipe-card">
   <div class="card-body">
     <h3>${escapeHtml(r.title)}</h3>
-    <div class="card-meta">${course}${time}<span class="card-ing">${ingCount} ingredients</span></div>
+    <div class="card-meta"><span class="card-cuisine">${escapeHtml(g.name)}</span>${course}${time}<span class="card-ing">${ingCount} ingredients</span></div>
   </div>
 </a>`;
         })
@@ -288,11 +332,16 @@ function renderIndexPage(groups: CuisineGroup[], totalCount: number, css: string
     })
     .join("\n");
 
+  const searchScript = fs.readFileSync(path.join(TEMPLATE_DIR, "search.js"), "utf-8");
+
+  // Function replacements throughout: a string replacement would interpret $&, $`,
+  // $' and $1 inside the injected CSS/JS as replacement patterns and corrupt it.
   return template
-    .replace(/\{\{sections\}\}/g, sections)
+    .replace(/\{\{sections\}\}/g, () => sections)
     .replace(/\{\{totalCount\}\}/g, String(totalCount))
     .replace(/\{\{cuisineCount\}\}/g, String(groups.length))
-    .replace(/\{\{css\}\}/g, css);
+    .replace(/\{\{searchScript\}\}/g, () => searchScript)
+    .replace(/\{\{css\}\}/g, () => css);
 }
 
 // ---------------------------------------------------------------------------
@@ -334,6 +383,36 @@ function main() {
   const indexHtml = renderIndexPage(groups, recipes.length, css);
   fs.writeFileSync(path.join(OUT_DIR, "index.html"), indexHtml);
   console.log(`  Generated index.html`);
+
+  // Redirect stubs for renamed recipes, so old bookmarks keep resolving.
+  // Hrefs are relative: GitHub Pages project sites are served under a subpath.
+  let stubs = 0;
+  for (const [from, to] of Object.entries(RENAMED)) {
+    const [fromDir, fromSlug] = from.split("/");
+    const target = `../${to}.html`;
+    const stubPath = path.join(OUT_DIR, fromDir, `${fromSlug}.html`);
+    if (fs.existsSync(stubPath)) {
+      console.warn(`⚠ Stub for ${from} collides with a real page — skipping`);
+      continue;
+    }
+    fs.mkdirSync(path.dirname(stubPath), { recursive: true });
+    fs.writeFileSync(
+      stubPath,
+      `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="0; url=${target}">
+<link rel="canonical" href="${target}">
+<title>Moved</title>
+</head>
+<body><p>This recipe moved. <a href="${target}">Continue →</a></p></body>
+</html>
+`
+    );
+    stubs++;
+  }
+  console.log(`  Generated ${stubs} redirect stubs`);
 
   console.log(`\n✅ Site built to docs/`);
 }

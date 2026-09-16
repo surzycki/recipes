@@ -10,6 +10,21 @@
   <style>/* ── Reset & Base ──────────────────────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Author rules below set `display` on these elements (.recipe-card is block,
+   .cuisine-section becomes contents while searching), which would otherwise
+   beat the UA stylesheet's [hidden] and leave filtered cards on screen. */
+[hidden] { display: none !important; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 :root {
   --cream: #FAF7F2;
   --warm-white: #FFFDF9;
@@ -209,6 +224,121 @@ a { color: inherit; text-decoration: none; }
 }
 
 .card-time, .card-ing {
+  font-weight: 500;
+}
+
+.card-cuisine {
+  background: var(--terracotta-light);
+  color: var(--terracotta);
+  padding: 0.15rem 0.55rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ── SEARCH ────────────────────────────────────────────────────────── */
+
+.search-wrap {
+  max-width: 480px;
+  margin: 2rem auto 0;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.7rem 1.1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 3px rgba(196, 101, 46, 0.12);
+}
+
+.search-icon {
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1;
+  transform: rotate(-45deg);
+}
+
+#search-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: none;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+#search-input::placeholder { color: var(--ink-muted); }
+#search-input::-webkit-search-cancel-button { display: none; }
+
+.search-clear {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--ink-muted);
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0 0.15rem;
+  font-family: var(--font-sans);
+}
+.search-clear:hover { color: var(--terracotta); }
+
+.search-count {
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  min-height: 1.2em;
+}
+
+/* While a query is active the 21 per-cuisine grids are flattened into one, so
+   `order` can rank every card against every other. display:contents promotes
+   the cards to grid items of .index-main without touching the DOM. */
+body.searching .index-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  align-content: start;
+}
+
+body.searching .cuisine-section,
+body.searching .recipe-grid {
+  display: contents;
+}
+
+body.searching .section-header { display: none; }
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.no-results-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.no-results-hint {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.no-results-hint em {
+  font-style: normal;
+  color: var(--terracotta);
   font-weight: 500;
 }
 
@@ -413,6 +543,8 @@ a { color: inherit; text-decoration: none; }
   .recipe-header { padding: 2rem 1.25rem 1.5rem; }
   .cuisine-nav { padding: 0.75rem 1.25rem; }
   .recipe-grid { grid-template-columns: 1fr; }
+  .search-wrap { margin-top: 1.5rem; }
+  body.searching .index-main { grid-template-columns: 1fr; }
 }
 </style>
 </head>
